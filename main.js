@@ -15,7 +15,7 @@ window.addEventListener("scroll", () => {
 });
 
 
-//Библиотека GSAP скролл в разделе Карьера
+//Библиотека GSAP, скролл в разделе Карьера
 gsap.registerPlugin(ScrollTrigger);
 
 const stepItems = gsap.utils.toArray(".steps__item");
