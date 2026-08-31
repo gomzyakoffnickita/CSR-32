@@ -482,11 +482,79 @@ li {
   font-size: 60px;
   font-weight: 500;
   line-height: 73px;
-
 }
 
 .career__hire-title p {
   line-height: 26px;
   text-align: left;
   flex-basis: 350px;
+}
+
+.career__hire-steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.career__steps {
+  max-width: 500px;
+  list-style-type: none;
+  counter-reset: my-counter;
+}
+
+.steps__item-title {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 48px;
+}
+
+.steps__item-text {
+  line-height: 26px;
+  opacity: 0.82;
+}
+
+.steps__item {
+  counter-increment: my-counter;
+  padding-left: 75px;
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.steps__item::before {
+  position: absolute;
+  content: counter(my-counter);
+  width: 50px;
+  height: 50px;
+  border: 1px solid #1b1917;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+}
+
+.steps__item::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  background-color: #423e3a;
+  left: 20px;
+  top: 48px;
+  bottom: 8px;
+}
+
+.steps__item:last-child::after {
+  display: none;
+}
+
+.career__hire-img {
+  width: 45%;
+  border-radius: 2px;
+  overflow: hidden;
+
+}
+
+.career__hire-img img {
+  
 }
