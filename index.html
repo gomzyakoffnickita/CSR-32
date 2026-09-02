@@ -36,7 +36,7 @@
                 <ul class="menu__list">
                   <li class="menu__item">
                     <a
-                      href="#"
+                      href="#about"
                       class="menu__link hover-btn"
                       data-text="О компании"
                       ><span>О кампании</span></a
@@ -44,7 +44,7 @@
                   </li>
                   <li class="menu__item">
                     <a
-                      href="#"
+                      href="#services"
                       class="menu__link hover-btn"
                       data-text="Наши услуги"
                       ><span>Наши услуги</span></a
@@ -52,7 +52,7 @@
                   </li>
                   <li class="menu__item">
                     <a
-                      href="#"
+                      href="#career"
                       class="menu__link hover-btn"
                       data-text="Карьера"
                       Карьера
@@ -61,7 +61,7 @@
                   </li>
                   <li class="menu__item">
                     <a
-                      href="#"
+                      href="#news"
                       class="menu__link hover-btn"
                       data-text="Новости / события"
                       ><span>Новости / события</span></a
@@ -69,7 +69,7 @@
                   </li>
                   <li class="menu__item">
                     <a
-                      href="#"
+                      href="#footer"
                       class="menu__link hover-btn"
                       data-text="Контакты"
                       ><span>Контакты</span></a
@@ -91,7 +91,7 @@
       </div>
     </header>
     <main class="main">
-      <section class="about">
+      <section class="about" id="about">
         <div class="container">
           <div class="about__wrapper">
             <div class="about__heading">
@@ -137,7 +137,7 @@
           </div>
         </div>
       </section>
-      <section class="services">
+      <section class="services" id="services">
         <div class="container">
           <div class="service__wrapper">
             <div class="service__title">
@@ -247,7 +247,7 @@
           </div>
         </div>
       </section>
-      <section class="career">
+      <section class="career" id="career">
         <div class="container">
           <div class="career__wrapper">
             <div class="career__title">
@@ -499,7 +499,7 @@
           </form>
         </div>
       </section>
-      <section class="news">
+      <section class="news" id="news">
         <div class="container">
           <div class="news__heading">
             <h2>Новости и события</h2>
@@ -572,6 +572,108 @@
         </div>
       </section>
     </main>
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <a href="#" class="footer__logo">
+            <img src="images/footer-logo.svg" alt="logo" />
+          </a>
+
+          <ul class="footer__nav">
+            <li class="footer__nav-item">
+              <p class="footer__nav-title">Выберите раздел</p>
+            </li>
+            <li class="footer__nav-item">
+              <a
+                class="footer__nav-link hover-btn"
+                href="#about"
+                data-text="О компании"
+                ><span>О кампании</span></a
+              >
+            </li>
+            <li class="footer__nav-item">
+              <a
+                class="footer__nav-link hover-btn"
+                href="#services"
+                data-text="Услуги"
+                ><span>Услуги</span></a
+              >
+            </li>
+            <li class="footer__nav-item">
+              <a
+                class="footer__nav-link hover-btn"
+                href="#career"
+                data-text="Карьера"
+                ><span>Карьера</span></a
+              >
+            </li>
+            <li class="footer__nav-item">
+              <a
+                class="footer__nav-link hover-btn"
+                href="#news"
+                data-text="Новости"
+                ><span>Новости</span></a
+              >
+            </li>
+          </ul>
+
+          <ul class="footer__social">
+            <li class="footer__social-item">
+              <p class="footer__social-title">Выберите раздел</p>
+            </li>
+            <li class="footer__social-item">
+              <a href="#" class="footer__social-link">
+                <img src="images/footer/email.svg" alt="email" />
+                <span>csr-32@gmail.com</span>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a href="#" class="footer__social-link">
+                <img src="images/footer/instagram.svg" alt="instagram" />
+                <span>CSR-32</span>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a href="#" class="footer__social-link">
+                <img
+                  src="images/footer/Facebook_white.svg"
+                  alt="Facebook_white"
+                />
+                <span>CSR-32</span>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a href="#" class="footer__social-link">
+                <img src="images/footer/telegramm.svg" alt="telegramm" />
+                <span>CSR-32</span>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="footer__contacts">
+            <li class="footer__contact-item">
+              <a href="#" class="footer__contact-link">
+                <img src="images/footer/map.svg" alt="" />
+                <span>г. Фокино, ул. Вокзальная, 14</span>
+              </a>
+            </li>
+            <li class="footer__contact-item">
+              <a href="tel: +7 (999) 255 34 54" class="footer__contact-link">
+                <img src="images/footer/phone.svg" alt="" />
+                <span>+ 7 (999) 255 34 54</span>
+              </a>
+            </li>
+            <li class="footer__contact-time">
+              Время работы
+              <br />
+              Пн-пт
+              <br />
+              с 08:00 до 17:00
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
     <script src="main.js" defer></script>

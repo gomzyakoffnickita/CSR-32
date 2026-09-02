@@ -8,6 +8,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -783,4 +784,65 @@ li {
 
 .form__submit:hover {
   background-color: #a8431a;
+}
+
+/*Footer*/
+
+.footer {
+  padding: 100px 0;
+  position: relative;
+  background-color: var(--background-color);
+  z-index: 2;
+  color: #ffff;
+}
+
+.footer__wrapper {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 100px;
+}
+
+.footer__logo {
+  margin-right: auto;
+}
+
+.footer__social li {
+  margin-bottom: 15px;
+}
+
+.footer__social li:first-child {
+  margin-bottom: 20px;
+}
+
+.footer__social li:last-child {
+  margin-bottom: 0px;
+}
+
+.footer__nav li {
+  margin-bottom: 10px;
+}
+
+.footer__nav li:first-child {
+  margin-bottom: 20px;
+}
+
+.footer__nav li:last-child {
+  margin-bottom: 0px;
+}
+
+.footer__contacts li {
+  margin-bottom: 15px;
+}
+
+.footer__social-link {
+  display: flex;
+  gap: 10px;
+  line-height: 1.16;
+}
+
+.footer__nav-title,
+.footer__social-title {
+  font-weight: 600;
+  line-height: 23px;
 }
