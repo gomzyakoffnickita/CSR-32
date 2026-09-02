@@ -14,8 +14,7 @@ window.addEventListener("scroll", () => {
   lastedScroll = currentScroll;
 });
 
-
-//Библиотека GSAP, скролл в разделе Карьера
+// Скролл в разделе Карьера
 gsap.registerPlugin(ScrollTrigger);
 
 const stepItems = gsap.utils.toArray(".steps__item");
@@ -46,3 +45,24 @@ ScrollTrigger.create({
     setActive(index);
   },
 });
+
+//Скролл Формы
+const formHeading = document.querySelector(".form__title h2");
+const formRight = document.querySelector(".form__title-right");
+const formContact = document.querySelector(".form__contact");
+
+gsap.set(formContact, { y: 600 }); // Изначально скрываем форму
+
+let tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".form", //Блок за которым следим
+    start: "top top", //Когда начать(верх блока и верх экрана)
+    end: "+=2000", //Длина в пикселях
+    pin: true,
+    scrub: true,
+  },
+});
+
+tl.to(formHeading, { x: -100 }, 0);
+tl.to(formRight, { x: 100 }, "<"); //< Старт одновременно с предыдущим блоком
+tl.to(formContact, { y: -300 }, 0.5); //Возвращаем в норму

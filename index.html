@@ -371,30 +371,132 @@
                   </li>
                 </ol>
                 <div class="career__hire-img">
-                  <img
-                    class="hire__img"
-                    src="images/career/hire/1.jpg"
-                    alt=""
-                  />
-                  <img
-                    class="hire__img"
-                    src="images/career/hire/2.jpg"
-                    alt=""
-                  />
-                  <img
-                    class="hire__img"
-                    src="images/career/hire/3.jpg"
-                    alt=""
-                  />
-                  <img
-                    class="hire__img"
-                    src="images/career/hire/4.jpg"
-                    alt=""
-                  />
+                  <picture>
+                    <source
+                      srcset="images/career/hire/1.avif"
+                      type="image/avif"
+                    />
+                    <source
+                      srcset="images/career/hire/1.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      class="hire__img"
+                      src="images/career/hire/1.jpg"
+                      alt=""
+                    />
+                  </picture>
+
+                  <picture>
+                    <source
+                      srcset="images/career/hire/2.avif"
+                      type="image/avif"
+                    />
+                    <source
+                      srcset="images/career/hire/2.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      class="hire__img"
+                      src="images/career/hire/2.jpg"
+                      alt=""
+                    />
+                  </picture>
+
+                  <picture>
+                    <source
+                      srcset="images/career/hire/3.avif"
+                      type="image/avif"
+                    />
+                    <source
+                      srcset="images/career/hire/3.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      class="hire__img"
+                      src="images/career/hire/3.jpg"
+                      alt=""
+                    />
+                  </picture>
+
+                  <picture>
+                    <source
+                      srcset="images/career/hire/4.avif"
+                      type="image/avif"
+                    />
+                    <source
+                      srcset="images/career/hire/4.webp"
+                      type="image/webp"
+                    />
+
+                    <img
+                      class="hire__img"
+                      src="images/career/hire/4.jpg"
+                      alt=""
+                    />
+                  </picture>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section class="form">
+        <div class="container">
+          <div class="form__wrapper">
+            <div class="form__title">
+              <h2>
+                Оставьте <br />
+                Вашу заявку
+              </h2>
+              <div class="form__title-right">
+                <p class="form__subtitle">Нужна помощь? Дайте нам знать</p>
+                <p class="form__desc">
+                  Заполните форму, чтобы начать общение. Мы ответим на Ваши
+                  вопросы и предложим подходящие вакансии
+                </p>
+              </div>
+            </div>
+          </div>
+          <form class="form__contact" action="#" method="post">
+            <div class="form__row">
+              <div class="form__field">
+                <label class="form__label" for="name">Имя</label>
+                <input
+                  class="form__input"
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Иван"
+                  required
+                />
+              </div>
+
+              <div class="form__field">
+                <label class="form__label" for="email">Email</label>
+                <input
+                  class="form__input"
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="ivan@mail.ru"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form__field">
+              <label class="form__label" for="message">Сообщение</label>
+              <textarea
+                class="form__input form__textarea"
+                id="message"
+                name="message"
+                placeholder="Напишите Ваш вопрос"
+              ></textarea>
+            </div>
+
+            <button class="form__submit" type="submit">Отправить</button>
+          </form>
         </div>
       </section>
       <section class="news">
@@ -414,7 +516,7 @@
             <article class="news__card">
               <a href="#" class="news__card-link">
                 <div class="news__card-img">
-                  <img src="images/news/1.jpeg" alt="" loading="lazy" />
+                  <img src="images/news/1.jpg" alt="" loading="lazy" />
                   <span class="news__card-date">20.08.2025</span>
                 </div>
                 <div class="news__card-body">
@@ -433,7 +535,7 @@
             <article class="news__card">
               <a href="#" class="news__card-link">
                 <div class="news__card-img">
-                  <img src="images/news/2.jpeg" alt="" loading="lazy" />
+                  <img src="images/news/2.jpg" alt="" loading="lazy" />
                   <span class="news__card-date">30.12.2025</span>
                 </div>
                 <div class="news__card-body">

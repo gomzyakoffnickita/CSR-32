@@ -679,3 +679,108 @@ li {
   color: #c2551e;
   font-weight: 500;
 }
+
+/*Form*/
+
+.form {
+  padding-top: 150px;
+}
+
+.form__title {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 80px;
+}
+
+.form__title h2 {
+  font-size: 80px;
+  font-weight: 500;
+  line-height: 96px;
+}
+
+.form__title-right {
+  max-width: 420px;
+}
+
+.form__subtitle {
+  font-weight: 500;
+  line-height: 26px;
+  margin-bottom: 12px;
+}
+
+.form__desc {
+  line-height: 26px;
+  opacity: 0.82;
+}
+
+.form__contact {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff;
+  border: 1px solid rgba(27, 25, 23, 0.15);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form__row {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form__label {
+  font-weight: 500;
+  line-height: 23px;
+}
+
+.form__input {
+  padding: 14px 16px;
+  border: 1px solid rgba(27, 25, 23, 0.2);
+  border-radius: 2px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 16px;
+  color: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.form__input:focus {
+  outline: none;
+  border-color: #c2551e; /* оранжевый акцент при фокусе */
+}
+
+.form__input::placeholder {
+  color: rgba(27, 25, 23, 0.4);
+}
+
+.form__textarea {
+  min-height: 140px;
+  resize: vertical; /* тянется только по вертикали */
+}
+
+.form__submit {
+  padding: 16px 48px;
+  background-color: #c2551e;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form__submit:hover {
+  background-color: #a8431a;
+}
