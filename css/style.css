@@ -192,6 +192,19 @@ li {
   height: 1px;
   opacity: 0.5;
   background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: line-grow 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+}
+
+.header__line {
+  display: block;
+  overflow: hidden;
+}
+
+.header__line-inner {
+  display: block;
+  animation: line-up 1s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 /*Main*/
@@ -287,6 +300,9 @@ li {
   line-height: 73px;
   text-align: center;
   margin-bottom: 100px;
+  animation: rise 1s both;
+  animation-timeline: view();
+  animation-range: cover 20% cover 50%;
 }
 
 .services__panel {
@@ -354,17 +370,6 @@ li {
   animation: pulse 2s ease-in-out infinite;
 }
 
-@keyframes pulse {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-    opacity: 0.6;
-  }
-}
-
 .services__desc {
   position: absolute;
   bottom: 100px;
@@ -398,12 +403,18 @@ li {
   font-weight: 500;
   line-height: 73px;
   text-align: center;
+  animation: rise 1s both;
+  animation-timeline: view();
+  animation-range: cover 20% cover 50%;
 }
 
 .career__title p {
   text-align: center;
   line-height: 26px;
   opacity: 0.82;
+  animation: rise 2s both;
+  animation-timeline: view();
+  animation-range: cover 20% cover 50%;
 }
 
 .career__cards {
@@ -483,6 +494,9 @@ li {
   font-size: 60px;
   font-weight: 500;
   line-height: 73px;
+  animation: rise 1s both;
+  animation-timeline: view();
+  animation-range: cover 20% cover 50%;
 }
 
 .career__hire-title p {
@@ -845,4 +859,99 @@ li {
 .footer__social-title {
   font-weight: 600;
   line-height: 23px;
+}
+
+/*Animation*/
+
+.header__line:nth-child(1) .header__line-inner {
+  animation-delay: 0.6s;
+}
+.header__line:nth-child(2) .header__line-inner {
+  animation-delay: 0.8s;
+}
+.header__line:nth-child(3) .header__line-inner {
+  animation-delay: 1s;
+}
+
+@keyframes line-up {
+  from {
+    transform: translateY(110%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes line-grow {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  .about__heading h2 {
+    animation: rise 1s both;
+    animation-timeline: view();
+    animation-range: cover 20% cover 50%; /* играет, пока блок въезжает */
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.6;
+  }
+}
+
+.services__panels {
+  --transitions: 4; /* 5 панелей = 4 «наезда» */
+  view-timeline-name: --services; /* имя таймлайна */
+}
+
+.services__panel:nth-child(1) {
+  --i: 0;
+  --shrink: 0.85;
+}
+.services__panel:nth-child(2) {
+  --i: 1;
+  --shrink: 0.89;
+}
+.services__panel:nth-child(3) {
+  --i: 2;
+  --shrink: 0.93;
+}
+.services__panel:nth-child(4) {
+  --i: 3;
+  --shrink: 0.97;
+}
+
+.services__panel:not(:last-child) {
+  --start: calc(var(--i) / var(--transitions) * 100%);
+  --end: calc((var(--i) + 1) / var(--transitions) * 100%);
+
+  animation: panel-shrink linear forwards;
+  animation-timeline: --services; /* общий «часовой механизм» */
+  animation-range: contain var(--start) contain var(--end); /* свой кусок */
+}
+
+@keyframes panel-shrink {
+  to {
+    transform: scale(var(--shrink)); /* сжимаемся */
+    filter: brightness(0.6); /* и темнеем — эффект «уходит вглубь» */
+  }
 }

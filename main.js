@@ -1,4 +1,32 @@
+// Отключаем автовосстановление скролла браузером
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+
+// Скроллим наверх при загрузке
+window.addEventListener("load", () => {
+  // Небольшая задержка, чтобы CSS применился
+  setTimeout(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+
+    // После скролла обновляем ScrollTrigger
+    ScrollTrigger.refresh();
+  }, 100);
+});
+
+// Дополнительная страховка при DOMContentLoaded
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, 50);
+});
+
 //Скролл хедер блока
+document.body.style.overflow = "hidden"; // Изначально блокируем скролл header
+setTimeout(() => {
+  document.body.style.overflow = "";
+}, 1000); //Разрешаем скроллить через 1 сек
+
 let lastedScroll = window.scrollY;
 const headerTop = document.querySelector(".header__top");
 
