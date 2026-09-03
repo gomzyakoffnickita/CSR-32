@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/about.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,12 +15,12 @@
     <title>О нас</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header__about">
       <div class="container">
         <div class="header__wrapper-about">
-          <div class="header__top">
-            <a href="#" class="logo">
-              <img src="" alt="logo" />
+          <div class="header__top header__top-about">
+            <a href="/index.html" class="logo">
+              <img src="../images/logo.png" alt="logo" />
             </a>
             <nav class="menu">
               <ul class="menu__list">
@@ -68,20 +69,44 @@
           </div>
           <div class="header__hero-about">
             <h1>О нашей кампании</h1>
-            <p class="about__team-desc">Наша команда</p>
-            <div class="about__team-preview">
-              <div class="about__team-photo">
-                <!-- <img src="/images/about/1.jpeg" alt="" />
-                <img src="/images/about/2.jpeg" alt="" /> -->
+            <div class="about__team-wrapper">
+              <div class="about__team-left">
+                <p class="about__team-desc">Наша команда</p>
+                <div class="about__team-preview">
+                  <div class="about__team-photo">
+                    <img src="/images/about/1.jpeg" alt="" />
+                    <img src="/images/about/2.jpeg" alt="" />
+                  </div>
+                  <a href="#about__team" class="about__team-link"
+                    >Узнать больше</a
+                  >
+                </div>
               </div>
-              <a href="" class="about__team-link">Узнать больше</a>
+
+              <span class="about__team-desc-right">
+                Главный капитал компании – люди, работающие в ней. ООО
+                «ЦЕНТРСПЕЦРЕМОНТ» - это сплоченная команда квалифицированных
+                специалистов, способная решать задачи любой сложности.
+              </span>
             </div>
           </div>
         </div>
       </div>
     </header>
+    <main class="main">
+      <section class="about__team-animation" id="about__team">
+        <div class="container">
+          <div class="team__animation-wrapper">
+            <img src="../images/about/1.jpeg" alt="" />
+            <img src="../images/about/2.jpeg" alt="" />
+            <img src="../images/about/3.jpg" alt="" />
+          </div>
+        </div>
+      </section>
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
-    <script src="../main.js" defer></script>
+    <script src="../js/common.js" defer></script>
+    <script src="../js/about.js" defer></script>
   </body>
 </html>

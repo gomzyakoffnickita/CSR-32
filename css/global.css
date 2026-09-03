@@ -1,0 +1,373 @@
+/* General settings*/
+:root {
+  --background-color: #1b1917;
+  --color-white: rgb(255, 255, 255);
+  --color-black: #1b1917;
+  --color-dark-gray: #423e3a;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #1b1917;
+  background-color: #f5f1eb;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  display: inline-block;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  font-family: inherit;
+  color: inherit;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+.container {
+  max-width: 1300px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.hover-btn {
+  position: relative;
+  display: inline-block;
+  transition: opacity 0.3s ease;
+  overflow: hidden;
+}
+
+.hover-btn span {
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.hover-btn::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-110%);
+  transition: transform 0.4s ease;
+}
+
+.hover-btn:hover span {
+  transform: translateY(110%);
+}
+
+.hover-btn:hover::after {
+  transform: translateY(0);
+}
+
+/*Header*/
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.header__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* заполняет экран без искажений */
+  z-index: 0;
+}
+
+.header__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    /* верх — прозрачный (светлый) */ rgba(0, 0, 0, 0) 40%,
+    /* держим светлым до 40% */ rgba(0, 0, 0, 0.8) 70%,
+    /* к 70% темнее */ rgba(0, 0, 0, 0.9) 80%,
+    /* 80% — затемнение 90% */ rgba(0, 0, 0, 0.9) 100% /* до низа 90% */
+  );
+}
+
+/* Видео и оверлей остаются на месте */
+.header__video,
+.header__overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.header .container {
+  position: relative;
+  z-index: 2;
+  will-change: transform; /* для плавности */
+}
+
+.header__wrapper-top,
+.header__wrapper-about {
+  margin-top: 20px;
+}
+
+.header__top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: transform 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
+  background-color: var(--background-color);
+  color: var(--color-white);
+  border-radius: 2px;
+  padding: 12px 20px;
+  max-width: fit-content;
+}
+
+.header__logo img {
+  width: 50px;
+}
+
+.header__top.hidden {
+  transform: translateY(-140%);
+}
+
+.menu__list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu__link {
+  color: var(--color-white);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+.header__title h1 {
+  padding-top: 350px;
+  font-size: 80px;
+  font-weight: 300;
+  color: var(--color-white);
+  line-height: 88px;
+}
+
+.header__title::after {
+  content: "";
+  position: absolute;
+  bottom: -80px;
+  width: 1300px;
+  height: 1px;
+  opacity: 0.5;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: line-grow 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+}
+
+.header__line {
+  display: block;
+  overflow: hidden;
+}
+
+.header__line-inner {
+  display: block;
+  animation: line-up 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/*Footer*/
+
+.footer {
+  padding: 100px 0;
+  position: relative;
+  background-color: var(--background-color);
+  z-index: 2;
+  color: #fff;
+}
+
+.footer__wrapper {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 100px;
+}
+
+.footer__logo {
+  margin-right: auto;
+}
+
+.footer__logo img {
+  width: 200px;
+}
+
+.footer__social li {
+  margin-bottom: 15px;
+}
+
+.footer__social li:first-child {
+  margin-bottom: 20px;
+}
+
+.footer__social li:last-child {
+  margin-bottom: 0px;
+}
+
+.footer__nav li {
+  margin-bottom: 10px;
+}
+
+.footer__nav li:first-child {
+  margin-bottom: 20px;
+}
+
+.footer__nav li:last-child {
+  margin-bottom: 0px;
+}
+
+.footer__contacts li {
+  margin-bottom: 15px;
+}
+
+.footer__social-link {
+  display: flex;
+  gap: 10px;
+  line-height: 1.16;
+}
+
+.footer__nav-title,
+.footer__social-title {
+  font-weight: 600;
+  line-height: 23px;
+}
+
+/*Animation*/
+
+.header__line:nth-child(1) .header__line-inner {
+  animation-delay: 0.6s;
+}
+.header__line:nth-child(2) .header__line-inner {
+  animation-delay: 0.8s;
+}
+.header__line:nth-child(3) .header__line-inner {
+  animation-delay: 1s;
+}
+
+@keyframes line-up {
+  from {
+    transform: translateY(110%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes line-grow {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  .about__heading h2 {
+    animation: rise 1s both;
+    animation-timeline: view();
+    animation-range: cover 20% cover 50%; /* играет, пока блок въезжает */
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.6;
+  }
+}
+
+.services__panels {
+  --transitions: 4; /* 5 панелей = 4 «наезда» */
+  view-timeline-name: --services; /* имя таймлайна */
+}
+
+.services__panel:nth-child(1) {
+  --i: 0;
+  --shrink: 0.85;
+}
+.services__panel:nth-child(2) {
+  --i: 1;
+  --shrink: 0.89;
+}
+.services__panel:nth-child(3) {
+  --i: 2;
+  --shrink: 0.93;
+}
+.services__panel:nth-child(4) {
+  --i: 3;
+  --shrink: 0.97;
+}
+
+.services__panel:not(:last-child) {
+  --start: calc(var(--i) / var(--transitions) * 100%);
+  --end: calc((var(--i) + 1) / var(--transitions) * 100%);
+
+  animation: panel-shrink linear forwards;
+  animation-timeline: --services; /* общий «часовой механизм» */
+  animation-range: contain var(--start) contain var(--end); /* свой кусок */
+}
+
+@keyframes panel-shrink {
+  to {
+    transform: scale(var(--shrink)); /* сжимаемся */
+    filter: brightness(0.6); /* и темнеем — эффект «уходит вглубь» */
+  }
+}

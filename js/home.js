@@ -1,15 +1,3 @@
-// Скролл наверх при загрузке
-if ("scrollRestoration" in history) {
-  history.scrollRestoration = "manual";
-}
-
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    window.scrollTo({ top: 0, behavior: "instant" });
-    ScrollTrigger.refresh();
-  }, 100);
-});
-
 //Скролл хедер блока
 document.body.style.overflow = "hidden"; // Изначально блокируем скролл header
 setTimeout(() => {

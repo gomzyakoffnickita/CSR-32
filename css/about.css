@@ -1,0 +1,137 @@
+/*Header-about*/
+
+.logo img {
+  width: 50px;
+}
+
+.header__about {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.header__wrapper-about {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-top: 0;
+}
+
+.header__top-about {
+  position: relative;
+}
+
+.header__hero-about h1 {
+  font-size: 80px;
+  font-weight: 500;
+  line-height: 96px;
+  transform: translateY(-60px);
+}
+
+.header__hero-about {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 80px; /* отступ снизу для блока команды */
+  position: relative;
+}
+
+.about__team-desc {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: rgb(228, 224, 217);
+  border-radius: 2px;
+  padding: 8px 25px;
+  max-width: fit-content;
+}
+
+.about__team-desc::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: red;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.about__team-preview {
+  padding: 8px 12px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  max-width: fit-content;
+}
+
+.about__team-wrapper {
+  position: absolute;
+  bottom: 100px; /* отступ от нижнего края */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 10px; /* чтобы не прилипал к краям container */
+}
+
+.about__team-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about__team-photo img {
+  width: 100px;
+}
+
+.about__team-desc-right {
+  line-height: 26px;
+  opacity: 0.82;
+  flex-basis: 428px;
+}
+
+.about__team-wrapper::before {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  width: 1300px;
+  height: 1px;
+  opacity: 0.2;
+  background-color: var(--color-black);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: line-grow 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+}
+
+/*Main*/
+
+.team__animation-wrapper {
+  position: relative;
+  height: 80vh;
+    perspective: 1200px;  /* на контейнер */
+}
+
+.team__animation-wrapper img {
+  position: absolute;
+  inset: 0;
+  margin: auto; /* ← центрирует absolute-элемент с фиксированным размером */
+  width: 420px;
+  height: 500px; /* фиксированная высота — иначе вертикально не отцентрируется */
+  object-fit: cover;
+  border-radius: 2px;
+  transform-style: preserve-3d;
+}
+
+.team__animation-wrapper img:nth-child(1) {
+  z-index: 2;
+}
+.team__animation-wrapper img:nth-child(2),
+.team__animation-wrapper img:nth-child(3) {
+  z-index: 1;
+}
