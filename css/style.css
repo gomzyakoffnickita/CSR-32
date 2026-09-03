@@ -137,7 +137,8 @@ li {
   will-change: transform; /* для плавности */
 }
 
-.header__wrapper-top {
+.header__wrapper-top,
+.header__wrapper-about {
   margin-top: 20px;
 }
 
@@ -157,6 +158,10 @@ li {
   border-radius: 2px;
   padding: 12px 20px;
   max-width: fit-content;
+}
+
+.header__logo img {
+  width: 50px;
 }
 
 .header__top.hidden {
@@ -243,8 +248,6 @@ li {
 }
 
 .about__btn {
-  align-items: center;
-  justify-content: center;
   background-color: var(--color-dark-gray);
   border-radius: 2px;
   font-size: 14px;
@@ -807,7 +810,7 @@ li {
   position: relative;
   background-color: var(--background-color);
   z-index: 2;
-  color: #ffff;
+  color: #fff;
 }
 
 .footer__wrapper {
@@ -819,6 +822,10 @@ li {
 
 .footer__logo {
   margin-right: auto;
+}
+
+.footer__logo img {
+  width: 200px;
 }
 
 .footer__social li {
