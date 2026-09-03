@@ -158,6 +158,7 @@ li {
   border-radius: 2px;
   padding: 12px 20px;
   max-width: fit-content;
+  animation: menu-drop 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s backwards;
 }
 
 .header__logo img {
@@ -369,5 +370,14 @@ li {
   to {
     transform: scale(var(--shrink)); /* сжимаемся */
     filter: brightness(0.6); /* и темнеем — эффект «уходит вглубь» */
+  }
+}
+
+@keyframes menu-drop {
+  from {
+    transform: translateY(-140%);
+  }
+  to {
+    transform: translateY(0);
   }
 }

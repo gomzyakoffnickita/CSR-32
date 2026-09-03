@@ -18,14 +18,16 @@
 }
 
 .header__top-about {
-  position: relative;
+  margin-top: 20px;
+  left: max(10px, calc((100% - 1300px) / 2 + 10px));
 }
 
 .header__hero-about h1 {
   font-size: 80px;
   font-weight: 500;
   line-height: 96px;
-  transform: translateY(-60px);
+  margin-top: -100px;
+  animation: hero-rise 1s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
 }
 
 .header__hero-about {
@@ -114,7 +116,7 @@
 .team__animation-wrapper {
   position: relative;
   height: 80vh;
-    perspective: 1200px;  /* на контейнер */
+  perspective: 1200px; /* на контейнер */
 }
 
 .team__animation-wrapper img {
@@ -134,4 +136,105 @@
 .team__animation-wrapper img:nth-child(2),
 .team__animation-wrapper img:nth-child(3) {
   z-index: 1;
+}
+
+/*Map*/
+
+.map {
+  margin: 100px 0;
+}
+
+.map__title {
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 73px;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  animation: rise 1s both;
+  animation-timeline: view();
+  animation-range: cover 20% cover 50%;
+}
+
+.map__wrapper {
+  position: relative;
+  background-color: #fbf8f3; /* чуть ярче твоего #f5f1eb */
+  width: 90%;
+  margin: 0 auto;
+}
+
+.map__wrapper img {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  mix-blend-mode: multiply;
+}
+
+.map__pin {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #c2551e;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.map__pin::after {
+  content: "";
+  position: absolute;
+  inset: -7px;
+  border-radius: 50%;
+  border: 2px solid rgba(194, 85, 30, 0.45);
+  animation: pin-pulse 2s ease-out infinite;
+}
+
+@keyframes pin-pulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+/* город при ховере */
+.map__pin::before {
+  content: attr(data-city);
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(5px);
+  background-color: var(--color-black);
+  color: #fff;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 2px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
+}
+
+.map__pin:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/*Animation*/
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(80px); /* старт снизу */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* финиш на месте */
+  }
 }
