@@ -213,6 +213,28 @@ li {
   animation: line-up 1s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+.highlight-desc {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: rgb(228, 224, 217);
+  border-radius: 2px;
+  padding: 8px 25px;
+  max-width: fit-content;
+}
+
+.highlight-desc::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: red;
+  animation: pulse 2s ease-in-out infinite;
+}
+
 /*Footer*/
 
 .footer {

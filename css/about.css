@@ -10,7 +10,7 @@
   overflow: hidden;
 }
 
-.header__wrapper-about {
+.header__wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -39,27 +39,6 @@
   position: relative;
 }
 
-.about__team-desc {
-  position: relative;
-  display: flex;
-  align-items: center;
-  background-color: rgb(228, 224, 217);
-  border-radius: 2px;
-  padding: 8px 25px;
-  max-width: fit-content;
-}
-
-.about__team-desc::before {
-  content: "";
-  position: absolute;
-  top: 13px;
-  left: 8px;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  background-color: red;
-  animation: pulse 2s ease-in-out infinite;
-}
 
 .about__team-preview {
   padding: 8px 12px;

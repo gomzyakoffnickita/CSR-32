@@ -95,10 +95,12 @@
 }
 
 .services__panel {
+  display: block;
   position: sticky;
   top: 0;
   height: 100vh;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .services__bg {
@@ -137,17 +139,17 @@
   letter-spacing: -0.5px;
 }
 
-.services__link {
+.services__span {
   position: absolute;
   top: 20px;
   right: 20px;
   color: var(--color-white);
   font-size: 14px;
   line-height: 23px;
-  cursor: pointer;
+
 }
 
-.services__link::before {
+.services__span::before {
   content: "";
   position: absolute;
   top: 0;

@@ -1,0 +1,90 @@
+/*Header*/
+
+.header__top-services {
+  margin-top: 20px;
+  left: max(10px, calc((100% - 1300px) / 2 + 10px));
+}
+
+.logo img {
+  width: 50px;
+}
+
+.header__services-desc {
+  margin-bottom: 30px;
+}
+
+.header__title-services {
+  font-size: 80px;
+  font-weight: 500;
+  line-height: 96px;
+  text-align: center;
+  margin-bottom: 50px;
+  animation: hero-rise 1s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+}
+
+.header__wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-top: 0;
+}
+
+.header__hero-services {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.header__subtitle {
+  line-height: 26px;
+  opacity: 0.82;
+}
+
+/*Carousel*/
+
+.service__gallery {
+  margin: 100px 0;
+}
+
+.gallery__carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding: 0 10px;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+}
+
+.gallery__slide {
+  flex-shrink: 0; /* ← слайды НЕ сжимаются */
+  width: 420px;
+  height: 600px;
+  scroll-snap-align: center;
+}
+
+.gallery__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+
+  animation-name: carousel;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  animation-timeline: view(inline);
+  animation-range: entry 0% exit 100%;
+}
+
+@keyframes carousel {
+  from {
+    object-position: 100% 50%;
+  }
+
+  to {
+    object-position: 0% 50%;
+  }
+}
+
