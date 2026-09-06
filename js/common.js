@@ -11,3 +11,8 @@ window.addEventListener("load", () => {
     }
   }, 100);
 });
+
+// Initialize Lenis
+const lenis = new Lenis({
+  autoRaf: true,
+});
