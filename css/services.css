@@ -41,6 +41,7 @@
 .header__subtitle {
   line-height: 26px;
   opacity: 0.82;
+  font-weight: 400;
 }
 
 /*Carousel*/
@@ -78,6 +79,215 @@
   animation-range: entry 0% exit 100%;
 }
 
+/*Description*/
+
+.description__grid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 60px;
+  align-items: start; /* ⚠️ КЛЮЧЕВАЯ строка для sticky */
+}
+
+.description__right {
+  position: sticky;
+  top: 20px;
+}
+
+.description__title,
+.description__left-steps {
+  line-height: 26px;
+}
+
+.description__left p {
+  line-height: 26px;
+}
+
+.steps__title {
+  font-weight: 700;
+}
+
+.description__left-steps h5 {
+  margin-bottom: 20px;
+}
+
+.steps__list {
+  counter-reset: my-counter;
+}
+
+.steps__item {
+  counter-increment: my-counter;
+  padding-left: 40px;
+  padding-bottom: 30px;
+  position: relative;
+}
+
+.steps__item::before {
+  position: absolute;
+  content: counter(my-counter);
+  height: 30px;
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  left: 15px;
+}
+
+.description__right h3 {
+  padding-left: 10px;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.8px;
+  line-height: 36px;
+  margin-bottom: 20px;
+}
+
+.form {
+  padding-top: 150px;
+}
+
+.form__title {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 80px;
+}
+
+.form__title h2 {
+  font-size: 80px;
+  font-weight: 500;
+  line-height: 96px;
+}
+
+.form__title-right {
+  max-width: 420px;
+}
+
+.form__subtitle {
+  font-weight: 500;
+  line-height: 26px;
+  margin-bottom: 12px;
+}
+
+.form__desc {
+  line-height: 26px;
+  opacity: 0.82;
+}
+
+.form__contact {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff;
+  border: 1px solid rgba(27, 25, 23, 0.15);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form__row {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form__label {
+  font-weight: 500;
+  line-height: 23px;
+}
+
+.form__input {
+  padding: 14px 16px;
+  border: 1px solid rgba(27, 25, 23, 0.2);
+  border-radius: 2px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 16px;
+  color: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.form__input:focus {
+  outline: none;
+  border-color: #c2551e; /* оранжевый акцент при фокусе */
+}
+
+.form__input::placeholder {
+  color: rgba(27, 25, 23, 0.4);
+}
+
+.form__textarea {
+  min-height: 140px;
+  resize: vertical; /* тянется только по вертикали */
+}
+
+.form__submit {
+  padding: 16px 48px;
+  background-color: #c2551e;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form__submit:hover {
+  background-color: #a8431a;
+}
+
+/*Benefits*/
+
+.benefits {
+  margin-bottom: 100px;
+}
+
+.benefits__wrapper {
+  max-width: 800px;
+  background-color: #c2551e;
+  color: var(--color-white);
+  padding: 16px 24px;
+  border-radius: 2px;
+}
+
+.benefits__title {
+  font-weight: 600;
+  line-height: 26px;
+  margin-bottom: 16px;
+}
+
+.benefits__desc-title {
+  position: relative; /* чтобы кружок позиционировался от него */
+  padding-left: 24px; /* место под кружок */
+}
+
+.benefits__desc-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%; /* центр по вертикали */
+  transform: translateY(-50%); /* точная центровка */
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-white); /* или любой цвет */
+}
+
+.benefits__desc-subtitle {
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+/*Animation*/
+
 @keyframes carousel {
   from {
     object-position: 100% 50%;
@@ -85,5 +295,16 @@
 
   to {
     object-position: 0% 50%;
+  }
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
