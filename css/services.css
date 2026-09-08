@@ -85,7 +85,7 @@
   display: grid;
   grid-template-columns: 1fr 420px;
   gap: 60px;
-  align-items: start; /* ⚠️ КЛЮЧЕВАЯ строка для sticky */
+  align-items: start; 
 }
 
 .description__right {
@@ -265,20 +265,20 @@
 }
 
 .benefits__desc-title {
-  position: relative; /* чтобы кружок позиционировался от него */
-  padding-left: 24px; /* место под кружок */
+  position: relative;
+  padding-left: 24px;
 }
 
 .benefits__desc-title::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 50%; /* центр по вертикали */
-  transform: translateY(-50%); /* точная центровка */
+  top: 50%;
+  transform: translateY(-50%);
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: var(--color-white); /* или любой цвет */
+  background-color: var(--color-white);
 }
 
 .benefits__desc-subtitle {

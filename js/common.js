@@ -1,35 +1,46 @@
 // Скролл наверх при загрузке
 if ("scrollRestoration" in history) {
-  history.scrollRestoration = "manual";
+  history.scrollRestoration = "manual"; //Сбрасываем историю
 }
 
 window.addEventListener("load", () => {
-  // Если в URL есть якорь — НЕ сбрасываем, а скроллим к нему
-  if (window.location.hash) {
-    const target = document.querySelector(window.location.hash);
-    console.log(target);
-    if (target) {
-      setTimeout(() => {
-        if (typeof lenis !== "undefined") {
-          lenis.scrollTo(target, { duration: 1.2 });
-        } else {
-          target.scrollIntoView({ behavior: "smooth" });
-        }
-        if (typeof ScrollTrigger !== "undefined") {
-          ScrollTrigger.refresh();
-        }
-      }, 100);
-    }
-    return; // ← выходим, не сбрасываем в начало
-  }
-
-  // Обычный случай: просто зашли на главную
   setTimeout(() => {
-    window.scrollTo({ top: 0, behavior: "instant" });
+    window.scrollTo({ top: 0, behavior: "instant" }); //Скроллим вверх
     if (typeof ScrollTrigger !== "undefined") {
-      ScrollTrigger.refresh();
+      ScrollTrigger.refresh(); //Пересчитываем заного все анимации
     }
   }, 100);
+
+  // Обновление ScrollTrigger при изменении размера окна
+  let resizeTimer;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+
+    resizeTimer = setTimeout(() => {
+      if (typeof ScrollTrigger === "undefined") return;
+
+      const currentScroll = window.scrollY;
+
+      if (typeof lenis !== "undefined") {
+        lenis.stop();
+      }
+
+      // Пересоздаём ОБА пин-блока
+      destroyCareerTrigger();
+      destroyFormTimeline();
+
+      initCareerTrigger();
+      initFormTimeline();
+
+      ScrollTrigger.refresh();
+
+      window.scrollTo(0, currentScroll);
+
+      if (typeof lenis !== "undefined") {
+        lenis.start();
+      }
+    }, 250);
+  });
 });
 
 // Initialize Lenis
