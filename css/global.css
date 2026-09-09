@@ -403,3 +403,190 @@ li {
     transform: translateY(0);
   }
 }
+
+/*Adaptive*/
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 10px;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-white);
+  border-radius: 2px;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+/* бургер → крестик */
+.burger.is-active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.burger.is-active span:nth-child(2) {
+  opacity: 0;
+}
+.burger.is-active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: var(--background-color);
+  padding: 90px 20px 40px;
+  transform: translateY(-100%);
+  visibility: hidden;
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0.4s;
+}
+
+.mobile-menu.is-open {
+  transform: translateY(0); /* выезжает сверху */
+  visibility: visible;
+  height: 100vh;
+}
+
+.mobile-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mobile-menu__link {
+  color: var(--color-white);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+/* ссылки выезжают каскадом (красивый штрих) */
+.mobile-menu__list li {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.mobile-menu.is-open .mobile-menu__list li {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-menu.is-open .mobile-menu__list li:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.mobile-menu.is-open .mobile-menu__list li:nth-child(2) {
+  transition-delay: 0.15s;
+}
+.mobile-menu.is-open .mobile-menu__list li:nth-child(3) {
+  transition-delay: 0.2s;
+}
+.mobile-menu.is-open .mobile-menu__list li:nth-child(4) {
+  transition-delay: 0.25s;
+}
+.mobile-menu.is-open .mobile-menu__list li:nth-child(5) {
+  transition-delay: 0.3s;
+}
+
+@media (max-width: 1200px) {
+  .header__title h1 {
+    font-size: 64px;
+    line-height: 72px;
+  }
+}
+
+@media (max-width: 992px) {
+  .header__top {
+    gap: 20px;
+    padding: 10px 16px;
+  }
+
+  .menu__list {
+    gap: 14px;
+  }
+
+  .header__title h1 {
+    font-size: 52px;
+    line-height: 60px;
+    padding-top: 260px;
+  }
+
+  .footer__wrapper {
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__wrapper-top {
+    margin-top: 0;
+  }
+
+  .menu__list {
+    display: none;
+  }
+
+  .burger {
+    position: relative;
+    z-index: 9999;
+    display: flex;
+  }
+
+  .header__top {
+    display: none;
+  }
+
+  .header__title h1 {
+    font-size: 40px;
+    line-height: 48px;
+    padding-top: 200px;
+  }
+
+  .header__title::after {
+    bottom: -40px;
+  }
+
+  .footer__logo img {
+    width: 160px;
+  }
+  .career__hire-img {
+    display: none;
+  }
+
+  .career {
+    padding: 100px 0 0 0 !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .header__title h1 {
+    font-size: 32px;
+    line-height: 40px;
+    padding-top: 160px;
+  }
+
+  .about__wrapper {
+    gap: 40px !important;
+  }
+
+  .footer__wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+}

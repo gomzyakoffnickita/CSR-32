@@ -81,7 +81,6 @@ initCareerTrigger();
 
 // Скролл Формы
 const formSection = document.querySelector(".form");
-
 let formTimeline = null;
 
 function initFormTimeline() {
@@ -93,11 +92,12 @@ function initFormTimeline() {
 
   if (!formHeading || !formRight || !formContact) return;
 
-  // Очищаем старые трансформы перед пересозданием
+  // Определяем, мобилка или десктоп
+  const isMobile = window.innerWidth <= 768;
+
   gsap.set([formHeading, formRight, formContact], {
     clearProps: "transform",
   });
-
   gsap.set(formContact, { y: 600 });
 
   formTimeline = gsap.timeline({
@@ -105,14 +105,19 @@ function initFormTimeline() {
       id: "formPin",
       trigger: formSection,
       start: "top top",
-      end: () => "+=2000",
+      end: () => (isMobile ? "+=500" : "+=2000"), // ← адаптивная длина
       pin: true,
       scrub: true,
     },
   });
 
-  formTimeline.to(formHeading, { x: -100 }, 0);
-  formTimeline.to(formRight, { x: 100 }, "<");
+  // На десктопе добавляем разъезд заголовков
+  if (!isMobile) {
+    formTimeline.to(formHeading, { x: -100 }, 0);
+    formTimeline.to(formRight, { x: 100 }, "<");
+  }
+
+  // На всех экранах форма поднимается
   formTimeline.to(formContact, { y: -300 }, 0.5);
 }
 
