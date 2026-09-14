@@ -2,7 +2,6 @@
 
 .header__top-services {
   margin-top: 20px;
-  left: max(10px, calc((100% - 1300px) / 2 + 10px));
 }
 
 .logo img {
@@ -85,7 +84,7 @@
   display: grid;
   grid-template-columns: 1fr 420px;
   gap: 60px;
-  align-items: start; 
+  align-items: start;
 }
 
 .description__right {

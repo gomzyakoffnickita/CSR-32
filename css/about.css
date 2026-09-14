@@ -19,7 +19,6 @@
 
 .header__top-about {
   margin-top: 20px;
-  left: max(10px, calc((100% - 1300px) / 2 + 10px));
 }
 
 .header__hero-about h1 {

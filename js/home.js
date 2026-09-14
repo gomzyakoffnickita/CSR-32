@@ -1,15 +1,3 @@
-//Запрещаем скролл хедер блока на 1 сек
-if (typeof lenis !== "undefined") {
-  lenis.stop(); //Ленис перестаёт работать
-}
-document.body.style.overflow = "hidden"; // Изначально блокируем скролл header
-setTimeout(() => {
-  document.body.style.overflow = "";
-  if (typeof lenis !== "undefined") {
-    lenis.start();
-  }
-}, 1000); //Разрешаем скроллить через 1 сек
-
 //Скролл хедер меню
 let lastedScroll = window.scrollY;
 const headerTop = document.querySelector(".header__top");
@@ -76,9 +64,6 @@ function destroyCareerTrigger() {
   }
 }
 
-// Запускаем при загрузке
-initCareerTrigger();
-
 // Скролл Формы
 const formSection = document.querySelector(".form");
 let formTimeline = null;
@@ -131,9 +116,46 @@ function destroyFormTimeline() {
   }
 }
 
-initFormTimeline();
-
 //Новости
-document.querySelector(".news__all").addEventListener("click", () => {
+document.querySelector(".news__all").addEventListener("click", (e) => {
+  e.preventDefault();
   alert("Раздел находится в разработке");
+});
+
+// Accordeon
+const faqItems = document.querySelectorAll(".faq__item");
+
+faqItems.forEach((item) => {
+  const question = item.querySelector(".faq__question");
+  const answer = item.querySelector(".faq__answer");
+  const answerInner = item.querySelector(".faq__answer-inner");
+
+  question.addEventListener("click", () => {
+    const isActive = item.classList.contains("is-active");
+
+    // Закрываем все остальные пункты (режим "один открыт")
+    faqItems.forEach((otherItem) => {
+      if (otherItem !== item && otherItem.classList.contains("is-active")) {
+        otherItem.classList.remove("is-active");
+        const otherAnswer = otherItem.querySelector(".faq__answer");
+        const otherQuestion = otherItem.querySelector(".faq__question");
+        otherAnswer.style.maxHeight = null;
+        otherQuestion.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    // Переключаем текущий пункт
+    if (isActive) {
+      // Закрываем
+      item.classList.remove("is-active");
+      answer.style.maxHeight = null;
+      question.setAttribute("aria-expanded", "false");
+    } else {
+      // Открываем
+      item.classList.add("is-active");
+      // max-height = реальная высота контента (нужна для плавной анимации)
+      answer.style.maxHeight = answerInner.offsetHeight + "px";
+      question.setAttribute("aria-expanded", "true");
+    }
+  });
 });

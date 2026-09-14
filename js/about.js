@@ -1,9 +1,3 @@
-//Скролл хедер блока
-document.body.style.overflow = "hidden"; // Изначально блокируем скролл header
-setTimeout(() => {
-  document.body.style.overflow = "";
-}, 1000); //Разрешаем скроллить через 1 сек
-
 let lastedScroll = window.scrollY;
 const headerTop = document.querySelector(".header__top");
 

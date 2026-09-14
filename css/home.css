@@ -590,6 +590,141 @@
   background-color: #a8431a;
 }
 
+/*Accordeon*/
+
+.faq {
+  background-color: var(--color-black);
+  padding: 120px 0;
+  color: var(--color-white);
+}
+
+.faq__wrapper {
+  display: flex;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+/* Левая часть: заголовок */
+.faq__left {
+  flex: 0 0 521px;
+  position: sticky;
+  top: 120px;
+}
+
+.faq__title {
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 73px;
+  margin-bottom: 24px;
+}
+
+.faq__subtitle {
+  line-height: 26px;
+  opacity: 0.82;
+  margin-bottom: 32px;
+}
+
+/* Правая часть: аккордеон */
+.faq__right {
+  flex: 1;
+}
+
+.faq__accordion {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Один пункт аккордеона */
+.faq__item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.faq__item:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Кнопка-вопрос */
+.faq__question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 28px 0;
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.faq__question:hover {
+  color: #c2551e;
+}
+
+.faq__question-text {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+/* Иконка + / - */
+.faq__icon {
+  position: relative;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+/* Горизонтальная палочка */
+.faq__icon::before,
+.faq__icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  border-radius: 2px;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Горизонтальная палочка (всегда видна) */
+.faq__icon::before {
+  transform: translateY(-50%);
+}
+
+/* Вертикальная палочка (делает +) */
+.faq__icon::after {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+/* Активное состояние: вертикальная палочка поворачивается → получается - */
+.faq__item.is-active .faq__icon::after {
+  transform: translateY(-50%) rotate(0deg);
+}
+
+/* Ответ (скрыт по умолчанию) */
+.faq__answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.faq__answer-inner {
+  padding: 0 0 28px 0;
+}
+
+.faq__answer-inner p {
+  line-height: 26px;
+  opacity: 0.82;
+  max-width: 700px;
+}
+
+
 /*Adaptive*/
 
 @media (max-width: 1200px) {
@@ -630,6 +765,25 @@
 
   .form__title {
     gap: 40px;
+  }
+  .faq {
+    padding: 80px 0;
+  }
+
+  .faq__wrapper {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .faq__left {
+    flex: none;
+    width: 100%;
+    position: static;
+  }
+
+  .faq__title {
+    font-size: 44px;
+    line-height: 54px;
   }
 }
 
@@ -732,6 +886,28 @@
 
   .career__card {
     align-items: center;
+  }
+  .faq {
+    padding: 60px 0;
+  }
+
+  .faq__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .faq__question {
+    padding: 22px 0;
+  }
+
+  .faq__question-text {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .faq__icon {
+    width: 20px;
+    height: 20px;
   }
 }
 
