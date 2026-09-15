@@ -66,15 +66,28 @@ window.addEventListener("resize", () => {
   }, 250);
 });
 
-// 5. Lenis
-new Lenis({
-  autoRaf: true,
-  autoToggle: true,
-  anchors: true,
-  allowNestedScroll: true,
-  naiveDimensions: true,
-  stopInertiaOnNavigate: true,
-});
+// 5. Lenis + ScrollTrigger интеграция
+const lenis = new Lenis({ autoRaf: false }); // ← ВАЖНО: сохраняем в переменную
+
+if (typeof ScrollTrigger !== "undefined") {
+  lenis.on("scroll", ScrollTrigger.update);
+}
+
+// Запуск цикла анимации
+if (typeof gsap !== "undefined" && gsap.ticker) {
+  // Если есть GSAP — используем его цикл
+  gsap.ticker.add((time) => {
+    lenis.raf(time * 1000);
+  });
+  gsap.ticker.lagSmoothing(0);
+} else {
+  // Если нет — свой цикл через requestAnimationFrame
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+}
 
 // 6. Клик по якорям на самой странице
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
