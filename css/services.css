@@ -43,6 +43,18 @@
   font-weight: 400;
 }
 
+.header__subtitle::after {
+  content: "";
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%); /* центрируем линию */
+  width: 1280px;
+  height: 1px;
+  background-color: var(--color-black);
+  opacity: 0.5;
+}
+
 /*Carousel*/
 
 .service__gallery {
@@ -55,7 +67,6 @@
   gap: 16px;
   padding: 0 10px;
   scrollbar-width: none;
-  scroll-snap-type: x mandatory;
 }
 
 .gallery__slide {

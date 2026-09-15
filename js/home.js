@@ -116,12 +116,6 @@ function destroyFormTimeline() {
   }
 }
 
-//Новости
-document.querySelector(".news__all").addEventListener("click", (e) => {
-  e.preventDefault();
-  alert("Раздел находится в разработке");
-});
-
 // Accordeon
 const faqItems = document.querySelectorAll(".faq__item");
 
