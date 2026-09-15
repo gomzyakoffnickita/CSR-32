@@ -87,9 +87,14 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     e.preventDefault();
     const targetTop = window.scrollY + target.getBoundingClientRect().top;
 
-    lenis.stop();
-    lenis.start();
-    lenis.scrollTo(targetTop, { duration: 1.2 });
+    if (typeof lenis !== "undefined" && typeof lenis.scrollTo === "function") {
+      lenis.stop();
+      lenis.start();
+      lenis.scrollTo(targetTop, { duration: 1.2 });
+    } else {
+      // Fallback: нативный плавный скролл
+      window.scrollTo({ top: targetTop, behavior: "smooth" });
+    }
 
     history.pushState(null, "", href);
   });
