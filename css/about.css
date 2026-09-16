@@ -72,14 +72,14 @@
 .about__team-desc-right {
   line-height: 26px;
   opacity: 0.82;
-  flex-basis: 428px;
+  flex: 0 1 428px;
 }
 
 .about__team-wrapper::before {
   content: "";
   position: absolute;
   bottom: -50px;
-  width: 1300px;
+  width: 100%;
   height: 1px;
   opacity: 0.2;
   background-color: var(--color-black);
@@ -246,7 +246,7 @@
   position: absolute;
   bottom: -50px;
   left: 0;
-  width: 1300px;
+  width: 100%;
   height: 1px;
   opacity: 0.5;
   background-color: #fff;
@@ -320,5 +320,319 @@
   100% {
     transform: scale(1.6);
     opacity: 0;
+  }
+}
+
+/* ========================================
+   АДАПТИВ
+   ======================================== */
+
+/* Планшеты и небольшие десктопы */
+@media (max-width: 1200px) {
+  .header__hero-about h1 {
+    font-size: 64px;
+    line-height: 76px;
+  }
+
+  .map__title {
+    font-size: 48px;
+    line-height: 58px;
+  }
+
+  .management__title {
+    font-size: 48px;
+    line-height: 58px;
+  }
+
+  .management__subtitle {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .executives-name {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  /* ===== Анимация команды: горизонтальный скролл ===== */
+  .team__animation-wrapper {
+    height: auto;
+    min-height: 380px;
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px 0 20px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    perspective: none;
+  }
+
+  .team__animation-wrapper img {
+    position: static;
+    margin: 0;
+    width: 260px;
+    height: 340px;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    transform: none !important; /* отключаем 3D-трансформации */
+  }
+
+  /* Убираем разные z-index для стопок */
+  .team__animation-wrapper img:nth-child(n) {
+    z-index: auto;
+  }
+
+  .map {
+    margin-top: 50px;
+  }
+}
+
+/* Планшеты */
+@media (max-width: 992px) {
+  /* ===== Header ===== */
+  .header__hero-about {
+    padding-bottom: 60px;
+    justify-content: space-between;
+  }
+
+  .header__hero-about h1 {
+    font-size: 48px;
+    line-height: 58px;
+    margin-top: 200px;
+    text-align: center;
+  }
+
+  /* Блок команды: вертикальная компоновка */
+  .about__team-wrapper {
+    position: static;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 0;
+    margin-top: 40px;
+  }
+
+  .about__team-desc-right {
+    flex: none;
+    max-width: 500px;
+  }
+
+  /* ===== Анимация команды: уменьшаем стопку ===== */
+  .team__animation-wrapper {
+    height: 60vh;
+  }
+
+  .team__animation-wrapper img {
+    width: 320px;
+    height: 400px;
+  }
+
+  /* Карта: меньше отступ сверху (высота анимации уменьшилась) */
+  .map {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .map__title {
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 60px;
+  }
+
+  /* ===== Руководство: 2 в ряд ===== */
+  .management__executives-wrapper {
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 60px;
+  }
+
+  .wrapper__personal {
+    flex: 0 0 calc(50% - 10px);
+  }
+
+  .management__executives-wrapper img {
+    height: 420px;
+  }
+
+  /* ===== Начальники: 2 в ряд ===== */
+  .management__team-wrapper {
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 60px;
+  }
+
+  .management__team-wrapper .wrapper__personal {
+    flex: 0 0 calc(50% - 8px);
+  }
+}
+
+/* Мобильные устройства */
+@media (max-width: 768px) {
+  .header__hero-about {
+    padding-bottom: 40px;
+  }
+
+  .header__hero-about h1 {
+    font-size: 40px;
+    line-height: 48px;
+    margin-top: 100px;
+  }
+
+  /* ===== Анимация команды: одна колонка ===== */
+  .team__animation-wrapper {
+    height: 350px;
+    perspective: 800px;
+  }
+
+  .team__animation-wrapper img {
+    width: 240px;
+    height: 320px;
+  }
+
+  /* Карта */
+  .map {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .map__wrapper {
+    width: 100%;
+  }
+
+  .map__wrapper img {
+    width: 100%;
+  }
+
+  .map__pin {
+    width: 10px;
+    height: 10px;
+  }
+
+  .map__pin::after {
+    inset: -5px;
+  }
+
+  .map__title {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 40px;
+  }
+
+  /* ===== Секция управления ===== */
+  .management {
+    margin-top: 60px;
+  }
+
+  .management__hero {
+    padding: 40px 0;
+  }
+
+  .management__title {
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 60px;
+    max-width: 100%;
+  }
+
+  .management__subtitle {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .management__subtitle::after {
+    bottom: -30px;
+  }
+
+  .management__executives-wrapper {
+    margin-top: 50px;
+  }
+
+  .wrapper__personal {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .management__executives-wrapper img {
+    height: 400px;
+  }
+
+  /* Начальники: 2 в ряд на мобилке (для компактности) */
+  .management__team-wrapper {
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 50px;
+  }
+
+  .management__team-wrapper .wrapper__personal {
+    flex: 0 0 calc(50% - 8px);
+  }
+}
+
+/* Маленькие мобильные (iPhone SE и подобные) */
+@media (max-width: 576px) {
+  .header__hero-about h1 {
+    font-size: 32px;
+    line-height: 40px;
+    margin-top: 80px;
+  }
+
+  .about__team-photo img {
+    width: 70px;
+  }
+
+  .about__team-preview {
+    padding: 6px 10px;
+    gap: 8px;
+  }
+
+  /* Карта */
+  .map {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .map__title {
+    font-size: 26px;
+    line-height: 34px;
+    margin-bottom: 30px;
+  }
+
+  /* Тултипы на карте всегда видны */
+  .map__pin::before {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+
+  /* Управление */
+  .management__title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .management__executives-wrapper img {
+    height: 360px;
+  }
+
+  .executives-name {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  /* Начальники: 1 в ряд */
+  .management__team-wrapper .wrapper__personal {
+    flex: none;
+    width: 100%;
+  }
+
+  .management__team img {
+    height: 340px;
+    object-fit: cover;
+  }
+  .wrapper__personal {
+    justify-content: flex-start;
   }
 }

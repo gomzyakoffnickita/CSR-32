@@ -211,6 +211,10 @@ li {
   overflow: hidden;
 }
 
+.header__line:nth-child(3) {
+  font-weight: 700;
+}
+
 .header__line-inner {
   display: block;
   animation: line-up 1s cubic-bezier(0.22, 1, 0.36, 1) both;
@@ -431,6 +435,29 @@ li {
     transform 0.3s ease,
     opacity 0.3s ease;
 }
+
+.burger__other span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-black);
+  border-radius: 2px;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.burger__other.is-active span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-white);
+  border-radius: 2px;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
 
 /* бургер → крестик */
 .burger.is-active span:nth-child(1) {
