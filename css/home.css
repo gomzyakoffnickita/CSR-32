@@ -724,7 +724,6 @@
   max-width: 700px;
 }
 
-
 /*Adaptive*/
 
 @media (max-width: 1200px) {
@@ -930,5 +929,13 @@
   .services__span {
     max-width: 60%;
     font-size: 12px;
+  }
+
+  .career__hire-title h2 {
+    animation: none;
+  }
+  .news__heading {
+    flex-wrap: wrap;
+    gap: 20px;
   }
 }

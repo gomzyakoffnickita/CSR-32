@@ -10,6 +10,7 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 *,
@@ -458,7 +459,6 @@ li {
     opacity 0.3s ease;
 }
 
-
 /* бургер → крестик */
 .burger.is-active span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
@@ -608,7 +608,7 @@ li {
   .header__title h1 {
     font-size: 32px;
     line-height: 40px;
-    padding-top: 160px;
+    padding-top: 550px;
   }
 
   .about__wrapper {
