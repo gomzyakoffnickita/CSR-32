@@ -63,7 +63,7 @@
   margin: 150px 0;
 }
 
-.news__grid {
+.news-page__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
