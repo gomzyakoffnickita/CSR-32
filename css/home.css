@@ -590,6 +590,138 @@
   background-color: #a8431a;
 }
 
+.form__state {
+  display: none;
+}
+
+.form__state--active {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  animation: fade-in 0.4s ease;
+}
+
+/* Иконка успеха */
+.form__success-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkmark {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: #c2551e;
+  stroke-miterlimit: 10;
+  box-shadow: inset 0px 0px 0px #c2551e;
+  animation:
+    checkmark-fill 0.4s ease-in-out 0.4s forwards,
+    checkmark-scale 0.3s ease-in-out 0.9s both;
+}
+
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #c2551e;
+  fill: none;
+  animation: checkmark-stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: checkmark-stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+/* Круг рисуется первым */
+@keyframes checkmark-stroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Круг заполняется цветом */
+@keyframes checkmark-fill {
+  to {
+    box-shadow: inset 0px 0px 0px 80px rgba(194, 85, 30, 0.1);
+  }
+}
+
+/* Лёгкий bounce в конце */
+@keyframes checkmark-scale {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.form__success {
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  background-color: #fff;
+  border: 1px solid rgba(27, 25, 23, 0.15);
+  border-radius: 2px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form__success-title {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 36px;
+  margin-bottom: 8px;
+}
+
+.form__success-text {
+  line-height: 26px;
+  opacity: 0.82;
+  margin-bottom: 20px;
+}
+
+.form__success-reset {
+  padding: 12px 24px;
+  background-color: transparent;
+  color: #c2551e;
+  border: 1px solid #c2551e;
+  border-radius: 2px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.form__success-reset:hover {
+  background-color: #c2551e;
+  color: #fff;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /*Accordeon*/
 
 .faq {
