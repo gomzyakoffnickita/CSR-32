@@ -850,7 +850,15 @@
         </div>
       </div>
     </footer>
-    <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js"></script>
+    <script>
+      // Загружаем Lenis только на десктопе
+      if (window.innerWidth > 768 && !("ontouchstart" in window)) {
+        const script = document.createElement("script");
+        script.src = "https://unpkg.com/lenis@1.3.26/dist/lenis.min.js";
+        script.async = true;
+        document.head.appendChild(script);
+      }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
     <script src="js/common.js" defer></script>

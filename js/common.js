@@ -13,13 +13,6 @@ if ("scrollRestoration" in history) {
   history.scrollRestoration = "manual";
 }
 
-// Отключить пересчёт триггеров при изменении высоты адресной строки
-if (typeof ScrollTrigger !== "undefined") {
-  ScrollTrigger.config({
-    ignoreMobileResize: true,
-  });
-}
-
 // 3. При загрузке — init триггеров + скролл к якорю
 window.addEventListener("load", () => {
   setTimeout(() => {
