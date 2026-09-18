@@ -1,13 +1,23 @@
 async function loadNews() {
   try {
-    const response = await fetch("news.json");
+    // Пытаемся загрузить с двух возможных путей
+    const paths = [
+      "/news.json", // корень домена (локально, реальный хостинг)
+      "../news.json", // если мы в подпапке
+      "./news.json", // если мы в корне
+    ];
 
-    if (!response.ok) {
-      throw new Error(`Ошибка загрузки: ${response.status}`);
+    let response;
+    for (const path of paths) {
+      response = await fetch(path);
+      if (response.ok) break;
     }
-    const news = await response.json();
-    console.log("Новости загружены", news);
-    return news;
+
+    if (!response || !response.ok) {
+      throw new Error(`Файл news.json не найден`);
+    }
+
+    return await response.json();
   } catch (error) {
     console.error("Ошибка:", error);
   }
