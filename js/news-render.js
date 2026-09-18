@@ -13,8 +13,6 @@ async function loadNews() {
   }
 }
 
-loadNews();
-
 //Рендер одной карточки
 function renderNewsCard(item) {
   const card = `
@@ -46,7 +44,7 @@ function renderNewsList(news, containerSelector, limit = null) {
     return;
   }
 
-  const newsToShow = limit ? news.slice(0, limit) : news;
+  const newsToShow = limit ? news.slice(0, limit) : news; //Разделяем массив (показываем на главной 3 объекта)
 
   const html = newsToShow.map((item) => renderNewsCard(item)).join("");
 

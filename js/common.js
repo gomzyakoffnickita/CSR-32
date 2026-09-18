@@ -1,3 +1,5 @@
+const isMobile = window.innerWidth <= 768 || "ontouchstart" in window;
+
 // 1. ПЕРЕХВАТ ЯКОРЯ (самая первая строка файла!)
 const savedHash = window.location.hash; //Берём хэш из URL
 if (savedHash) {
@@ -41,52 +43,56 @@ window.addEventListener("load", () => {
 });
 
 // 4. Ресайз
-let resizeTimer;
-window.addEventListener("resize", () => {
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(() => {
-    if (typeof ScrollTrigger === "undefined") return;
-    const currentScroll = window.scrollY;
+if (!isMobile) {
+  let resizeTimer;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      if (typeof ScrollTrigger === "undefined") return;
+      const currentScroll = window.scrollY;
 
-    if (typeof lenis !== "undefined") lenis.stop();
+      if (typeof lenis !== "undefined") lenis.stop();
 
-    if (typeof destroyCareerTrigger === "function") {
-      destroyCareerTrigger();
-      initCareerTrigger();
-    }
-    if (typeof destroyFormTimeline === "function") {
-      destroyFormTimeline();
-      initFormTimeline();
-    }
+      if (typeof destroyCareerTrigger === "function") {
+        destroyCareerTrigger();
+        initCareerTrigger();
+      }
+      if (typeof destroyFormTimeline === "function") {
+        destroyFormTimeline();
+        initFormTimeline();
+      }
 
-    ScrollTrigger.refresh();
-    window.scrollTo(0, currentScroll);
+      ScrollTrigger.refresh();
+      window.scrollTo(0, currentScroll);
 
-    if (typeof lenis !== "undefined") lenis.start();
-  }, 250);
-});
-
-// 5. Lenis + ScrollTrigger интеграция
-const lenis = new Lenis({ autoRaf: false }); // ← ВАЖНО: сохраняем в переменную
-
-if (typeof ScrollTrigger !== "undefined") {
-  lenis.on("scroll", ScrollTrigger.update);
+      if (typeof lenis !== "undefined") lenis.start();
+    }, 250);
+  });
 }
 
-// Запуск цикла анимации
-if (typeof gsap !== "undefined" && gsap.ticker) {
-  // Если есть GSAP — используем его цикл
-  gsap.ticker.add((time) => {
-    lenis.raf(time * 1000);
-  });
-  gsap.ticker.lagSmoothing(0);
-} else {
-  // Если нет — свой цикл через requestAnimationFrame
-  function raf(time) {
-    lenis.raf(time);
+// 5. Lenis + ScrollTrigger интеграция
+
+let lenis;
+if (!isMobile && typeof Lenis !== "undefined") {
+  lenis = new Lenis({ autoRaf: false });
+
+  if (typeof ScrollTrigger !== "undefined") {
+    lenis.on("scroll", ScrollTrigger.update);
+  }
+
+  // Запуск цикла анимации — ТОЛЬКО внутри проверки
+  if (typeof gsap !== "undefined" && gsap.ticker) {
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+    gsap.ticker.lagSmoothing(0);
+  } else {
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
     requestAnimationFrame(raf);
   }
-  requestAnimationFrame(raf);
 }
 
 // 6. Клик по якорям на самой странице
@@ -120,6 +126,10 @@ if (burger && mobileMenu) {
   burger.addEventListener("click", () => {
     const isOpen = mobileMenu.classList.toggle("is-open");
     burger.classList.toggle("is-active");
-    isOpen ? lenis.stop() : lenis.start();
+
+    // Защита: lenis может быть undefined на мобильном
+    if (typeof lenis !== "undefined") {
+      isOpen ? lenis.stop() : lenis.start();
+    }
   });
 }
