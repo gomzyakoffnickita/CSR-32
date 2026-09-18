@@ -17,7 +17,7 @@ async function loadNews() {
 function renderNewsCard(item) {
   const card = `
    <article class="news__card">
-              <a href="pages/news/${item.slug}.html" class="news__card-link">
+              <a href="/pages/news/${item.slug}.html" class="news__card-link">
                 <div class="news__card-img">
                   <img src="/${item.img}" alt="${item.title}" loading="lazy" />
                   <span class="news__card-date">${item.date}</span>
@@ -33,7 +33,6 @@ function renderNewsCard(item) {
               </a>
             </article>
   `;
-
   return card;
 }
 
