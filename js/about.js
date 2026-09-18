@@ -71,3 +71,49 @@ ScrollTrigger.matchMedia({
     gsap.set(images, { clearProps: "all" });
   },
 });
+
+// Анимация счётчика цифр в блоке "Цифры и факты"
+function animateCounter(el) {
+  const target = parseInt(el.dataset.count, 10);
+  const duration = 1500; // длительность анимации в мс
+  const startTime = performance.now();
+
+  function update(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+
+    // Замедление к концу (эффект естественности)
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const current = Math.floor(eased * target);
+
+    el.textContent = current;
+
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    } else {
+      el.textContent = target;
+    }
+  }
+
+  requestAnimationFrame(update);
+}
+
+// Запускаем анимацию, когда секция попадает в зону видимости
+const factsSection = document.querySelector(".facts__grid");
+
+if (factsSection) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const numbers = factsSection.querySelectorAll(".facts__number");
+          numbers.forEach(animateCounter);
+          observer.unobserve(factsSection); // запускаем только один раз
+        }
+      });
+    },
+    { threshold: 0.3 }, // когда 30% секции видно
+  );
+
+  observer.observe(factsSection);
+}
