@@ -1,6 +1,6 @@
 async function loadNews() {
   try {
-    const response = await fetch("/news.json");
+    const response = await fetch("news.json");
 
     if (!response.ok) {
       throw new Error(`Ошибка загрузки: ${response.status}`);
