@@ -19,6 +19,14 @@ html {
   box-sizing: inherit;
 }
 
+h1,
+h2 {
+  font-family: "Russo One", sans-serif;
+  font-weight: 400; /* у Russo One только одно начертание */
+  text-transform: uppercase; /* плакатный стиль — все заглавные */
+  letter-spacing: 0.02em; /* лёгкая разрядка для крупных кеглей */
+}
+
 body {
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
