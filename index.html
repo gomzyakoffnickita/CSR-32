@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,7 +16,32 @@
       href="https://fonts.googleapis.com/css2?family=Russo+One&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
       rel="stylesheet"
     />
-    <title>ЦСР 32</title>
+    <title>Центрспецремонт — ремонт промышленного оборудования</title>
+    <meta
+      name="description"
+      content="Центрспецремонт — ремонт промышленного оборудования с 2004 года. Вращающиеся печи, мельницы, футеровка, сварка. Работаем по всей России."
+    />
+    <meta name="author" content="ООО Центрспецремонт" />
+    <meta name="robots" content="index, follow" />
+    <!-- Open Graph для соцсетей -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Центрспецремонт — ремонт промышленного оборудования"
+    />
+    <meta
+      property="og:description"
+      content="Ремонт вращающихся печей, мельниц, футеровка. Работаем по всей России с 2004 года."
+    />
+    <meta property="og:image" content="https://csr-32.ru/images/og-image.jpg" />
+    <meta property="og:url" content="https://csr-32.ru/" />
+    <meta property="og:locale" content="ru_RU" />
+    <!-- Канонический URL (защита от дублей) -->
+    <link rel="canonical" href="https://csr-32.ru/" />
+    <!-- Фавиконка -->
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+    <meta name="theme-color" content="#c2551e" />
   </head>
   <body>
     <div class="header__top">
@@ -45,10 +70,15 @@
           </li>
           <li class="menu__item">
             <a
-              href="#news"
+              href="#social"
               class="menu__link hover-btn"
-              data-text="Новости / события"
-              ><span>Новости / события</span></a
+              data-text="Социальные проекты"
+              ><span>Социальные проекты</span></a
+            >
+          </li>
+          <li class="menu__item">
+            <a href="#news" class="menu__link hover-btn" data-text="Новости"
+              ><span>Новости</span></a
             >
           </li>
           <li class="menu__item">
@@ -94,6 +124,11 @@
                   <a href="#services" class="mobile-menu__link">Услуги</a>
                 </li>
                 <li><a href="#career" class="mobile-menu__link">Карьера</a></li>
+                <li>
+                  <a href="#social" class="mobile-menu__link"
+                    >Социальные проекты</a
+                  >
+                </li>
                 <li><a href="#news" class="mobile-menu__link">Новости</a></li>
                 <li>
                   <a href="#footer" class="mobile-menu__link">Контакты</a>
@@ -115,6 +150,12 @@
                   ><strong><em>РЕЗУЛЬТАТ</em></strong></span
                 >
               </span>
+            </h1>
+            <h1>
+              <span class="visually-hidden"
+                >Ремонт промышленного оборудования</span
+              >
+              <span class="header__line">...</span>
             </h1>
           </div>
         </div>
@@ -379,6 +420,63 @@
                 </p>
               </div>
 
+              <div class="career__vacancies">
+                <div class="career__vacancies-head">
+                  <span class="career__vacancies-badge"
+                    >Сейчас открыт набор</span
+                  >
+                  <h3 class="career__vacancies-title">
+                    Кого мы ищем в команду
+                  </h3>
+                </div>
+
+                <ul class="career__vacancies-list">
+                  <li class="career__vacancy">
+                    <span class="career__vacancy-num">/01</span>
+                    <h4 class="career__vacancy-role">Сварщики</h4>
+                    <p class="career__vacancy-desc">
+                      Ручная и дуговая сварка металлоконструкций. Опыт от 1
+                      года.
+                    </p>
+                    <span class="career__vacancy-salary">от 140 000 ₽</span>
+                  </li>
+
+                  <li class="career__vacancy">
+                    <span class="career__vacancy-num">/02</span>
+                    <h4 class="career__vacancy-role">Футеровщики</h4>
+                    <p class="career__vacancy-desc">
+                      Футеровка вращающихся печей. Обучение на месте, наставник.
+                    </p>
+                    <span class="career__vacancy-salary">от 130 000 ₽</span>
+                  </li>
+
+                  <li class="career__vacancy">
+                    <span class="career__vacancy-num">/03</span>
+                    <h4 class="career__vacancy-role">Слесари-ремонтники</h4>
+                    <p class="career__vacancy-desc">
+                      4–6 разряд. Ремонт промышленного оборудования.
+                    </p>
+                    <span class="career__vacancy-salary">от 120 000 ₽</span>
+                  </li>
+                </ul>
+
+                <div class="career__vacancies-footer">
+                  <a
+                    href="pages/news/nabor_sotrudnikov.html"
+                    class="career__vacancies-link"
+                  >
+                    Подробнее о наборе →
+                  </a>
+                  <a
+                    href="#form"
+                    class="career__vacancies-cta hover-btn"
+                    data-text="Оставить заявку"
+                  >
+                    <span>Оставить заявку</span>
+                  </a>
+                </div>
+              </div>
+
               <div class="career__hire-steps">
                 <ol class="career__steps">
                   <li class="steps__item">
@@ -481,7 +579,7 @@
           </div>
         </div>
       </section>
-      <section class="form">
+      <section class="form" id="form">
         <div class="container">
           <div class="form__wrapper">
             <div class="form__title">
@@ -570,6 +668,22 @@
               </button>
             </div>
           </form>
+        </div>
+      </section>
+      <section class="social" id="social">
+        <div class="container">
+          <div class="social__heading">
+            <h2 class="social__title">
+              Наши <span class="social__accent">социальные</span> проекты
+            </h2>
+            <p class="social__subtitle">
+              Память, поддержка и культура — то, что объединяет нас за пределами
+              производства
+            </p>
+          </div>
+
+          <!-- Карусель: карточки рендерятся из social.json -->
+          <div class="social__track"></div>
         </div>
       </section>
       <section class="news" id="news">
@@ -766,6 +880,14 @@
             <li class="footer__nav-item">
               <a
                 class="footer__nav-link hover-btn"
+                href="#social"
+                data-text="Социальные проекты"
+                ><span>Социальные проекты</span></a
+              >
+            </li>
+            <li class="footer__nav-item">
+              <a
+                class="footer__nav-link hover-btn"
                 href="#news"
                 data-text="Новости"
                 ><span>Новости</span></a
@@ -837,5 +959,6 @@
     <script src="js/home.js" defer></script>
     <script src="js/form.js" defer></script>
     <script src="js/news-render.js" defer></script>
+    <script src="js/social-render.js" defer></script>
   </body>
 </html>

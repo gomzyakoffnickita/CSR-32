@@ -1,0 +1,390 @@
+/*Header*/
+
+.header__top-services {
+  margin-top: 20px;
+}
+
+.logo img {
+  width: 50px;
+}
+
+.header__services-desc {
+  margin-bottom: 30px;
+}
+
+.header__title-news {
+  position: relative;
+  font-size: 80px;
+  font-weight: 500;
+  line-height: 96px;
+  text-align: center;
+  margin-bottom: 50px;
+  animation: hero-rise 1s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+}
+
+.header__title-news::after {
+  content: "";
+  position: absolute;
+  bottom: -200px;
+  left: 50%;
+  transform: translateX(-50%); /* центрируем линию */
+  width: 1280px;
+  height: 1px;
+  background-color: var(--color-black);
+  opacity: 0.5;
+}
+
+.header__wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-top: 0;
+}
+
+.header__hero-news {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.header__subtitle::after {
+  content: "";
+  position: absolute;
+  bottom: -200px;
+  left: 50%;
+  transform: translateX(-50%); /* центрируем линию */
+  width: 1280px;
+  height: 1px;
+  background-color: var(--color-black);
+  opacity: 0.5;
+}
+
+/*Animation*/
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Интро */
+.polk-intro {
+  padding: 80px 0;
+}
+
+.polk-intro__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.polk-intro__lead {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.polk-intro__video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  display: block;
+}
+
+/* Цифры — тонкие линии, как в секции facts */
+.polk-stats {
+  padding: 50px 0;
+  border-top: 1px solid rgba(27, 25, 23, 0.15);
+  border-bottom: 1px solid rgba(27, 25, 23, 0.15);
+}
+
+.polk-stats__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+
+.polk-stats__num {
+  display: block;
+  font-family: "Russo One", sans-serif;
+  font-size: 56px;
+  color: #c2551e;
+}
+
+.polk-stats__label {
+  font-size: 15px;
+  opacity: 0.7;
+}
+
+/* Сетка групп */
+.polk-groups {
+  padding: 80px 0 120px;
+}
+
+.polk-groups__title {
+  font-family: "Russo One", sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.polk-groups__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.polk-group {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  color: #fff;
+  text-decoration: none;
+}
+
+.polk-group img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(60%);
+  transition:
+    transform 0.6s ease,
+    filter 0.6s ease;
+}
+
+.polk-group:hover img {
+  transform: scale(1.05);
+  filter: grayscale(0%);
+}
+
+/* Затемнение под текст */
+.polk-group::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(27, 25, 23, 0.85), transparent 60%);
+}
+
+.polk-group__info {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1;
+}
+
+.polk-group__title {
+  font-family: "Russo One", sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.polk-group__count {
+  font-size: 14px;
+  color: #c2551e;
+  font-weight: 500;
+}
+
+/* ===== СЕТКА ГЕРОЕВ ===== */
+.polk-heroes {
+  padding: 80px 0 120px;
+}
+
+.polk-heroes__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 30px;
+}
+
+.polk-heroes__title {
+  font-family: "Russo One", sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.polk-heroes__counter {
+  font-size: 15px;
+  opacity: 0.7;
+}
+
+/* Поиск */
+.polk-heroes__input {
+  width: 100%;
+  padding: 14px 20px;
+  border: 1px solid rgba(27, 25, 23, 0.2);
+  background: transparent;
+  font: inherit;
+  margin-bottom: 40px;
+  transition: border-color 0.3s ease;
+}
+
+.polk-heroes__input:focus {
+  outline: none;
+  border-color: #c2551e;
+}
+
+/* Сетка: автозаполнение под ширину экрана */
+.polk-heroes__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 20px 14px;
+}
+
+.polk-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: inherit;
+  text-decoration: none;
+  text-align: center;
+}
+
+.polk-hero img {
+  width: 100%;
+  aspect-ratio: 2 / 3; /* 100×150 пропорция */
+  object-fit: cover;
+  filter: grayscale(50%);
+  transition:
+    filter 0.4s ease,
+    transform 0.4s ease;
+}
+
+.polk-hero:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.04);
+}
+
+.polk-hero__name {
+  font-size: 12px;
+  line-height: 16px;
+  opacity: 0.85;
+  /* обрезка до 2 строк */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ===== МОДАЛКА ===== */
+.polk-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.polk-modal[hidden] {
+  display: none;
+}
+
+.polk-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(27, 25, 23, 0.85);
+}
+
+.polk-modal__content {
+  position: relative;
+  max-width: 760px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  background: #fff;
+  padding: 50px;
+}
+
+.polk-modal__close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* Тело модалки: фото слева, текст справа */
+.polk-modal__body {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.polk-modal__photo {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+}
+
+.polk-modal__name {
+  font-family: "Russo One", sans-serif;
+  font-size: 26px;
+  line-height: 34px;
+  margin-bottom: 8px;
+}
+
+.polk-modal__years {
+  display: block;
+  color: #c2551e;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.polk-modal__bio {
+  font-size: 16px;
+  line-height: 26px;
+  opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  .polk-modal__content {
+    padding: 30px 20px;
+  }
+  .polk-modal__body {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .polk-modal__photo {
+    max-width: 220px;
+    margin: 0 auto;
+  }
+}
+
+/* Адаптив */
+@media (max-width: 1024px) {
+  .polk-groups__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .polk-intro__wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .polk-stats__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .polk-groups__grid {
+    grid-template-columns: 1fr;
+  }
+}

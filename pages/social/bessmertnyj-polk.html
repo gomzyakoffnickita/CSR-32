@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/news.css" />
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="../../css/bessmertnyj-polk.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Russo+One&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
       rel="stylesheet"
     />
-    <title>Новости</title>
+    <title>Бессмертный полк</title>
   </head>
   <body>
     <header class="header__news">
@@ -20,13 +20,13 @@
         <div class="header__wrapper">
           <div class="header__top header__top-services">
             <a href="/index.html" class="logo">
-              <img src="../images/logo.png" alt="logo" />
+              <img src="../../images/logo.png" alt="logo" />
             </a>
             <nav class="menu">
               <ul class="menu__list">
                 <li class="menu__item">
                   <a
-                    href="../index.html#about"
+                    href="../../index.html#about"
                     class="menu__link hover-btn"
                     data-text="О компании"
                     ><span>О компании</span></a
@@ -34,7 +34,7 @@
                 </li>
                 <li class="menu__item">
                   <a
-                    href="../index.html#services"
+                    href="../../index.html#services"
                     class="menu__link hover-btn"
                     data-text="Наши услуги"
                     ><span>Наши услуги</span></a
@@ -42,7 +42,7 @@
                 </li>
                 <li class="menu__item">
                   <a
-                    href="../index.html#career"
+                    href="../../index.html#career"
                     class="menu__link hover-btn"
                     data-text="Карьера"
                     ><span>Карьера</span></a
@@ -50,15 +50,23 @@
                 </li>
                 <li class="menu__item">
                   <a
-                    href="../index.html#news"
+                    href="../../index.html#social"
                     class="menu__link hover-btn"
-                    data-text="Новости / события"
-                    ><span>Новости / события</span></a
+                    data-text="Социальные проекты"
+                    ><span>Социальные проекты</span></a
                   >
                 </li>
                 <li class="menu__item">
                   <a
-                    href="../index.html#footer"
+                    href="../../index.html#news"
+                    class="menu__link hover-btn"
+                    data-text="Новости"
+                    ><span>Новости</span></a
+                  >
+                </li>
+                <li class="menu__item">
+                  <a
+                    href="../../index.html#footer"
                     class="menu__link hover-btn"
                     data-text="Контакты"
                     ><span>Контакты</span></a
@@ -107,27 +115,112 @@
               </li>
             </ul>
           </nav>
-          <div class="header__hero-services">
-            <h1 class="header__title-services">Мы в работе и в жизни</h1>
-            <h5 class="header__subtitle">
-              События, проекты и новости команды Центрспецремонт
-            </h5>
+
+          <div class="header__hero-news">
+            <h1 class="header__title-news">Наш "Бессмертный полк"</h1>
           </div>
         </div>
       </div>
     </header>
+
     <main>
-      <section class="news">
+      <!-- 1. Интро: текст + видео -->
+      <section class="polk-intro">
         <div class="container">
-          <div class="news-page__list"></div>
+          <div class="polk-intro__wrapper">
+            <div class="polk-intro__text">
+              <p class="polk-intro__lead">
+                «Бессмертный полк» — наш проект памяти о земляках, прошедших
+                Великую Отечественную войну.
+              </p>
+              <p>
+                С 2015 года сотрудники и их семьи выходят на шествие с
+                портретами героев. Мы собираем и бережно храним истории каждого
+                участника.
+              </p>
+            </div>
+            <div class="polk-intro__video">
+              <!-- YouTube-вставка, как на старом сайте -->
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/_cVQJDM4sYU"
+                title="9 мая 2024 г. — Бессмертный полк"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; encrypted-media; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
         </div>
       </section>
+
+      <!-- 2. Цифры -->
+      <section class="polk-stats">
+        <div class="container">
+          <div class="polk-stats__grid">
+            <div class="polk-stats__item">
+              <span class="polk-stats__num" id="polk-total">0</span>
+              <span class="polk-stats__label">героев в полку</span>
+            </div>
+            <div class="polk-stats__item">
+              <span class="polk-stats__num" id="polk-groups">0</span>
+              <span class="polk-stats__label">групп памяти</span>
+            </div>
+            <div class="polk-stats__item">
+              <span class="polk-stats__num">2015</span>
+              <span class="polk-stats__label">год начала проекта</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Раздел "Группы памяти" -->
+      <section class="polk-heroes">
+        <div class="container">
+          <div class="polk-heroes__heading">
+            <h2 class="polk-heroes__title">Группы памяти</h2>
+            <p class="polk-heroes__counter">
+              Героев в полку: <span id="polk-counter">0</span>
+            </p>
+          </div>
+
+          <!-- Поиск по фамилии -->
+          <div class="polk-heroes__search">
+            <input
+              type="search"
+              id="polk-search"
+              class="polk-heroes__input"
+              placeholder="Найти героя по фамилии..."
+            />
+          </div>
+
+          <!-- Сетка 480 портретов -->
+          <div class="polk-heroes__grid" id="polk-grid"></div>
+        </div>
+      </section>
+
+      <!-- Модалка героя (один раз в конце main) -->
+      <div
+        class="polk-modal"
+        id="polk-modal"
+        role="dialog"
+        aria-modal="true"
+        hidden
+      >
+        <div class="polk-modal__overlay" data-close></div>
+        <div class="polk-modal__content">
+          <button class="polk-modal__close" data-close aria-label="Закрыть">
+            ×
+          </button>
+          <div class="polk-modal__body" id="polk-modal-body"></div>
+        </div>
+      </div>
     </main>
     <footer class="footer" id="footer">
       <div class="container">
         <div class="footer__wrapper">
-          <a href="../index.html" class="footer__logo">
-            <img src="../images/logo.png" alt="logo" />
+          <a href="/index.html" class="footer__logo">
+            <img src="/images/logo.png" alt="logo" />
           </a>
 
           <ul class="footer__nav">
@@ -137,7 +230,7 @@
             <li class="footer__nav-item">
               <a
                 class="footer__nav-link hover-btn"
-                href="../index.html#about"
+                href="/index.html#about"
                 data-text="О компании"
                 ><span>О компании</span></a
               >
@@ -145,7 +238,7 @@
             <li class="footer__nav-item">
               <a
                 class="footer__nav-link hover-btn"
-                href="../index.html#services"
+                href="/index.html#services"
                 data-text="Услуги"
                 ><span>Услуги</span></a
               >
@@ -153,7 +246,7 @@
             <li class="footer__nav-item">
               <a
                 class="footer__nav-link hover-btn"
-                href="../index.html#career"
+                href="/index.html#career"
                 data-text="Карьера"
                 ><span>Карьера</span></a
               >
@@ -161,7 +254,7 @@
             <li class="footer__nav-item">
               <a
                 class="footer__nav-link hover-btn"
-                href="../index.html#social"
+                href="/index.html#social"
                 data-text="Социальные проекты"
                 ><span>Социальные проекты</span></a
               >
@@ -169,7 +262,7 @@
             <li class="footer__nav-item">
               <a
                 class="footer__nav-link hover-btn"
-                href="../index.html#news"
+                href="/index.html#news"
                 data-text="Новости"
                 ><span>Новости</span></a
               >
@@ -182,20 +275,20 @@
             </li>
             <li class="footer__social-item">
               <a href="#" class="footer__social-link">
-                <img src="../images/footer/email.svg" alt="email" />
+                <img src="/images/footer/email.svg" alt="email" />
                 <span>csr-32@gmail.com</span>
               </a>
             </li>
             <li class="footer__social-item">
               <a href="#" class="footer__social-link">
-                <img src="../images/footer/instagram.svg" alt="instagram" />
+                <img src="/images/footer/instagram.svg" alt="instagram" />
                 <span>CSR-32</span>
               </a>
             </li>
             <li class="footer__social-item">
               <a href="#" class="footer__social-link">
                 <img
-                  src="../images/footer/Facebook_white.svg"
+                  src="/images/footer/Facebook_white.svg"
                   alt="Facebook_white"
                 />
                 <span>CSR-32</span>
@@ -203,7 +296,7 @@
             </li>
             <li class="footer__social-item">
               <a href="#" class="footer__social-link">
-                <img src="../images/footer/telegramm.svg" alt="telegramm" />
+                <img src="/images/footer/telegramm.svg" alt="telegramm" />
                 <span>CSR-32</span>
               </a>
             </li>
@@ -212,13 +305,13 @@
           <ul class="footer__contacts">
             <li class="footer__contact-item">
               <a href="#" class="footer__contact-link">
-                <img src="../images/footer/map.svg" alt="" />
+                <img src="/images/footer/map.svg" alt="" />
                 <span>г. Фокино, ул. Вокзальная, 14</span>
               </a>
             </li>
             <li class="footer__contact-item">
               <a href="tel: +7 (999) 255 34 54" class="footer__contact-link">
-                <img src="../images/footer/phone.svg" alt="" />
+                <img src="/images/footer/phone.svg" alt="" />
                 <span>+ 7 (999) 255 34 54</span>
               </a>
             </li>
@@ -234,8 +327,7 @@
       </div>
     </footer>
     <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js"></script>
-    <script src="../js/common.js" defer></script>
-    <script src="../js/news.js" defer></script>
-    <script src="../js/news-render.js" defer></script>
+    <script src="/js/common.js" defer></script>
+    <script src="/js/social.js" defer></script>
   </body>
 </html>

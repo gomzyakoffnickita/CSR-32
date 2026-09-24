@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "slug": "bessmertnyj-polk",
+    "img": "images/social/polk.jpg",
+    "years": "2015 — н.в.",
+    "title": "Бессмертный полк",
+    "desc": "Шествие памяти наших земляков — участников Великой Отечественной войны."
+  },
+  {
+    "id": 2,
+    "slug": "pust-zhivye-zapomnyat",
+    "link": "https://socprocsr.ru/index.php/glavnaya",
+    "img": "images/social/zapomnyat.jpg",
+    "years": "2016",
+    "title": "Пусть живые запомнят",
+    "desc": "Мемориальный проект о ветеранах и тружениках тыла нашего района."
+  },
+  {
+    "id": 3,
+    "slug": "pobede-70",
+    "img": "images/social/pobede-70.jpeg",
+    "years": "2015",
+    "title": "Победе-70",
+    "desc": "Документальные фильмы и издательские проекты к 70-летию Великой Победы."
+  },
+  {
+    "id": 4,
+    "slug": "almanah",
+    "img": "images/social/almanah.jpg",
+    "years": "2015",
+    "title": "Альманах",
+    "desc": "Наш издательский проект с историями земляков о военных годах."
+  },
+  {
+    "id": 5,
+    "slug": "neissyakaemyj-rodnik",
+    "img": "images/social/rodnik.jpg",
+    "years": "2016",
+    "title": "Неиссякаемый родник",
+    "desc": "Партнёрство в областном фестивале юных исполнителей народной песни."
+  },
+  {
+    "id": 6,
+    "slug": "moj-uchitel",
+    "img": "images/social/uchitel.jpg",
+    "years": "2017",
+    "title": "Мой учитель",
+    "desc": "Проект благодарности педагогам, воспитавшим поколения наших сотрудников."
+  }
+]
