@@ -484,13 +484,6 @@
   opacity: 1;
 }
 
-/* ===== АДАПТИВ ===== */
-@media (max-width: 1024px) {
-}
-
-@media (max-width: 768px) {
-}
-
 .hire__img.is-visible {
   opacity: 1;
 }
@@ -677,6 +670,28 @@
   font-size: 16px;
   color: inherit;
   transition: border-color 0.3s ease;
+}
+
+.form__consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  line-height: 18px;
+  opacity: 0.75;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+.form__consent-input {
+  margin-top: 2px;
+  flex: 0 0 16px;
+  cursor: pointer;
+}
+
+.form__consent a {
+  color: #c2551e;
+  text-decoration: underline;
 }
 
 .form__input:focus {
