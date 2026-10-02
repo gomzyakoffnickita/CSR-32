@@ -1,15 +1,10 @@
-/*Header*/
-
+/* ===== HEADER ===== */
 .header__top-services {
   margin-top: 20px;
 }
 
 .logo img {
   width: 50px;
-}
-
-.header__services-desc {
-  margin-bottom: 30px;
 }
 
 .header__title-news {
@@ -27,18 +22,11 @@
   position: absolute;
   bottom: -200px;
   left: 50%;
-  transform: translateX(-50%); /* центрируем линию */
+  transform: translateX(-50%);
   width: 1280px;
   height: 1px;
   background-color: var(--color-black);
   opacity: 0.5;
-}
-
-.header__wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin-top: 0;
 }
 
 .header__hero-news {
@@ -50,19 +38,6 @@
   position: relative;
 }
 
-.header__subtitle::after {
-  content: "";
-  position: absolute;
-  bottom: -200px;
-  left: 50%;
-  transform: translateX(-50%); /* центрируем линию */
-  width: 1280px;
-  height: 1px;
-  background-color: var(--color-black);
-  opacity: 0.5;
-}
-
-/*Animation*/
 @keyframes hero-rise {
   from {
     opacity: 0;
@@ -74,7 +49,7 @@
   }
 }
 
-/* Интро */
+/* ===== ИНТРО ===== */
 .polk-intro {
   padding: 80px 0;
 }
@@ -93,14 +68,7 @@
   margin-bottom: 24px;
 }
 
-.polk-intro__video iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border: none;
-  display: block;
-}
-
-/* Цифры — тонкие линии, как в секции facts */
+/* ===== ЦИФРЫ ===== */
 .polk-stats {
   padding: 50px 0;
   border-top: 1px solid rgba(27, 25, 23, 0.15);
@@ -126,26 +94,7 @@
   opacity: 0.7;
 }
 
-/* ===== ФИЛЬМЫ (тёмная кинематографичная секция) ===== */
-.victory-films {
-  background-color: var(--color-black);
-  color: #fff;
-  padding: 100px 0;
-}
-
-.victory-films__title {
-  font-family: "Russo One", sans-serif;
-  font-size: 40px;
-  text-transform: uppercase;
-  margin-bottom: 50px;
-}
-
-.victory-films__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
-}
-
+/* ===== ФИЛЬМ (один, не секция) ===== */
 .victory-film {
   display: flex;
   flex-direction: column;
@@ -163,7 +112,6 @@
   transform: translateY(-6px);
 }
 
-/* Постер с кнопкой play */
 .victory-film__poster {
   position: relative;
   overflow: hidden;
@@ -199,7 +147,7 @@
   align-items: center;
   justify-content: center;
   font-size: 22px;
-  padding-left: 6px; /* визуально центрируем треугольник */
+  padding-left: 6px;
   transition: transform 0.3s ease;
 }
 
@@ -232,12 +180,14 @@
   font-family: "Russo One", sans-serif;
   font-size: 22px;
   line-height: 30px;
+  color: white;
 }
 
 .victory-film__desc {
   font-size: 15px;
   line-height: 24px;
   opacity: 0.75;
+  color: white;
 }
 
 .victory-film__link {
@@ -246,209 +196,397 @@
   font-weight: 500;
 }
 
-.victory-film__title,
-.victory-film__desc {
-  color: white;
+/* ===== ГРУППЫ ===== */
+.polk-groups {
+  padding: 100px 0 140px;
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease,
+    visibility 0.4s;
+  will-change: opacity, transform;
 }
 
-/* Сетка групп */
-.polk-groups {
-  padding: 80px 0 120px;
+.polk-groups__head {
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .polk-groups__title {
   font-family: "Russo One", sans-serif;
-  font-size: 40px;
+  font-size: 48px;
   text-transform: uppercase;
-  margin-bottom: 40px;
+  margin-bottom: 16px;
+}
+
+.polk-groups__subtitle {
+  font-size: 18px;
+  opacity: 0.75;
 }
 
 .polk-groups__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 24px;
 }
 
-.polk-group {
+.polk-group-card {
   position: relative;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  aspect-ratio: 9 / 16;
   overflow: hidden;
-  aspect-ratio: 4 / 3;
-  color: #fff;
+  border-radius: 4px;
   text-decoration: none;
+  color: #fff;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.polk-group img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: grayscale(60%);
-  transition:
-    transform 0.6s ease,
-    filter 0.6s ease;
+.polk-group-card:hover {
+  transform: translateY(-8px);
 }
 
-.polk-group:hover img {
-  transform: scale(1.05);
-  filter: grayscale(0%);
-}
-
-/* Затемнение под текст */
-.polk-group::after {
-  content: "";
+.polk-group-card__cover {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(27, 25, 23, 0.85), transparent 60%);
-}
-
-.polk-group__info {
-  position: absolute;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
   z-index: 1;
 }
 
-.polk-group__title {
-  font-family: "Russo One", sans-serif;
-  font-size: 20px;
-  text-transform: uppercase;
-  margin-bottom: 6px;
+.polk-group-card__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(40%);
+  transition:
+    filter 0.5s ease,
+    transform 0.5s ease;
 }
 
-.polk-group__count {
+.polk-group-card:hover .polk-group-card__cover img {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+.polk-group-card__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(
+    to top,
+    rgba(27, 25, 23, 0.95) 0%,
+    rgba(27, 25, 23, 0.7) 40%,
+    rgba(27, 25, 23, 0.3) 70%,
+    transparent 100%
+  );
+}
+
+.polk-group-card__content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex: 1;
+  padding: 28px;
+}
+
+.polk-group-card__num {
+  font-family: "Russo One", sans-serif;
   font-size: 14px;
   color: #c2551e;
-  font-weight: 500;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
 }
 
-/* ===== СЕТКА ГЕРОЕВ ===== */
+.polk-group-card__title {
+  font-family: "Russo One", sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.polk-group-card__count {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 16px;
+}
+
+.polk-group-card__arrow {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(194, 85, 30, 0.9);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.polk-group-card:hover .polk-group-card__arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ===== ГЕРОИ ===== */
 .polk-heroes {
   padding: 80px 0 120px;
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease,
+    visibility 0.4s;
+  will-change: opacity, transform;
 }
 
 .polk-heroes__heading {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .polk-heroes__title {
   font-family: "Russo One", sans-serif;
-  font-size: 40px;
+  font-size: 48px;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .polk-heroes__counter {
-  font-size: 15px;
+  font-size: 16px;
   opacity: 0.7;
+  margin: 0;
 }
 
-/* Поиск */
-.polk-heroes__input {
-  width: 100%;
-  padding: 14px 20px;
-  border: 1px solid rgba(27, 25, 23, 0.2);
-  background: transparent;
-  font: inherit;
-  margin-bottom: 40px;
-  transition: border-color 0.3s ease;
-}
-
-.polk-heroes__input:focus {
-  outline: none;
-  border-color: #c2551e;
-}
-
-/* Сетка: автозаполнение под ширину экрана */
 .polk-heroes__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-  gap: 20px 14px;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 24px 16px;
 }
 
+/* ===== ГЕРОИ ===== */
 .polk-hero {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  color: inherit;
+  align-items: center;
   text-decoration: none;
-  text-align: center;
+  color: inherit;
+  transition: transform 0.3s ease;
+  opacity: 0;
+  animation: hero-appear 0.4s ease forwards;
+}
+
+.polk-hero:hover {
+  transform: translateY(-4px);
 }
 
 .polk-hero img {
   width: 100%;
-  aspect-ratio: 2 / 3; /* 100×150 пропорция */
+  aspect-ratio: 2 / 3;
   object-fit: cover;
-  filter: grayscale(50%);
-  transition:
-    filter 0.4s ease,
-    transform 0.4s ease;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  filter: grayscale(30%);
+  transition: filter 0.3s ease;
 }
 
 .polk-hero:hover img {
   filter: grayscale(0%);
-  transform: scale(1.04);
 }
 
 .polk-hero__name {
-  font-size: 12px;
-  line-height: 16px;
-  opacity: 0.85;
-  /* обрезка до 2 строк */
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: center;
+  opacity: 0.9;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
+/* Анимация только для opacity */
+@keyframes hero-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Задержка появления карточек (эффект волны) */
+.polk-hero:nth-child(1) {
+  animation-delay: 0.02s;
+}
+.polk-hero:nth-child(2) {
+  animation-delay: 0.04s;
+}
+.polk-hero:nth-child(3) {
+  animation-delay: 0.06s;
+}
+.polk-hero:nth-child(4) {
+  animation-delay: 0.08s;
+}
+.polk-hero:nth-child(5) {
+  animation-delay: 0.1s;
+}
+.polk-hero:nth-child(6) {
+  animation-delay: 0.12s;
+}
+.polk-hero:nth-child(7) {
+  animation-delay: 0.14s;
+}
+.polk-hero:nth-child(8) {
+  animation-delay: 0.16s;
+}
+.polk-hero:nth-child(9) {
+  animation-delay: 0.18s;
+}
+.polk-hero:nth-child(10) {
+  animation-delay: 0.2s;
+}
+.polk-hero:nth-child(11) {
+  animation-delay: 0.22s;
+}
+.polk-hero:nth-child(12) {
+  animation-delay: 0.24s;
+}
+.polk-hero:nth-child(n + 13) {
+  animation-delay: 0.26s;
+}
+
+/* Кнопка назад */
+.polk-back-link {
+  display: inline-block;
+  margin-bottom: 30px;
+  padding: 12px 24px;
+  background: #c2551e;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.polk-back-link:hover {
+  background: #a34418;
+}
+
+/* Пустое состояние */
+.polk-heroes__empty {
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 18px;
+  opacity: 0.7;
+}
+
+.polk-heroes__empty a {
+  color: #c2551e;
+  text-decoration: underline;
+}
+
+/* ===== ПЕРЕКЛЮЧЕНИЕ СЕКЦИЙ ===== */
+.polk-groups.is-hidden,
+.polk-heroes.is-hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  visibility: hidden;
+  pointer-events: none;
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.polk-groups.is-visible,
+.polk-heroes.is-visible {
+  opacity: 1;
+}
+
 /* ===== МОДАЛКА ===== */
 .polk-modal {
-  position: fixed;
+  position: fixed !important;
   inset: 0;
-  z-index: 100;
+  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s;
+}
+
+.polk-modal.is-open {
+  opacity: 1;
+  visibility: visible;
 }
 
 .polk-modal[hidden] {
-  display: none;
+  display: none !important;
 }
 
 .polk-modal__overlay {
   position: absolute;
   inset: 0;
   background: rgba(27, 25, 23, 0.85);
+  backdrop-filter: blur(4px);
 }
 
 .polk-modal__content {
   position: relative;
-  max-width: 760px;
+  max-width: 800px;
   width: 100%;
-  max-height: 85vh;
+  max-height: 90vh;
   overflow-y: auto;
   background: #fff;
-  padding: 50px;
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  transform: scale(0.95) translateY(20px);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.polk-modal.is-open .polk-modal__content {
+  transform: scale(1) translateY(0);
 }
 
 .polk-modal__close {
   position: absolute;
   top: 15px;
   right: 20px;
-  font-size: 28px;
-  background: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(27, 25, 23, 0.1);
   border: none;
+  font-size: 24px;
+  line-height: 1;
   cursor: pointer;
-  color: inherit;
+  color: #1b1917;
+  transition: background 0.3s ease;
+  z-index: 10;
 }
 
-/* Тело модалки: фото слева, текст справа */
+.polk-modal__close:hover {
+  background: rgba(27, 25, 23, 0.2);
+}
+
 .polk-modal__body {
   display: grid;
-  grid-template-columns: 260px 1fr;
+  grid-template-columns: 300px 1fr;
   gap: 40px;
   align-items: start;
 }
@@ -457,17 +595,20 @@
   width: 100%;
   aspect-ratio: 2 / 3;
   object-fit: cover;
+  border-radius: 4px;
 }
 
 .polk-modal__name {
   font-family: "Russo One", sans-serif;
-  font-size: 26px;
-  line-height: 34px;
-  margin-bottom: 8px;
+  font-size: 28px;
+  line-height: 1.2;
+  margin: 0 0 8px 0;
+  color: #1b1917;
 }
 
 .polk-modal__years {
   display: block;
+  font-size: 16px;
   color: #c2551e;
   font-weight: 500;
   margin-bottom: 20px;
@@ -475,41 +616,153 @@
 
 .polk-modal__bio {
   font-size: 16px;
-  line-height: 26px;
+  line-height: 1.7;
+  color: #1b1917;
   opacity: 0.85;
+  margin: 0;
 }
 
-@media (max-width: 768px) {
-  .polk-modal__content {
-    padding: 30px 20px;
-  }
-  .polk-modal__body {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  .polk-modal__photo {
-    max-width: 220px;
-    margin: 0 auto;
-  }
-}
-
-/* Адаптив */
+/* ===== АДАПТИВ ===== */
 @media (max-width: 1024px) {
   .polk-groups__grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .polk-groups__title {
+    font-size: 40px;
+  }
+
+  .polk-group-card__title {
+    font-size: 20px;
   }
 }
 
 @media (max-width: 768px) {
-  .polk-intro__wrapper {
-    grid-template-columns: 1fr;
-    gap: 30px;
+  .polk-groups {
+    padding: 60px 0 100px;
   }
-  .polk-stats__grid {
+
+  .polk-groups__head {
+    margin-bottom: 40px;
+  }
+
+  .polk-groups__title {
+    font-size: 32px;
+  }
+
+  .polk-groups__subtitle {
+    font-size: 16px;
+  }
+
+  .polk-groups__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .polk-group-card {
+    aspect-ratio: 2 / 3;
+  }
+
+  .polk-group-card__content {
+    padding: 20px;
+  }
+
+  .polk-group-card__title {
+    font-size: 18px;
+  }
+
+  .polk-group-card__num {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .polk-group-card__count {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .polk-group-card__arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+    top: 12px;
+    right: 12px;
+  }
+
+  .polk-heroes {
+    padding: 60px 0 80px;
+  }
+
+  .polk-heroes__title {
+    font-size: 32px;
+  }
+
+  .polk-heroes__grid {
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 16px 12px;
+  }
+
+  .polk-hero__name {
+    font-size: 12px;
+  }
+
+  .polk-modal {
+    padding: 10px;
+  }
+
+  .polk-modal__content {
+    padding: 30px 20px;
+  }
+
+  .polk-modal__body {
     grid-template-columns: 1fr;
     gap: 24px;
   }
+
+  .polk-modal__photo {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .polk-modal__name {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .polk-modal__years {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
   .polk-groups__grid {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .polk-group-card {
+    aspect-ratio: 16 / 9;
+  }
+
+  .polk-groups__title {
+    font-size: 28px;
+  }
+
+  .polk-group-card__content {
+    padding: 20px;
+  }
+
+  .polk-group-card__title {
+    font-size: 20px;
+  }
+
+  .polk-group-card__num {
+    font-size: 12px;
+  }
+
+  .polk-heroes__grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 12px 8px;
   }
 }

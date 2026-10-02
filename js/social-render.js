@@ -10,6 +10,8 @@ async function loadSocial() {
   }
 }
 
+
+
 // Карточка соцпроекта
 function renderSocialCard(item, index) {
   const num = String(index + 1).padStart(2, "0");
