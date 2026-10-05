@@ -1,8 +1,49 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO мета-теги -->
+    <title>
+      О компании ООО «Центрспецремонт» — 22 года на рынке промышленного ремонта
+    </title>
+    <meta
+      name="description"
+      content="ООО «Центрспецремонт» — более 22 лет на рынке ремонта промышленного оборудования. Команда из 150+ квалифицированных специалистов. Работаем по всей России с 2004 года."
+    />
+    <meta
+      name="keywords"
+      content="ремонт промышленного оборудования, Центрспецремонт, ООО Центрспецремонт, ремонт оборудования Брянск"
+    />
+    <link rel="canonical" href="https://csr32.ru/about.html" />
+
+    <!-- Open Graph (для соцсетей) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="О компании ООО «Центрспецремонт»" />
+    <meta
+      property="og:description"
+      content="22 года на рынке промышленного ремонта. Команда из 150+ специалистов."
+    />
+    <meta
+      property="og:image"
+      content="https://csr32.ru/images/about/og-image.jpg"
+    />
+    <meta property="og:url" content="https://csr32.ru/about.html" />
+    <meta property="og:site_name" content="Центрспецремонт" />
+    <meta property="og:locale" content="ru_RU" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="О компании ООО «Центрспецремонт»" />
+    <meta
+      name="twitter:description"
+      content="22 года на рынке промышленного ремонта."
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/about.css" />
@@ -13,8 +54,39 @@
       rel="stylesheet"
     />
     <title>О нас</title>
+    <!-- JSON-LD для SEO (LocalBusiness) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ООО «Центрспецремонт»",
+        "url": "https://csr32.ru",
+        "logo": "https://csr32.ru/images/logo.png",
+        "description": "Ремонт промышленного оборудования с 2004 года",
+        "foundingDate": "2004",
+        "numberOfEmployees": "150+",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ул. Базарная, 10",
+          "addressLocality": "Фокино",
+          "addressRegion": "Брянская область",
+          "addressCountry": "RU"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+7-4832-36-73-80",
+          "contactType": "customer service",
+          "availableLanguage": "Russian"
+        },
+        "sameAs": ["https://vk.ru/csr32"]
+      }
+    </script>
   </head>
   <body>
+    <!-- Skip link для доступности -->
+    <a href="#main-content" class="skip-link"
+      >Перейти к основному содержимому</a
+    >
     <header class="header__about">
       <div class="container">
         <div class="header__wrapper-inner">
@@ -109,9 +181,7 @@
                 >
               </li>
               <li>
-                <a href="/index.html#news" class="mobile-menu__link"
-                  >Новости</a
-                >
+                <a href="/index.html#news" class="mobile-menu__link">Новости</a>
               </li>
               <li>
                 <a href="/index.html#footer" class="mobile-menu__link"
@@ -127,8 +197,8 @@
                 <p class="highlight-desc about__team-desc">Наша команда</p>
                 <div class="about__team-preview">
                   <div class="about__team-photo">
-                    <img src="../images/about/1.jpeg" alt="" />
-                    <img src="../images/about/2.jpeg" alt="" />
+                    <img src="/images/about/1.jpeg" alt="" />
+                    <img src="/images/about/2.jpeg" alt="" />
                   </div>
                   <a href="#about__team" class="about__team-link"
                     >Узнать больше</a
@@ -248,12 +318,36 @@
       <section class="about__team-animation" id="about__team">
         <div class="container">
           <div class="team__animation-wrapper">
-            <img src="../images/about/4.jpg" alt="" />
-            <img src="../images/about/5.jpg" alt="" />
-            <img src="../images/about/6.jpg" alt="" />
-            <img src="../images/about/1.jpeg" alt="" />
-            <img src="../images/about/2.jpeg" alt="" />
-            <img src="../images/about/3.jpg" alt="" />
+            <img
+              src="/images/about/4.jpg"
+              alt="Сотрудники ремонтируют оборудование"
+              loading="lazy"
+            />
+            <img
+              src="/images/about/5.jpg"
+              alt="Сотрудники ремонтируют оборудование"
+              loading="lazy"
+            />
+            <img
+              src="/images/about/6.jpg"
+              alt="Сотрудники ремонтируют оборудование"
+              loading="lazy"
+            />
+            <img
+              src="/images/about/1.jpeg"
+              alt="Коллективное фото на объекте"
+              loading="lazy"
+            />
+            <img
+              src="/images/about/2.jpeg"
+              alt="Коллективное фото на объекте"
+              loading="lazy"
+            />
+            <img
+              src="/images/about/3.jpg"
+              alt="Коллективное фото на объекте"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>

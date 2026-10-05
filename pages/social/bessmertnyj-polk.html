@@ -3,28 +3,92 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Бессмертный полк</title>
 
-    <link rel="stylesheet" href="/css/reset.css" />
-    <link rel="stylesheet" href="/css/global.css" />
-    <link rel="stylesheet" href="/css/bessmertnyj-polk.css" />
+    <!-- SEO мета-теги -->
+    <title>
+      Бессмертный полк ООО «Центрспецремонт» — проект памяти о героях ВОВ
+    </title>
+    <meta
+      name="description"
+      content="Проект «Бессмертный полк» компании Центрспецремонт. 480 историй сотрудников и их семей о родственниках, прошедших Великую Отечественную войну. С 2015 года храним память о героях."
+    />
+    <meta
+      name="keywords"
+      content="Бессмертный полк, Центрспецремонт, ВОВ, память о героях, социальный проект, Брянск"
+    />
+    <link rel="canonical" href="https://csr32.ru/bessmertnyj-polk.html" />
 
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Бессмертный полк ООО «Центрспецремонт»"
+    />
+    <meta
+      property="og:description"
+      content="480 историй о героях Великой Отечественной войны. Проект памяти с 2015 года."
+    />
+    <meta
+      property="og:image"
+      content="https://csr32.ru/images/social/polk-og.jpg"
+    />
+    <meta property="og:url" content="https://csr32.ru/bessmertnyj-polk.html" />
+    <meta property="og:site_name" content="Центрспецремонт" />
+    <meta property="og:locale" content="ru_RU" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png" />
+
+    <!-- Шрифты -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Russo+One&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Стили -->
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/bessmertnyj-polk.css" />
+
+    <!-- JSON-LD: разметка проекта -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Бессмертный полк ООО «Центрспецремонт»",
+        "description": "Корпоративный проект памяти о героях Великой Отечественной войны. 480 историй сотрудников и их родственников.",
+        "url": "https://csr32.ru/bessmertnyj-polk.html",
+        "publisher": {
+          "@type": "Organization",
+          "name": "ООО «Центрспецремонт»",
+          "url": "https://csr32.ru",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://csr32.ru/images/logo.png"
+          }
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "Бессмертный полк"
+        }
+      }
+    </script>
   </head>
   <body>
+    <a href="#main-content" class="skip-link"
+      >Перейти к основному содержимому</a
+    >
+
     <header class="header__news">
       <div class="container">
         <div class="header__wrapper-inner">
           <div class="header__top header__top-services">
-            <a href="/index.html" class="logo">
+            <a href="/index.html" class="logo" aria-label="На главную">
               <img src="/images/logo.png" alt="Логотип ООО Центрспецремонт" />
             </a>
-            <nav class="menu">
+            <nav class="menu" aria-label="Основная навигация">
               <ul class="menu__list">
                 <li class="menu__item">
                   <a
@@ -89,13 +153,18 @@
             type="button"
             aria-label="Открыть меню"
             aria-expanded="false"
+            aria-controls="mobile-menu"
           >
             <span></span>
             <span></span>
             <span></span>
           </button>
 
-          <nav class="mobile-menu">
+          <nav
+            class="mobile-menu"
+            id="mobile-menu"
+            aria-label="Мобильная навигация"
+          >
             <ul class="mobile-menu__list">
               <li>
                 <a href="/index.html#about" class="mobile-menu__link"
@@ -135,12 +204,15 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <!-- Интро -->
-      <section class="polk-intro">
+      <section class="polk-intro" aria-labelledby="polk-intro-title">
         <div class="container">
           <div class="polk-intro__wrapper">
             <div class="polk-intro__text">
+              <h2 id="polk-intro-title" class="visually-hidden">
+                О проекте «Бессмертный полк»
+              </h2>
               <p class="polk-intro__lead">
                 «Бессмертный полк» — наш проект памяти о земляках, прошедших
                 Великую Отечественную войну.
@@ -155,13 +227,14 @@
               <a
                 href="https://www.youtube.com/watch?v=vnnozyitUdc"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 class="victory-film"
+                aria-label="Смотреть документальный фильм «Бессмертный полк» на YouTube (откроется в новой вкладке)"
               >
                 <div class="victory-film__poster">
                   <img
                     src="/images/social/polk.jpg"
-                    alt="Бессмертный полк"
+                    alt="Кадр из документального фильма «Бессмертный полк»"
                     loading="lazy"
                   />
                   <span class="victory-film__play" aria-hidden="true">▶</span>
@@ -182,7 +255,7 @@
       </section>
 
       <!-- Цифры -->
-      <section class="polk-stats">
+      <section class="polk-stats" aria-label="Статистика проекта">
         <div class="container">
           <div class="polk-stats__grid">
             <div class="polk-stats__item">
@@ -202,22 +275,23 @@
       </section>
 
       <!-- Группы -->
-      <section class="polk-groups">
+      <section class="polk-groups" aria-labelledby="polk-groups-title">
         <div class="container">
           <div class="polk-groups__head">
-            <h2 class="polk-groups__title">Группы памяти</h2>
+            <h2 class="polk-groups__title" id="polk-groups-title">
+              Группы памяти
+            </h2>
             <p class="polk-groups__subtitle">
               Выберите группу, чтобы увидеть героев
             </p>
           </div>
 
           <div class="polk-groups__grid">
-            <!-- Группа 1 -->
             <a href="?offset=49&count=48" class="polk-group-card">
               <div class="polk-group-card__cover">
                 <img
                   src="/images/social/bessmertnyi_polk/01.jpg"
-                  alt="Группа 1"
+                  alt="Фотографии героев группы 1"
                   loading="lazy"
                 />
               </div>
@@ -226,16 +300,15 @@
                 <span class="polk-group-card__num">/01</span>
                 <h3 class="polk-group-card__title">Группа 1</h3>
                 <span class="polk-group-card__count">48 героев</span>
-                <span class="polk-group-card__arrow">→</span>
+                <span class="polk-group-card__arrow" aria-hidden="true">→</span>
               </div>
             </a>
 
-            <!-- Группа 2 -->
             <a href="?offset=385&count=48" class="polk-group-card">
               <div class="polk-group-card__cover">
                 <img
                   src="/images/social/bessmertnyi_polk/02.jpg"
-                  alt="Группа 2"
+                  alt="Фотографии героев группы 2"
                   loading="lazy"
                 />
               </div>
@@ -244,16 +317,15 @@
                 <span class="polk-group-card__num">/02</span>
                 <h3 class="polk-group-card__title">Группа 2</h3>
                 <span class="polk-group-card__count">48 героев</span>
-                <span class="polk-group-card__arrow">→</span>
+                <span class="polk-group-card__arrow" aria-hidden="true">→</span>
               </div>
             </a>
 
-            <!-- Группа 3 -->
             <a href="?offset=337&count=48" class="polk-group-card">
               <div class="polk-group-card__cover">
                 <img
                   src="/images/social/bessmertnyi_polk/03.jpg"
-                  alt="Группа 3"
+                  alt="Фотографии героев группы 3"
                   loading="lazy"
                 />
               </div>
@@ -262,16 +334,15 @@
                 <span class="polk-group-card__num">/03</span>
                 <h3 class="polk-group-card__title">Группа 3</h3>
                 <span class="polk-group-card__count">48 героев</span>
-                <span class="polk-group-card__arrow">→</span>
+                <span class="polk-group-card__arrow" aria-hidden="true">→</span>
               </div>
             </a>
 
-            <!-- Группа 4 -->
             <a href="?offset=193&count=48" class="polk-group-card">
               <div class="polk-group-card__cover">
                 <img
                   src="/images/social/bessmertnyi_polk/04.jpg"
-                  alt="Группа 4"
+                  alt="Фотографии героев группы 4"
                   loading="lazy"
                 />
               </div>
@@ -280,16 +351,15 @@
                 <span class="polk-group-card__num">/04</span>
                 <h3 class="polk-group-card__title">Группа 4</h3>
                 <span class="polk-group-card__count">48 героев</span>
-                <span class="polk-group-card__arrow">→</span>
+                <span class="polk-group-card__arrow" aria-hidden="true">→</span>
               </div>
             </a>
 
-            <!-- Группа 5 -->
             <a href="?offset=145&count=48" class="polk-group-card">
               <div class="polk-group-card__cover">
                 <img
                   src="/images/social/bessmertnyi_polk/05.jpg"
-                  alt="Группа 5"
+                  alt="Фотографии героев группы 5"
                   loading="lazy"
                 />
               </div>
@@ -298,16 +368,15 @@
                 <span class="polk-group-card__num">/05</span>
                 <h3 class="polk-group-card__title">Группа 5</h3>
                 <span class="polk-group-card__count">48 героев</span>
-                <span class="polk-group-card__arrow">→</span>
+                <span class="polk-group-card__arrow" aria-hidden="true">→</span>
               </div>
             </a>
 
-            <!-- Группа 6 -->
             <a href="?offset=1&count=48" class="polk-group-card">
               <div class="polk-group-card__cover">
                 <img
                   src="/images/social/bessmertnyi_polk/06.jpg"
-                  alt="Группа 6"
+                  alt="Фотографии героев группы 6"
                   loading="lazy"
                 />
               </div>
@@ -316,16 +385,15 @@
                 <span class="polk-group-card__num">/06</span>
                 <h3 class="polk-group-card__title">Группа 6</h3>
                 <span class="polk-group-card__count">48 героев</span>
-                <span class="polk-group-card__arrow">→</span>
+                <span class="polk-group-card__arrow" aria-hidden="true">→</span>
               </div>
             </a>
 
-            <!-- Группа 7 -->
             <a href="?offset=97&count=48" class="polk-group-card">
               <div class="polk-group-card__cover">
                 <img
                   src="/images/social/bessmertnyi_polk/07.jpg"
-                  alt="Группа 7"
+                  alt="Фотографии героев группы 7"
                   loading="lazy"
                 />
               </div>
@@ -334,16 +402,15 @@
                 <span class="polk-group-card__num">/07</span>
                 <h3 class="polk-group-card__title">Группа 7</h3>
                 <span class="polk-group-card__count">48 героев</span>
-                <span class="polk-group-card__arrow">→</span>
+                <span class="polk-group-card__arrow" aria-hidden="true">→</span>
               </div>
             </a>
 
-            <!-- Группа 8 -->
             <a href="?offset=241&count=48" class="polk-group-card">
               <div class="polk-group-card__cover">
                 <img
                   src="/images/social/bessmertnyi_polk/08.jpg"
-                  alt="Группа 8"
+                  alt="Фотографии героев группы 8"
                   loading="lazy"
                 />
               </div>
@@ -352,16 +419,15 @@
                 <span class="polk-group-card__num">/08</span>
                 <h3 class="polk-group-card__title">Группа 8</h3>
                 <span class="polk-group-card__count">48 героев</span>
-                <span class="polk-group-card__arrow">→</span>
+                <span class="polk-group-card__arrow" aria-hidden="true">→</span>
               </div>
             </a>
 
-            <!-- Группа 9 -->
             <a href="?offset=289&count=48" class="polk-group-card">
               <div class="polk-group-card__cover">
                 <img
                   src="/images/social/bessmertnyi_polk/09.jpg"
-                  alt="Группа 9"
+                  alt="Фотографии героев группы 9"
                   loading="lazy"
                 />
               </div>
@@ -370,16 +436,15 @@
                 <span class="polk-group-card__num">/09</span>
                 <h3 class="polk-group-card__title">Группа 9</h3>
                 <span class="polk-group-card__count">48 героев</span>
-                <span class="polk-group-card__arrow">→</span>
+                <span class="polk-group-card__arrow" aria-hidden="true">→</span>
               </div>
             </a>
 
-            <!-- Группа 10 -->
             <a href="?offset=433&count=48" class="polk-group-card">
               <div class="polk-group-card__cover">
                 <img
                   src="/images/social/bessmertnyi_polk/10.jpg"
-                  alt="Группа 10"
+                  alt="Фотографии героев группы 10"
                   loading="lazy"
                 />
               </div>
@@ -388,7 +453,7 @@
                 <span class="polk-group-card__num">/10</span>
                 <h3 class="polk-group-card__title">Группа 10</h3>
                 <span class="polk-group-card__count">48 героев</span>
-                <span class="polk-group-card__arrow">→</span>
+                <span class="polk-group-card__arrow" aria-hidden="true">→</span>
               </div>
             </a>
           </div>
@@ -396,7 +461,11 @@
       </section>
 
       <!-- Сетка героев -->
-      <section class="polk-heroes" id="polk-heroes-section">
+      <section
+        class="polk-heroes"
+        id="polk-heroes-section"
+        aria-labelledby="polk-heroes-title"
+      >
         <div class="container">
           <a href="/bessmertnyj-polk.html" class="polk-back-link"
             >← Вернуться к группам</a
@@ -404,12 +473,17 @@
 
           <div class="polk-heroes__heading">
             <h2 class="polk-heroes__title" id="polk-heroes-title">Герои</h2>
-            <p class="polk-heroes__counter">
+            <p class="polk-heroes__counter" aria-live="polite">
               Показано: <span id="polk-counter">0</span>
             </p>
           </div>
 
-          <div class="polk-heroes__grid" id="polk-grid"></div>
+          <div
+            class="polk-heroes__grid"
+            id="polk-grid"
+            role="list"
+            aria-label="Список героев"
+          ></div>
 
           <p class="polk-heroes__empty" id="polk-empty" hidden>
             По заданным параметрам героев не найдено.
@@ -418,12 +492,25 @@
       </section>
 
       <!-- Модалка -->
-      <div class="polk-modal" id="polk-modal" role="dialog" aria-modal="true">
-        <div class="polk-modal__overlay" data-close></div>
+      <div
+        class="polk-modal"
+        id="polk-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="polk-modal-title"
+      >
+        <button
+          class="polk-modal__overlay"
+          data-close
+          aria-label="Закрыть"
+        ></button>
         <div class="polk-modal__content">
           <button class="polk-modal__close" data-close aria-label="Закрыть">
             ×
           </button>
+          <h2 id="polk-modal-title" class="visually-hidden">
+            Информация о герое
+          </h2>
           <div class="polk-modal__body" id="polk-modal-body"></div>
         </div>
       </div>
@@ -432,59 +519,64 @@
     <footer class="footer" id="footer">
       <div class="container">
         <div class="footer__wrapper">
-          <a href="/index.html" class="footer__logo">
-            <img src="/images/logo.png" alt="logo" />
+          <a href="/index.html" class="footer__logo" aria-label="На главную">
+            <img src="/images/logo.png" alt="Логотип ООО Центрспецремонт" />
           </a>
 
           <ul class="footer__nav">
             <li class="footer__nav-item">
-              <p class="footer__nav-title">Выберите раздел</p>
+              <p class="footer__nav-title">Разделы</p>
             </li>
             <li class="footer__nav-item">
               <a
                 class="footer__nav-link hover-btn"
                 href="/index.html#about"
                 data-text="О компании"
-                ><span>О компании</span></a
               >
+                <span>О компании</span>
+              </a>
             </li>
             <li class="footer__nav-item">
               <a
                 class="footer__nav-link hover-btn"
                 href="/index.html#services"
                 data-text="Услуги"
-                ><span>Услуги</span></a
               >
+                <span>Услуги</span>
+              </a>
             </li>
             <li class="footer__nav-item">
               <a
                 class="footer__nav-link hover-btn"
                 href="/index.html#career"
                 data-text="Карьера"
-                ><span>Карьера</span></a
               >
+                <span>Карьера</span>
+              </a>
             </li>
             <li class="footer__nav-item">
               <a
                 class="footer__nav-link hover-btn"
                 href="/index.html#social"
                 data-text="Социальные проекты"
-                ><span>Социальные проекты</span></a
               >
+                <span>Социальные проекты</span>
+              </a>
             </li>
             <li class="footer__nav-item">
               <a
                 class="footer__nav-link hover-btn"
                 href="/index.html#news"
                 data-text="Новости"
-                ><span>Новости</span></a
               >
+                <span>Новости</span>
+              </a>
             </li>
           </ul>
 
           <ul class="footer__social">
             <li class="footer__social-item">
-              <p class="footer__social-title">Выберите раздел</p>
+              <p class="footer__social-title">Мы на связи</p>
             </li>
             <li class="footer__social-item">
               <a
@@ -498,12 +590,13 @@
             </li>
             <li class="footer__social-item">
               <a
-                href="https://vk.ru/csr32"
+                href="https://vk.com/csr32"
                 class="footer__social-link"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Мы ВКонтакте (откроется в новой вкладке)"
               >
-                <img src="/images/footer/vk.svg" alt="vk" />
+                <img src="/images/footer/vk.svg" alt="" aria-hidden="true" />
                 <span>CSR-32</span>
               </a>
             </li>
@@ -512,19 +605,19 @@
           <ul class="footer__contacts">
             <li class="footer__contact-item">
               <a href="#" class="footer__contact-link">
-                <img src="/images/footer/map.svg" alt="" />
+                <img src="/images/footer/map.svg" alt="" aria-hidden="true" />
                 <span>г. Фокино, ул. Базарная, 10</span>
               </a>
             </li>
             <li class="footer__contact-item">
-              <a href="tel: +74832367380" class="footer__contact-link">
-                <img src="/images/footer/phone.svg" alt="" />
+              <a href="tel:+74832367380" class="footer__contact-link">
+                <img src="/images/footer/phone.svg" alt="" aria-hidden="true" />
                 <span>+7 (4832) 36-73-80</span>
               </a>
             </li>
             <li class="footer__contact-item">
-              <a href="tel: +74833347101" class="footer__contact-link">
-                <img src="/images/footer/phone.svg" alt="" />
+              <a href="tel:+74833347101" class="footer__contact-link">
+                <img src="/images/footer/phone.svg" alt="" aria-hidden="true" />
                 <span>+7 (48333) 4-71-01</span>
               </a>
             </li>

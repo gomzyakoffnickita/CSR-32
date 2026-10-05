@@ -260,6 +260,37 @@
   display: none;
 }
 
+.form__consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  line-height: 18px;
+  opacity: 0.75;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+.form__consent-input {
+  margin-top: 2px;
+  flex: 0 0 16px;
+  cursor: pointer;
+}
+
+.form__consent a {
+  color: #c2551e;
+  text-decoration: underline;
+}
+
+.form__input:focus {
+  outline: none;
+  border-color: #c2551e; /* оранжевый акцент при фокусе */
+}
+
+.form__input::placeholder {
+  color: rgba(27, 25, 23, 0.4);
+}
+
 .form__state--active {
   display: flex;
   flex-direction: column;

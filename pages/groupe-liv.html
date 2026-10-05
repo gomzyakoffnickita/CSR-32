@@ -1,20 +1,97 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/services.css" />
+
+    <!-- SEO мета-теги -->
+    <title>
+      Инструментальная и лазерная выверка оборудования — ООО «Центрспецремонт»
+    </title>
+    <meta
+      name="description"
+      content="Группа ЛИВ ООО «Центрспецремонт»: лазерная и инструментальная выверка, вибродиагностика, тепловой контроль, ультразвуковая дефектоскопия промышленного оборудования. Выезд на объекты по всей России."
+    />
+    <meta
+      name="keywords"
+      content="инструментальная выверка, лазерная выверка, вибродиагностика, выверка оборудования, соосность валов, тепловой контроль, дефектоскопия"
+    />
+    <link rel="canonical" href="https://csr32.ru/services/gruppa-liv.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Инструментальная и лазерная выверка — ООО «Центрспецремонт»"
+    />
+    <meta
+      property="og:description"
+      content="Точная диагностика и выверка промышленного оборудования. Лазерная выверка, вибродиагностика, тепловой контроль."
+    />
+    <meta
+      property="og:image"
+      content="https://csr32.ru/images/services/slider/4/og-image.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://csr32.ru/services/gruppa-liv.html"
+    />
+    <meta property="og:site_name" content="Центрспецремонт" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/favicon/favicon-96x96.png"
+    />
+
+    <!-- Шрифты -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Russo+One&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
       rel="stylesheet"
     />
-    <title>Группа ЛИВ</title>
+
+    <!-- Стили (абсолютные пути) -->
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/services.css" />
+
+    <!-- JSON-LD: разметка услуги -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Инструментальная и лазерная выверка промышленного оборудования",
+        "name": "Группа ЛИВ ООО «Центрспецремонт»",
+        "description": "Лазерная и инструментальная выверка, вибродиагностика, тепловой контроль, ультразвуковая дефектоскопия. Выверка соосности валов, геометрии корпусов и опор.",
+        "provider": {
+          "@type": "Organization",
+          "name": "ООО «Центрспецремонт»",
+          "url": "https://csr32.ru",
+          "telephone": "+7-4832-36-73-80",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ул. Базарная, 10",
+            "addressLocality": "Фокино",
+            "addressRegion": "Брянская область",
+            "addressCountry": "RU"
+          }
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "Россия"
+        }
+      }
+    </script>
   </head>
   <body>
+    <!-- Skip link для доступности -->
+    <a href="#main-content" class="skip-link"
+      >Перейти к основному содержимому</a
+    >
+
     <header class="header__services">
       <div class="container">
         <div class="header__wrapper-inner">
@@ -29,7 +106,7 @@
             <span></span>
           </button>
 
-          <nav class="mobile-menu">
+          <nav class="mobile-menu" aria-label="Мобильная навигация">
             <ul class="mobile-menu__list">
               <li>
                 <a href="/index.html#about" class="mobile-menu__link"
@@ -62,14 +139,14 @@
             </ul>
           </nav>
           <div class="header__top header__top-services">
-            <a href="../index.html" class="logo">
-              <img src="../images/logo.png" alt="logo" />
+            <a href="/index.html" class="logo" aria-label="На главную">
+              <img src="/images/logo.png" alt="Логотип ООО Центрспецремонт" />
             </a>
-            <nav class="menu">
+            <nav class="menu" aria-label="Основная навигация">
               <ul class="menu__list">
                 <li class="menu__item">
                   <a
-                    href="../index.html#about"
+                    href="/index.html#about"
                     class="menu__link hover-btn"
                     data-text="О компании"
                     ><span>О компании</span></a
@@ -77,7 +154,7 @@
                 </li>
                 <li class="menu__item">
                   <a
-                    href="../index.html#services"
+                    href="/index.html#services"
                     class="menu__link hover-btn"
                     data-text="Наши услуги"
                     ><span>Наши услуги</span></a
@@ -85,7 +162,7 @@
                 </li>
                 <li class="menu__item">
                   <a
-                    href="../index.html#career"
+                    href="/index.html#career"
                     class="menu__link hover-btn"
                     data-text="Карьера"
                     ><span>Карьера</span></a
@@ -93,7 +170,7 @@
                 </li>
                 <li class="menu__item">
                   <a
-                    href="../index.html#social"
+                    href="/index.html#social"
                     class="menu__link hover-btn"
                     data-text="Социальные проекты"
                     ><span>Социальные проекты</span></a
@@ -101,7 +178,7 @@
                 </li>
                 <li class="menu__item">
                   <a
-                    href="../index.html#news"
+                    href="/index.html#news"
                     class="menu__link hover-btn"
                     data-text="Новости"
                     ><span>Новости</span></a
@@ -109,7 +186,7 @@
                 </li>
                 <li class="menu__item">
                   <a
-                    href="../index.html#footer"
+                    href="/index.html#footer"
                     class="menu__link hover-btn"
                     data-text="Контакты"
                     ><span>Контакты</span></a
@@ -130,147 +207,180 @@
         </div>
       </div>
     </header>
-    <main>
-      <section class="service__gallery">
+    <main id="main-content">
+      <section
+        class="service__gallery"
+        aria-label="Фотографии работ группы ЛИВ"
+      >
         <div class="container">
           <div class="gallery__carousel">
             <div class="gallery__slide">
               <picture>
                 <source
-                  srcset="../images/services/slider/4/1.avif"
+                  srcset="/images/services/slider/4/1.avif"
                   type="image/avif"
                 />
                 <source
-                  srcset="../images/services/slider/4/1.webp"
+                  srcset="/images/services/slider/4/1.webp"
                   type="image/webp"
                 />
-                <img src="../images/services/slider/4/1.jpg" alt="" />
+                <img
+                  src="/images/services/slider/4/1.jpg"
+                  alt="Лазерная выверка соосности валов промышленного оборудования"
+                />
               </picture>
             </div>
 
             <div class="gallery__slide">
               <picture>
                 <source
-                  srcset="../images/services/slider/4/2.avif"
+                  srcset="/images/services/slider/4/2.avif"
                   type="image/avif"
                 />
                 <source
-                  srcset="../images/services/slider/4/2.webp"
+                  srcset="/images/services/slider/4/2.webp"
                   type="image/webp"
                 />
-                <img src="../images/services/slider/4/2.jpg" alt="" />
+                <img
+                  src="/images/services/slider/4/2.jpg"
+                  alt="Специалист проводит инструментальную выверку агрегата"
+                />
               </picture>
             </div>
 
             <div class="gallery__slide">
               <picture>
                 <source
-                  srcset="../images/services/slider/1/3.avif"
+                  srcset="/images/services/slider/1/3.avif"
                   type="image/avif"
                 />
                 <source
-                  srcset="../images/services/slider/1/3.webp"
+                  srcset="/images/services/slider/1/3.webp"
                   type="image/webp"
                 />
-                <img src="../images/services/slider/1/3.jpg" alt="" />
+                <img
+                  src="/images/services/slider/1/3.jpg"
+                  alt="Вибродиагностика подшипниковых узлов оборудования"
+                />
               </picture>
             </div>
 
             <div class="gallery__slide">
               <picture>
                 <source
-                  srcset="../images/services/slider/1/4.avif"
+                  srcset="/images/services/slider/1/4.avif"
                   type="image/avif"
                 />
                 <source
-                  srcset="../images/services/slider/1/4.webp"
+                  srcset="/images/services/slider/1/4.webp"
                   type="image/webp"
                 />
-                <img src="../images/services/slider/1/4.jpg" alt="" />
+                <img
+                  src="/images/services/slider/1/4.jpg"
+                  alt="Тепловизионный контроль промышленного оборудования"
+                />
               </picture>
             </div>
 
             <div class="gallery__slide">
               <picture>
                 <source
-                  srcset="../images/services/slider/1/5.avif"
+                  srcset="/images/services/slider/1/5.avif"
                   type="image/avif"
                 />
                 <source
-                  srcset="../images/services/slider/1/5.webp"
+                  srcset="/images/services/slider/1/5.webp"
                   type="image/webp"
                 />
-                <img src="../images/services/slider/1/5.jpg" alt="" />
+                <img
+                  src="/images/services/slider/1/5.jpg"
+                  alt="Проверка геометрии вращающейся печи"
+                />
               </picture>
             </div>
 
             <div class="gallery__slide">
               <picture>
                 <source
-                  srcset="../images/services/slider/1/6.avif"
+                  srcset="/images/services/slider/1/6.avif"
                   type="image/avif"
                 />
                 <source
-                  srcset="../images/services/slider/1/6.webp"
+                  srcset="/images/services/slider/1/6.webp"
                   type="image/webp"
                 />
-                <img src="../images/services/slider/1/6.jpg" alt="" />
+                <img
+                  src="/images/services/slider/1/6.jpg"
+                  alt="Ультразвуковая дефектоскопия металлических конструкций"
+                />
               </picture>
             </div>
 
             <div class="gallery__slide">
               <picture>
                 <source
-                  srcset="../images/services/slider/1/7.avif"
+                  srcset="/images/services/slider/1/7.avif"
                   type="image/avif"
                 />
                 <source
-                  srcset="../images/services/slider/1/7.webp"
+                  srcset="/images/services/slider/1/7.webp"
                   type="image/webp"
                 />
-                <img src="../images/services/slider/1/7.jpg" alt="" />
+                <img
+                  src="/images/services/slider/1/7.jpg"
+                  alt="Выверка редуктора мельничного агрегата"
+                />
               </picture>
             </div>
 
             <div class="gallery__slide">
               <picture>
                 <source
-                  srcset="../images/services/slider/1/8.avif"
+                  srcset="/images/services/slider/1/8.avif"
                   type="image/avif"
                 />
                 <source
-                  srcset="../images/services/slider/1/8.webp"
+                  srcset="/images/services/slider/1/8.webp"
                   type="image/webp"
                 />
-                <img src="../images/services/slider/1/8.jpg" alt="" />
+                <img
+                  src="/images/services/slider/1/8.jpg"
+                  alt="Диагностика компрессорного оборудования на объекте"
+                />
               </picture>
             </div>
 
             <div class="gallery__slide">
               <picture>
                 <source
-                  srcset="../images/services/slider/1/9.avif"
+                  srcset="/images/services/slider/1/9.avif"
                   type="image/avif"
                 />
                 <source
-                  srcset="../images/services/slider/1/9.webp"
+                  srcset="/images/services/slider/1/9.webp"
                   type="image/webp"
                 />
-                <img src="../images/services/slider/1/9.jpg" alt="" />
+                <img
+                  src="/images/services/slider/1/9.jpg"
+                  alt="Контроль соосности цапф мельницы"
+                />
               </picture>
             </div>
 
             <div class="gallery__slide">
               <picture>
                 <source
-                  srcset="../images/services/slider/1/10.avif"
+                  srcset="/images/services/slider/1/10.avif"
                   type="image/avif"
                 />
                 <source
-                  srcset="../images/services/slider/1/10.webp"
+                  srcset="/images/services/slider/1/10.webp"
                   type="image/webp"
                 />
-                <img src="../images/services/slider/1/10.jpg" alt="" />
+                <img
+                  src="/images/services/slider/1/10.jpg"
+                  alt="Оформление технического отчёта по результатам выверки"
+                />
               </picture>
             </div>
           </div>
@@ -290,8 +400,8 @@
                 снижает энергопотребление и наработку на отказ. Это основа
                 бесперебойной работы любого производства. Проведение
                 инструментальной и динамической выверки, диагностики
-                оборудования. По данным инструментальной выверки оставляется
-                отчет с рекомендациями по ведению ремонта и дальнейшей
+                оборудования. По данным инструментальной выверки составляется
+                отчёт с рекомендациями по ведению ремонта и дальнейшей
                 эксплуатации оборудования. Проведение ультразвуковой
                 дефектоскопии.
               </p>
@@ -379,7 +489,7 @@
                 Остались вопросы? <br />
                 Оставьте нам заявку и мы ответим!
               </h3>
-              <form class="form__contact" action="#" method="post">
+              <form class="form__contact" action="/api/contact" method="post">
                 <!-- Состояние: форма (активно по умолчанию) -->
                 <div class="form__state form__state--active" data-state="form">
                   <div class="form__row">
@@ -390,6 +500,7 @@
                         type="text"
                         id="name"
                         name="name"
+                        autocomplete="name"
                         minlength="2"
                         maxlength="50"
                         placeholder="Иван"
@@ -404,6 +515,7 @@
                         type="email"
                         id="email"
                         name="email"
+                        autocomplete="email"
                         placeholder="ivan@mail.ru"
                         required
                       />
@@ -422,11 +534,25 @@
                   </div>
 
                   <button class="form__submit" type="submit">Отправить</button>
+                  <label class="form__consent">
+                    <input
+                      type="checkbox"
+                      class="form__consent-input"
+                      name="consent"
+                      required
+                    />
+                    <span class="form__consent-text">
+                      Согласен на обработку персональных данных в соответствии с
+                      <a href="/privacy.html" target="_blank" rel="noopener"
+                        >политикой конфиденциальности</a
+                      >
+                    </span>
+                  </label>
                 </div>
 
                 <!-- Состояние: успех (скрыто по умолчанию) -->
                 <div class="form__state form__success" data-state="success">
-                  <div class="form__success-icon">
+                  <div class="form__success-icon" aria-hidden="true">
                     <svg class="checkmark" viewBox="0 0 52 52">
                       <circle
                         class="checkmark__circle"
@@ -502,124 +628,122 @@
           </div>
         </div>
       </section>
-      <footer class="footer" id="footer">
-        <div class="container">
-          <div class="footer__wrapper">
-            <a href="/index.html" class="footer__logo">
-              <img src="/images/logo.png" alt="logo" />
-            </a>
-
-            <ul class="footer__nav">
-              <li class="footer__nav-item">
-                <p class="footer__nav-title">Выберите раздел</p>
-              </li>
-              <li class="footer__nav-item">
-                <a
-                  class="footer__nav-link hover-btn"
-                  href="/index.html#about"
-                  data-text="О компании"
-                  ><span>О компании</span></a
-                >
-              </li>
-              <li class="footer__nav-item">
-                <a
-                  class="footer__nav-link hover-btn"
-                  href="/index.html#services"
-                  data-text="Услуги"
-                  ><span>Услуги</span></a
-                >
-              </li>
-              <li class="footer__nav-item">
-                <a
-                  class="footer__nav-link hover-btn"
-                  href="/index.html#career"
-                  data-text="Карьера"
-                  ><span>Карьера</span></a
-                >
-              </li>
-              <li class="footer__nav-item">
-                <a
-                  class="footer__nav-link hover-btn"
-                  href="/index.html#social"
-                  data-text="Социальные проекты"
-                  ><span>Социальные проекты</span></a
-                >
-              </li>
-              <li class="footer__nav-item">
-                <a
-                  class="footer__nav-link hover-btn"
-                  href="/index.html#news"
-                  data-text="Новости"
-                  ><span>Новости</span></a
-                >
-              </li>
-            </ul>
-
-            <ul class="footer__social">
-              <li class="footer__social-item">
-                <p class="footer__social-title">Выберите раздел</p>
-              </li>
-              <li class="footer__social-item">
-                <a
-                  href="mailto:centrspezremont@mail.ru"
-                  class="footer__social-link"
-                  aria-label="Написать на почту centrspezremont@mail.ru"
-                >
-                  <img
-                    src="/images/footer/email.svg"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                  <span>centrspezremont@mail.ru</span>
-                </a>
-              </li>
-              <li class="footer__social-item">
-                <a
-                  href="https://vk.ru/csr32"
-                  class="footer__social-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src="/images/footer/vk.svg" alt="vk" />
-                  <span>CSR-32</span>
-                </a>
-              </li>
-            </ul>
-
-            <ul class="footer__contacts">
-              <li class="footer__contact-item">
-                <a href="#" class="footer__contact-link">
-                  <img src="/images/footer/map.svg" alt="" />
-                  <span>г. Фокино, ул. Базарная, 10</span>
-                </a>
-              </li>
-              <li class="footer__contact-item">
-                <a href="tel: +74832367380" class="footer__contact-link">
-                  <img src="/images/footer/phone.svg" alt="" />
-                  <span>+7 (4832) 36-73-80</span>
-                </a>
-              </li>
-              <li class="footer__contact-item">
-                <a href="tel: +74833347101" class="footer__contact-link">
-                  <img src="/images/footer/phone.svg" alt="" />
-                  <span>+7 (48333) 4-71-01</span>
-                </a>
-              </li>
-              <li class="footer__contact-time">
-                Время работы
-                <br />
-                Пн-пт
-                <br />
-                с 08:00 до 17:00
-              </li>
-            </ul>
-          </div>
-        </div>
-      </footer>
     </main>
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <a href="/index.html" class="footer__logo" aria-label="На главную">
+            <img src="/images/logo.png" alt="Логотип ООО Центрспецремонт" />
+          </a>
+
+          <ul class="footer__nav">
+            <li class="footer__nav-item">
+              <p class="footer__nav-title">Выберите раздел</p>
+            </li>
+            <li class="footer__nav-item">
+              <a
+                class="footer__nav-link hover-btn"
+                href="/index.html#about"
+                data-text="О компании"
+                ><span>О компании</span></a
+              >
+            </li>
+            <li class="footer__nav-item">
+              <a
+                class="footer__nav-link hover-btn"
+                href="/index.html#services"
+                data-text="Услуги"
+                ><span>Услуги</span></a
+              >
+            </li>
+            <li class="footer__nav-item">
+              <a
+                class="footer__nav-link hover-btn"
+                href="/index.html#career"
+                data-text="Карьера"
+                ><span>Карьера</span></a
+              >
+            </li>
+            <li class="footer__nav-item">
+              <a
+                class="footer__nav-link hover-btn"
+                href="/index.html#social"
+                data-text="Социальные проекты"
+                ><span>Социальные проекты</span></a
+              >
+            </li>
+            <li class="footer__nav-item">
+              <a
+                class="footer__nav-link hover-btn"
+                href="/index.html#news"
+                data-text="Новости"
+                ><span>Новости</span></a
+              >
+            </li>
+          </ul>
+
+          <ul class="footer__social">
+            <li class="footer__social-item">
+              <p class="footer__social-title">Выберите раздел</p>
+            </li>
+            <li class="footer__social-item">
+              <a
+                href="mailto:centrspezremont@mail.ru"
+                class="footer__social-link"
+                aria-label="Написать на почту centrspezremont@mail.ru"
+              >
+                <img src="/images/footer/email.svg" alt="" aria-hidden="true" />
+                <span>centrspezremont@mail.ru</span>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a
+                href="https://vk.com/csr32"
+                class="footer__social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Мы ВКонтакте (откроется в новой вкладке)"
+              >
+                <img src="/images/footer/vk.svg" alt="" aria-hidden="true" />
+                <span>CSR-32</span>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="footer__contacts">
+            <li class="footer__contact-item">
+              <a href="#" class="footer__contact-link">
+                <img src="/images/footer/map.svg" alt="" aria-hidden="true" />
+                <span>г. Фокино, ул. Базарная, 10</span>
+              </a>
+            </li>
+            <li class="footer__contact-item">
+              <a href="tel:+74832367380" class="footer__contact-link">
+                <img src="/images/footer/phone.svg" alt="" aria-hidden="true" />
+                <span>+7 (4832) 36-73-80</span>
+              </a>
+            </li>
+            <li class="footer__contact-item">
+              <a href="tel:+74833347101" class="footer__contact-link">
+                <img src="/images/footer/phone.svg" alt="" aria-hidden="true" />
+                <span>+7 (48333) 4-71-01</span>
+              </a>
+            </li>
+            <li class="footer__contact-time">
+              Время работы
+              <br />
+              Пн-пт
+              <br />
+              с 08:00 до 17:00
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
     <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js"></script>
-    <script src="../js/common.js"></script>
-    <script src="../js/services.js"></script>
-    <script src="../js/form.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/services.js"></script>
+    <script src="/js/form.js"></script>
   </body>
 </html>

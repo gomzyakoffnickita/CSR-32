@@ -1,20 +1,132 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/services.css" />
+
+    <!-- SEO мета-теги -->
+    <title>
+      Ремонт технологического оборудования — ООО «Центрспецремонт» | Печи,
+      мельницы, холодильники
+    </title>
+    <meta
+      name="description"
+      content="Ремонт технологического оборудования: вращающиеся печи, цементные и сырьевые мельницы, колосниковые холодильники. Замена обечаек, бандажей, футеровки. Собственная производственная база ЦСР. Выезд на объекты по всей России."
+    />
+    <meta
+      name="keywords"
+      content="ремонт печей, ремонт мельниц, колосниковый холодильник, ремонт обечайки, замена бандажа, ремонт футеровки, мельница Гидрофол, ремонт оборудования"
+    />
+    <link
+      rel="canonical"
+      href="https://csr32.ru/services/remont-tehnologicheskogo-oborudovaniya.html"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Ремонт технологического оборудования — ООО «Центрспецремонт»"
+    />
+    <meta
+      property="og:description"
+      content="Ремонт вращающихся печей, мельниц, колосниковых холодильников. Замена обечаек, бандажей, футеровки."
+    />
+    <meta
+      property="og:image"
+      content="https://csr32.ru/images/services/slider/2/og-image.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://csr32.ru/services/remont-tehnologicheskogo-oborudovaniya.html"
+    />
+    <meta property="og:site_name" content="Центрспецремонт" />
+    <meta property="og:locale" content="ru_RU" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png" />
+
+    <!-- Шрифты -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Russo+One&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
       rel="stylesheet"
     />
-    <title>Ремонт технологического оборудования</title>
+
+    <!-- Стили (абсолютные пути) -->
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/services.css" />
+
+    <!-- JSON-LD: разметка услуги -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Ремонт технологического оборудования",
+        "name": "Ремонтный участок ООО «Центрспецремонт»",
+        "description": "Механический ремонт вращающихся печей, цементных и сырьевых мельниц, колосниковых холодильников, сушильных барабанов. Замена обечаек, бандажей, опорных роликов, футеровки.",
+        "provider": {
+          "@type": "Organization",
+          "name": "ООО «Центрспецремонт»",
+          "url": "https://csr32.ru",
+          "telephone": "+7-4832-36-73-80",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ул. Базарная, 10",
+            "addressLocality": "Фокино",
+            "addressRegion": "Брянская область",
+            "addressCountry": "RU"
+          }
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "Россия"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Ремонт технологического оборудования",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Ремонт вращающихся печей и замена обечаек"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Ремонт цементных и сырьевых мельниц"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Ремонт колосниковых холодильников"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Замена бандажей и опорных роликов"
+              }
+            }
+          ]
+        }
+      }
+    </script>
   </head>
   <body>
+    <!-- Skip link для доступности -->
+    <a href="#main-content" class="skip-link"
+      >Перейти к основному содержимому</a
+    >
+
     <header class="header__services">
       <div class="container">
         <div class="header__wrapper-inner">
@@ -29,49 +141,47 @@
             <span></span>
           </button>
 
-          <nav class="mobile-menu">
+          <nav class="mobile-menu" aria-label="Мобильная навигация">
             <ul class="mobile-menu__list">
               <li>
-                <a href="../index.html#about" class="mobile-menu__link"
+                <a href="/index.html#about" class="mobile-menu__link"
                   >О компании</a
                 >
               </li>
               <li>
-                <a href="../index.html#services" class="mobile-menu__link"
+                <a href="/index.html#services" class="mobile-menu__link"
                   >Услуги</a
                 >
               </li>
               <li>
-                <a href="../index.html#career" class="mobile-menu__link"
+                <a href="/index.html#career" class="mobile-menu__link"
                   >Карьера</a
                 >
               </li>
               <li>
-                <a href="../index.html#news" class="mobile-menu__link"
+                <a href="/index.html#social" class="mobile-menu__link"
                   >Социальные проекты</a
                 >
               </li>
               <li>
-                <a href="../index.html#news" class="mobile-menu__link"
-                  >Новости</a
-                >
+                <a href="/index.html#news" class="mobile-menu__link">Новости</a>
               </li>
               <li>
-                <a href="../index.html#footer" class="mobile-menu__link"
+                <a href="/index.html#footer" class="mobile-menu__link"
                   >Контакты</a
                 >
               </li>
             </ul>
           </nav>
           <div class="header__top header__top-services">
-            <a href="../index.html" class="logo">
-              <img src="../images/logo.png" alt="logo" />
+            <a href="/index.html" class="logo" aria-label="На главную">
+              <img src="/images/logo.png" alt="Логотип ООО Центрспецремонт" />
             </a>
-            <nav class="menu">
+            <nav class="menu" aria-label="Основная навигация">
               <ul class="menu__list">
                 <li class="menu__item">
                   <a
-                    href="../index.html#about"
+                    href="/index.html#about"
                     class="menu__link hover-btn"
                     data-text="О компании"
                     ><span>О компании</span></a
@@ -79,7 +189,7 @@
                 </li>
                 <li class="menu__item">
                   <a
-                    href="../index.html#services"
+                    href="/index.html#services"
                     class="menu__link hover-btn"
                     data-text="Наши услуги"
                     ><span>Наши услуги</span></a
@@ -87,7 +197,7 @@
                 </li>
                 <li class="menu__item">
                   <a
-                    href="../index.html#career"
+                    href="/index.html#career"
                     class="menu__link hover-btn"
                     data-text="Карьера"
                     ><span>Карьера</span></a
@@ -95,7 +205,7 @@
                 </li>
                 <li class="menu__item">
                   <a
-                    href="../index.html#social"
+                    href="/index.html#social"
                     class="menu__link hover-btn"
                     data-text="Социальные проекты"
                     ><span>Социальные проекты</span></a
@@ -103,7 +213,7 @@
                 </li>
                 <li class="menu__item">
                   <a
-                    href="../index.html#news"
+                    href="/index.html#news"
                     class="menu__link hover-btn"
                     data-text="Новости"
                     ><span>Новости</span></a
@@ -111,7 +221,7 @@
                 </li>
                 <li class="menu__item">
                   <a
-                    href="../index.html#footer"
+                    href="/index.html#footer"
                     class="menu__link hover-btn"
                     data-text="Контакты"
                     ><span>Контакты</span></a
@@ -132,119 +242,146 @@
         </div>
       </div>
     </header>
-    <main>
-      <section class="service__gallery">
+    <main id="main-content">
+      <section
+        class="service__gallery"
+        aria-label="Фотографии работ по ремонту оборудования"
+      >
         <div class="container">
           <div class="gallery__carousel">
             <div class="gallery__slide">
               <picture>
                 <source
-                  srcset="../images/services/slider/2/1.avif"
+                  srcset="/images/services/slider/2/1.avif"
                   type="image/avif"
                 />
                 <source
-                  srcset="../images/services/slider/2/1.webp"
+                  srcset="/images/services/slider/2/1.webp"
                   type="image/webp"
                 />
-                <img src="../images/services/slider/2/1.jpg" alt="" />
+                <img
+                  src="/images/services/slider/2/1.jpg"
+                  alt="Ремонт вращающейся печи на промышленном объекте"
+                />
               </picture>
             </div>
 
             <div class="gallery__slide">
               <picture>
                 <source
-                  srcset="../images/services/slider/2/2.avif"
+                  srcset="/images/services/slider/2/2.avif"
                   type="image/avif"
                 />
                 <source
-                  srcset="../images/services/slider/2/2.webp"
+                  srcset="/images/services/slider/2/2.webp"
                   type="image/webp"
                 />
-                <img src="../images/services/slider/2/2.jpg" alt="" />
+                <img
+                  src="/images/services/slider/2/2.jpg"
+                  alt="Замена обечайки корпуса вращающейся печи"
+                />
               </picture>
             </div>
 
             <div class="gallery__slide">
               <picture>
                 <source
-                  srcset="../images/services/slider/2/3.avif"
+                  srcset="/images/services/slider/2/3.avif"
                   type="image/avif"
                 />
                 <source
-                  srcset="../images/services/slider/2/3.webp"
+                  srcset="/images/services/slider/2/3.webp"
                   type="image/webp"
                 />
-                <img src="../images/services/slider/2/3.jpg" alt="" />
+                <img
+                  src="/images/services/slider/2/3.jpg"
+                  alt="Ремонт цементной мельницы на производственной базе ЦСР"
+                />
               </picture>
             </div>
 
             <div class="gallery__slide">
               <picture>
                 <source
-                  srcset="../images/services/slider/2/4.avif"
+                  srcset="/images/services/slider/2/4.avif"
                   type="image/avif"
                 />
                 <source
-                  srcset="../images/services/slider/2/4.webp"
+                  srcset="/images/services/slider/2/4.webp"
                   type="image/webp"
                 />
-                <img src="../images/services/slider/2/4.jpg" alt="" />
+                <img
+                  src="/images/services/slider/2/4.jpg"
+                  alt="Восстановление бандажа и опорных роликов"
+                />
               </picture>
             </div>
 
             <div class="gallery__slide">
               <picture>
                 <source
-                  srcset="../images/services/slider/2/5.avif"
+                  srcset="/images/services/slider/2/5.avif"
                   type="image/avif"
                 />
                 <source
-                  srcset="../images/services/slider/2/5.webp"
+                  srcset="/images/services/slider/2/5.webp"
                   type="image/webp"
                 />
-                <img src="../images/services/slider/2/5.jpg" alt="" />
+                <img
+                  src="/images/services/slider/2/5.jpg"
+                  alt="Ремонт колосникового холодильника"
+                />
               </picture>
             </div>
 
             <div class="gallery__slide">
               <picture>
                 <source
-                  srcset="../images/services/slider/2/6.avif"
+                  srcset="/images/services/slider/2/6.avif"
                   type="image/avif"
                 />
                 <source
-                  srcset="../images/services/slider/2/6.webp"
+                  srcset="/images/services/slider/2/6.webp"
                   type="image/webp"
                 />
-                <img src="../images/services/slider/2/6.jpg" alt="" />
+                <img
+                  src="/images/services/slider/2/6.jpg"
+                  alt="Замена футеровки барабана мельницы"
+                />
               </picture>
             </div>
 
             <div class="gallery__slide">
               <picture>
                 <source
-                  srcset="../images/services/slider/2/7.avif"
+                  srcset="/images/services/slider/2/7.avif"
                   type="image/avif"
                 />
                 <source
-                  srcset="../images/services/slider/2/7.webp"
+                  srcset="/images/services/slider/2/7.webp"
                   type="image/webp"
                 />
-                <img src="../images/services/slider/2/7.jpg" alt="" />
+                <img
+                  src="/images/services/slider/2/7.jpg"
+                  alt="Выверка и центровка валов после ремонта"
+                />
               </picture>
             </div>
 
             <div class="gallery__slide">
               <picture>
                 <source
-                  srcset="../images/services/slider/2/8.avif"
+                  srcset="/images/services/slider/2/8.avif"
                   type="image/avif"
                 />
                 <source
-                  srcset="../images/services/slider/2/8.webp"
+                  srcset="/images/services/slider/2/8.webp"
                   type="image/webp"
                 />
-                <img src="../images/services/slider/2/8.jpg" alt="" />
+                <img
+                  src="/images/services/slider/2/8.jpg"
+                  alt="Обкатка оборудования после капитального ремонта"
+                />
               </picture>
             </div>
           </div>
@@ -347,7 +484,7 @@
                 Остались вопросы? <br />
                 Оставьте нам заявку и мы ответим!
               </h3>
-              <form class="form__contact" action="#" method="post">
+              <form class="form__contact" action="/api/contact" method="post">
                 <!-- Состояние: форма (активно по умолчанию) -->
                 <div class="form__state form__state--active" data-state="form">
                   <div class="form__row">
@@ -358,6 +495,7 @@
                         type="text"
                         id="name"
                         name="name"
+                        autocomplete="name"
                         minlength="2"
                         maxlength="50"
                         placeholder="Иван"
@@ -372,6 +510,7 @@
                         type="email"
                         id="email"
                         name="email"
+                        autocomplete="email"
                         placeholder="ivan@mail.ru"
                         required
                       />
@@ -390,11 +529,25 @@
                   </div>
 
                   <button class="form__submit" type="submit">Отправить</button>
+                  <label class="form__consent">
+                    <input
+                      type="checkbox"
+                      class="form__consent-input"
+                      name="consent"
+                      required
+                    />
+                    <span class="form__consent-text">
+                      Согласен на обработку персональных данных в соответствии с
+                      <a href="/privacy.html" target="_blank" rel="noopener"
+                        >политикой конфиденциальности</a
+                      >
+                    </span>
+                  </label>
                 </div>
 
                 <!-- Состояние: успех (скрыто по умолчанию) -->
                 <div class="form__state form__success" data-state="success">
-                  <div class="form__success-icon">
+                  <div class="form__success-icon" aria-hidden="true">
                     <svg class="checkmark" viewBox="0 0 52 52">
                       <circle
                         class="checkmark__circle"
@@ -471,11 +624,11 @@
         </div>
       </section>
     </main>
-   <footer class="footer" id="footer">
+    <footer class="footer" id="footer">
       <div class="container">
         <div class="footer__wrapper">
-          <a href="/index.html" class="footer__logo">
-            <img src="/images/logo.png" alt="logo" />
+          <a href="/index.html" class="footer__logo" aria-label="На главную">
+            <img src="/images/logo.png" alt="Логотип ООО Центрспецремонт" />
           </a>
 
           <ul class="footer__nav">
@@ -540,12 +693,13 @@
             </li>
             <li class="footer__social-item">
               <a
-                href="https://vk.ru/csr32"
+                href="https://vk.com/csr32"
                 class="footer__social-link"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Мы ВКонтакте (откроется в новой вкладке)"
               >
-                <img src="/images/footer/vk.svg" alt="vk" />
+                <img src="/images/footer/vk.svg" alt="" aria-hidden="true" />
                 <span>CSR-32</span>
               </a>
             </li>
@@ -554,19 +708,19 @@
           <ul class="footer__contacts">
             <li class="footer__contact-item">
               <a href="#" class="footer__contact-link">
-                <img src="/images/footer/map.svg" alt="" />
+                <img src="/images/footer/map.svg" alt="" aria-hidden="true" />
                 <span>г. Фокино, ул. Базарная, 10</span>
               </a>
             </li>
             <li class="footer__contact-item">
-              <a href="tel: +74832367380" class="footer__contact-link">
-                <img src="/images/footer/phone.svg" alt="" />
+              <a href="tel:+74832367380" class="footer__contact-link">
+                <img src="/images/footer/phone.svg" alt="" aria-hidden="true" />
                 <span>+7 (4832) 36-73-80</span>
               </a>
             </li>
             <li class="footer__contact-item">
-              <a href="tel: +74833347101" class="footer__contact-link">
-                <img src="/images/footer/phone.svg" alt="" />
+              <a href="tel:+74833347101" class="footer__contact-link">
+                <img src="/images/footer/phone.svg" alt="" aria-hidden="true" />
                 <span>+7 (48333) 4-71-01</span>
               </a>
             </li>
@@ -582,8 +736,8 @@
       </div>
     </footer>
     <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js"></script>
-    <script src="../js/common.js"></script>
-    <script src="../js/services.js"></script>
-    <script src="../js/form.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/services.js"></script>
+    <script src="/js/form.js"></script>
   </body>
 </html>

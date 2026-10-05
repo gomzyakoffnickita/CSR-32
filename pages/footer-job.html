@@ -1,20 +1,95 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/services.css" />
+
+    <!-- SEO мета-теги -->
+    <title>
+      Футеровочные работы — ООО «Центрспецремонт» | Ремонт печей и котлов
+    </title>
+    <meta
+      name="description"
+      content="Футеровочный участок ООО «Центрспецремонт»: огнеупорная кладка печей, котлов, мельниц. Аварийные горячие ремонты. Собственная база, современное оборудование. Работаем по всей России."
+    />
+    <meta
+      name="keywords"
+      content="футеровка печей, огнеупорная кладка, ремонт котлов, футеровочные работы, горячий ремонт печей, торкретирование"
+    />
+    <link
+      rel="canonical"
+      href="https://csr32.ru/services/futerovochnyj-uchastok.html"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Футеровочные работы — ООО «Центрспецремонт»"
+    />
+    <meta
+      property="og:description"
+      content="Огнеупорная кладка печей, котлов, мельниц. Аварийные горячие ремонты по всей России."
+    />
+    <meta
+      property="og:image"
+      content="https://csr32.ru/images/services/slider/3/og-image.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://csr32.ru/services/futerovochnyj-uchastok.html"
+    />
+    <meta property="og:site_name" content="Центрспецремонт" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+
+    <!-- Шрифты -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Russo+One&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
       rel="stylesheet"
     />
-    <title>Футеровочный участок</title>
+
+    <!-- Стили (абсолютные пути) -->
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/services.css" />
+
+    <!-- JSON-LD: разметка услуги -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Футеровочные работы",
+        "name": "Футеровочный участок ООО «Центрспецремонт»",
+        "description": "Огнеупорная кладка вращающихся печей, шахтных и туннельных печей, мельниц, котлов, газоходов. Аварийные (горячие) ремонты. Торкретирование жаростойких бетонов.",
+        "provider": {
+          "@type": "Organization",
+          "name": "ООО «Центрспецремонт»",
+          "url": "https://csr32.ru",
+          "telephone": "+7-4832-36-73-80",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ул. Базарная, 10",
+            "addressLocality": "Фокино",
+            "addressRegion": "Брянская область",
+            "addressCountry": "RU"
+          }
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "Россия"
+        }
+      }
+    </script>
   </head>
   <body>
+    <!-- Skip link для доступности -->
+    <a href="#main-content" class="skip-link"
+      >Перейти к основному содержимому</a
+    >
     <header class="header__services">
       <div class="container">
         <div class="header__wrapper-inner">
@@ -29,7 +104,7 @@
             <span></span>
           </button>
 
-          <nav class="mobile-menu">
+          <nav class="mobile-menu" aria-label="Мобильная навигация">
             <ul class="mobile-menu__list">
               <li>
                 <a href="/index.html#about" class="mobile-menu__link"
@@ -61,63 +136,71 @@
               </li>
             </ul>
           </nav>
+
           <div class="header__top header__top-services">
-            <a href="/index.html" class="logo">
-              <img src="/images/logo.png" alt="logo" />
+            <a href="/index.html" class="logo" aria-label="На главную">
+              <img src="/images/logo.png" alt="Логотип ООО Центрспецремонт" />
             </a>
-            <nav class="menu">
+            <nav class="menu" aria-label="Основная навигация">
               <ul class="menu__list">
                 <li class="menu__item">
                   <a
                     href="/index.html#about"
                     class="menu__link hover-btn"
                     data-text="О компании"
-                    ><span>О компании</span></a
                   >
+                    <span>О компании</span>
+                  </a>
                 </li>
                 <li class="menu__item">
                   <a
                     href="/index.html#services"
                     class="menu__link hover-btn"
                     data-text="Наши услуги"
-                    ><span>Наши услуги</span></a
                   >
+                    <span>Наши услуги</span>
+                  </a>
                 </li>
                 <li class="menu__item">
                   <a
                     href="/index.html#career"
                     class="menu__link hover-btn"
                     data-text="Карьера"
-                    ><span>Карьера</span></a
                   >
+                    <span>Карьера</span>
+                  </a>
                 </li>
                 <li class="menu__item">
                   <a
                     href="/index.html#social"
                     class="menu__link hover-btn"
                     data-text="Социальные проекты"
-                    ><span>Социальные проекты</span></a
                   >
+                    <span>Социальные проекты</span>
+                  </a>
                 </li>
                 <li class="menu__item">
                   <a
                     href="/index.html#news"
                     class="menu__link hover-btn"
                     data-text="Новости"
-                    ><span>Новости</span></a
                   >
+                    <span>Новости</span>
+                  </a>
                 </li>
                 <li class="menu__item">
                   <a
                     href="/index.html#footer"
                     class="menu__link hover-btn"
                     data-text="Контакты"
-                    ><span>Контакты</span></a
                   >
+                    <span>Контакты</span>
+                  </a>
                 </li>
               </ul>
             </nav>
           </div>
+
           <div class="header__hero-services">
             <p class="highlight-desc header__services-desc">Наши услуги</p>
             <h1 class="header__title-services">Футеровочный участок</h1>
@@ -128,138 +211,170 @@
         </div>
       </div>
     </header>
-    <main>
-      <section class="service__gallery">
+
+    <main id="main-content">
+      <section
+        class="service__gallery"
+        aria-label="Фотографии выполненных работ"
+      >
         <div class="container">
           <div class="gallery__carousel">
             <div class="gallery__slide">
               <picture>
                 <source
-                  srcset="../images/services/slider/3/1.avif"
+                  srcset="/images/services/slider/3/1.avif"
                   type="image/avif"
                 />
                 <source
-                  srcset="../images/services/slider/3/1.webp"
+                  srcset="/images/services/slider/3/1.webp"
                   type="image/webp"
                 />
-                <img src="../images/services/slider/3/1.jpg" alt="" />
+                <img
+                  src="/images/services/slider/3/1.jpg"
+                  alt="Футеровка вращающейся печи на промышленном объекте"
+                />
               </picture>
             </div>
 
             <div class="gallery__slide">
               <picture>
                 <source
-                  srcset="../images/services/slider/3/2.avif"
+                  srcset="/images/services/slider/3/2.avif"
                   type="image/avif"
                 />
                 <source
-                  srcset="../images/services/slider/3/2.webp"
+                  srcset="/images/services/slider/3/2.webp"
                   type="image/webp"
                 />
-                <img src="../images/services/slider/3/2.jpg" alt="" />
+                <img
+                  src="/images/services/slider/3/2.jpg"
+                  alt="Огнеупорная кладка шахтной печи"
+                />
               </picture>
             </div>
 
             <div class="gallery__slide">
               <picture>
                 <source
-                  srcset="../images/services/slider/3/3.avif"
+                  srcset="/images/services/slider/3/3.avif"
                   type="image/avif"
                 />
                 <source
-                  srcset="../images/services/slider/3/3.webp"
+                  srcset="/images/services/slider/3/3.webp"
                   type="image/webp"
                 />
-                <img src="../images/services/slider/3/3.jpg" alt="" />
+                <img
+                  src="/images/services/slider/3/3.jpg"
+                  alt="Ремонт футеровки котельного оборудования"
+                />
               </picture>
             </div>
 
             <div class="gallery__slide">
               <picture>
                 <source
-                  srcset="../images/services/slider/3/4.avif"
+                  srcset="/images/services/slider/3/4.avif"
                   type="image/avif"
                 />
                 <source
-                  srcset="../images/services/slider/3/4.webp"
+                  srcset="/images/services/slider/3/4.webp"
                   type="image/webp"
                 />
-                <img src="../images/services/slider/3/4.jpg" alt="" />
+                <img
+                  src="/images/services/slider/3/4.jpg"
+                  alt="Торкретирование жаростойким бетоном"
+                />
               </picture>
             </div>
 
             <div class="gallery__slide">
               <picture>
                 <source
-                  srcset="../images/services/slider/3/5.avif"
+                  srcset="/images/services/slider/3/5.avif"
                   type="image/avif"
                 />
                 <source
-                  srcset="../images/services/slider/3/5.webp"
+                  srcset="/images/services/slider/3/5.webp"
                   type="image/webp"
                 />
-                <img src="../images/services/slider/3/5.jpg" alt="" />
+                <img
+                  src="/images/services/slider/3/5.jpg"
+                  alt="Монтаж анкерной системы футеровки"
+                />
               </picture>
             </div>
 
             <div class="gallery__slide">
               <picture>
                 <source
-                  srcset="../images/services/slider/3/6.avif"
+                  srcset="/images/services/slider/3/6.avif"
                   type="image/avif"
                 />
                 <source
-                  srcset="../images/services/slider/3/6.webp"
+                  srcset="/images/services/slider/3/6.webp"
                   type="image/webp"
                 />
-                <img src="../images/services/slider/3/6.jpg" alt="" />
+                <img
+                  src="/images/services/slider/3/6.jpg"
+                  alt="Работы по футеровке туннельной печи"
+                />
               </picture>
             </div>
 
             <div class="gallery__slide">
               <picture>
                 <source
-                  srcset="../images/services/slider/3/7.avif"
+                  srcset="/images/services/slider/3/7.avif"
                   type="image/avif"
                 />
                 <source
-                  srcset="../images/services/slider/3/7.webp"
+                  srcset="/images/services/slider/3/7.webp"
                   type="image/webp"
                 />
-                <img src="../images/services/slider/3/7.jpg" alt="" />
+                <img
+                  src="/images/services/slider/3/7.jpg"
+                  alt="Футеровка мельницы на производственном объекте"
+                />
               </picture>
             </div>
 
             <div class="gallery__slide">
               <picture>
                 <source
-                  srcset="../images/services/slider/3/8.avif"
+                  srcset="/images/services/slider/3/8.avif"
                   type="image/avif"
                 />
                 <source
-                  srcset="../images/services/slider/3/8.webp"
+                  srcset="/images/services/slider/3/8.webp"
                   type="image/webp"
                 />
-                <img src="../images/services/slider/3/8.jpg" alt="" />
+                <img
+                  src="/images/services/slider/3/8.jpg"
+                  alt="Работа бригады огнеупорщиков на объекте"
+                />
               </picture>
             </div>
 
             <div class="gallery__slide">
               <picture>
                 <source
-                  srcset="../images/services/slider/3/9.avif"
+                  srcset="/images/services/slider/3/9.avif"
                   type="image/avif"
                 />
                 <source
-                  srcset="../images/services/slider/3/9.webp"
+                  srcset="/images/services/slider/3/9.webp"
                   type="image/webp"
                 />
-                <img src="../images/services/slider/3/9.jpg" alt="" />
+                <img
+                  src="/images/services/slider/3/9.jpg"
+                  alt="Контроль качества футеровочных работ"
+                />
               </picture>
             </div>
           </div>
         </div>
       </section>
+
       <section class="description">
         <div class="container">
           <div class="description__grid">
@@ -360,7 +475,7 @@
                 Остались вопросы? <br />
                 Оставьте нам заявку и мы ответим!
               </h3>
-              <form class="form__contact" action="#" method="post">
+              <form class="form__contact" action="/api/contact" method="post">
                 <!-- Состояние: форма (активно по умолчанию) -->
                 <div class="form__state form__state--active" data-state="form">
                   <div class="form__row">
@@ -371,6 +486,7 @@
                         type="text"
                         id="name"
                         name="name"
+                        autocomplete="name"
                         minlength="2"
                         maxlength="50"
                         placeholder="Иван"
@@ -385,6 +501,7 @@
                         type="email"
                         id="email"
                         name="email"
+                        autocomplete="email"
                         placeholder="ivan@mail.ru"
                         required
                       />
@@ -403,11 +520,25 @@
                   </div>
 
                   <button class="form__submit" type="submit">Отправить</button>
+                  <label class="form__consent">
+                    <input
+                      type="checkbox"
+                      class="form__consent-input"
+                      name="consent"
+                      required
+                    />
+                    <span class="form__consent-text">
+                      Согласен на обработку персональных данных в соответствии с
+                      <a href="/privacy.html" target="_blank" rel="noopener"
+                        >политикой конфиденциальности</a
+                      >
+                    </span>
+                  </label>
                 </div>
 
                 <!-- Состояние: успех (скрыто по умолчанию) -->
                 <div class="form__state form__success" data-state="success">
-                  <div class="form__success-icon">
+                  <div class="form__success-icon" aria-hidden="true">
                     <svg class="checkmark" viewBox="0 0 52 52">
                       <circle
                         class="checkmark__circle"
@@ -436,6 +567,7 @@
           </div>
         </div>
       </section>
+
       <section class="benefits">
         <div class="container">
           <div class="benefits__wrapper">
@@ -483,124 +615,122 @@
           </div>
         </div>
       </section>
-      <footer class="footer" id="footer">
-        <div class="container">
-          <div class="footer__wrapper">
-            <a href="/index.html" class="footer__logo">
-              <img src="/images/logo.png" alt="logo" />
-            </a>
-
-            <ul class="footer__nav">
-              <li class="footer__nav-item">
-                <p class="footer__nav-title">Выберите раздел</p>
-              </li>
-              <li class="footer__nav-item">
-                <a
-                  class="footer__nav-link hover-btn"
-                  href="/index.html#about"
-                  data-text="О компании"
-                  ><span>О компании</span></a
-                >
-              </li>
-              <li class="footer__nav-item">
-                <a
-                  class="footer__nav-link hover-btn"
-                  href="/index.html#services"
-                  data-text="Услуги"
-                  ><span>Услуги</span></a
-                >
-              </li>
-              <li class="footer__nav-item">
-                <a
-                  class="footer__nav-link hover-btn"
-                  href="/index.html#career"
-                  data-text="Карьера"
-                  ><span>Карьера</span></a
-                >
-              </li>
-              <li class="footer__nav-item">
-                <a
-                  class="footer__nav-link hover-btn"
-                  href="/index.html#social"
-                  data-text="Социальные проекты"
-                  ><span>Социальные проекты</span></a
-                >
-              </li>
-              <li class="footer__nav-item">
-                <a
-                  class="footer__nav-link hover-btn"
-                  href="/index.html#news"
-                  data-text="Новости"
-                  ><span>Новости</span></a
-                >
-              </li>
-            </ul>
-
-            <ul class="footer__social">
-              <li class="footer__social-item">
-                <p class="footer__social-title">Выберите раздел</p>
-              </li>
-              <li class="footer__social-item">
-                <a
-                  href="mailto:centrspezremont@mail.ru"
-                  class="footer__social-link"
-                  aria-label="Написать на почту centrspezremont@mail.ru"
-                >
-                  <img
-                    src="/images/footer/email.svg"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                  <span>centrspezremont@mail.ru</span>
-                </a>
-              </li>
-              <li class="footer__social-item">
-                <a
-                  href="https://vk.ru/csr32"
-                  class="footer__social-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src="/images/footer/vk.svg" alt="vk" />
-                  <span>CSR-32</span>
-                </a>
-              </li>
-            </ul>
-
-            <ul class="footer__contacts">
-              <li class="footer__contact-item">
-                <a href="#" class="footer__contact-link">
-                  <img src="/images/footer/map.svg" alt="" />
-                  <span>г. Фокино, ул. Базарная, 10</span>
-                </a>
-              </li>
-              <li class="footer__contact-item">
-                <a href="tel: +74832367380" class="footer__contact-link">
-                  <img src="/images/footer/phone.svg" alt="" />
-                  <span>+7 (4832) 36-73-80</span>
-                </a>
-              </li>
-              <li class="footer__contact-item">
-                <a href="tel: +74833347101" class="footer__contact-link">
-                  <img src="/images/footer/phone.svg" alt="" />
-                  <span>+7 (48333) 4-71-01</span>
-                </a>
-              </li>
-              <li class="footer__contact-time">
-                Время работы
-                <br />
-                Пн-пт
-                <br />
-                с 08:00 до 17:00
-              </li>
-            </ul>
-          </div>
-        </div>
-      </footer>
     </main>
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <a href="/index.html" class="footer__logo" aria-label="На главную">
+            <img src="/images/logo.png" alt="Логотип ООО Центрспецремонт" />
+          </a>
+
+          <ul class="footer__nav">
+            <li class="footer__nav-item">
+              <p class="footer__nav-title">Выберите раздел</p>
+            </li>
+            <li class="footer__nav-item">
+              <a
+                class="footer__nav-link hover-btn"
+                href="/index.html#about"
+                data-text="О компании"
+                ><span>О компании</span></a
+              >
+            </li>
+            <li class="footer__nav-item">
+              <a
+                class="footer__nav-link hover-btn"
+                href="/index.html#services"
+                data-text="Услуги"
+                ><span>Услуги</span></a
+              >
+            </li>
+            <li class="footer__nav-item">
+              <a
+                class="footer__nav-link hover-btn"
+                href="/index.html#career"
+                data-text="Карьера"
+                ><span>Карьера</span></a
+              >
+            </li>
+            <li class="footer__nav-item">
+              <a
+                class="footer__nav-link hover-btn"
+                href="/index.html#social"
+                data-text="Социальные проекты"
+                ><span>Социальные проекты</span></a
+              >
+            </li>
+            <li class="footer__nav-item">
+              <a
+                class="footer__nav-link hover-btn"
+                href="/index.html#news"
+                data-text="Новости"
+                ><span>Новости</span></a
+              >
+            </li>
+          </ul>
+
+          <ul class="footer__social">
+            <li class="footer__social-item">
+              <p class="footer__social-title">Выберите раздел</p>
+            </li>
+            <li class="footer__social-item">
+              <a
+                href="mailto:centrspezremont@mail.ru"
+                class="footer__social-link"
+                aria-label="Написать на почту centrspezremont@mail.ru"
+              >
+                <img src="/images/footer/email.svg" alt="" aria-hidden="true" />
+                <span>centrspezremont@mail.ru</span>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a
+                href="https://vk.com/csr32"
+                class="footer__social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Мы ВКонтакте (откроется в новой вкладке)"
+              >
+                <img src="/images/footer/vk.svg" alt="" aria-hidden="true" />
+                <span>CSR-32</span>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="footer__contacts">
+            <li class="footer__contact-item">
+              <a href="#" class="footer__contact-link">
+                <img src="/images/footer/map.svg" alt="" aria-hidden="true" />
+                <span>г. Фокино, ул. Базарная, 10</span>
+              </a>
+            </li>
+            <li class="footer__contact-item">
+              <a href="tel:+74832367380" class="footer__contact-link">
+                <img src="/images/footer/phone.svg" alt="" aria-hidden="true" />
+                <span>+7 (4832) 36-73-80</span>
+              </a>
+            </li>
+            <li class="footer__contact-item">
+              <a href="tel:+74833347101" class="footer__contact-link">
+                <img src="/images/footer/phone.svg" alt="" aria-hidden="true" />
+                <span>+7 (48333) 4-71-01</span>
+              </a>
+            </li>
+            <li class="footer__contact-time">
+              Время работы
+              <br />
+              Пн-пт
+              <br />
+              с 08:00 до 17:00
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
     <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js"></script>
-    <script src="../js/common.js"></script>
-    <script src="../js/services.js"></script>
-    <script src="../js/form.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/services.js"></script>
+    <script src="/js/form.js"></script>
   </body>
 </html>

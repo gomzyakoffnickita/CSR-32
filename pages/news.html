@@ -1,32 +1,96 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/news.css" />
+
+    <!-- SEO мета-теги -->
+    <title>
+      Новости ООО «Центрспецремонт» — события, проекты и жизнь компании
+    </title>
+    <meta
+      name="description"
+      content="Новости компании Центрспецремонт: производственные проекты, социальные инициативы, достижения команды. Более 20 лет на рынке промышленного ремонта. Актуальные события из жизни предприятия."
+    />
+    <meta
+      name="keywords"
+      content="новости Центрспецремонт, события компании, производственные проекты, корпоративные новости, жизнь команды"
+    />
+    <link rel="canonical" href="https://csr32.ru/news.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Новости ООО «Центрспецремонт»" />
+    <meta
+      property="og:description"
+      content="События, проекты и новости команды. Более 20 лет на рынке промышленного ремонта."
+    />
+    <meta
+      property="og:image"
+      content="https://csr32.ru/images/news/og-image.jpg"
+    />
+    <meta property="og:url" content="https://csr32.ru/news.html" />
+    <meta property="og:site_name" content="Центрспецремонт" />
+    <meta property="og:locale" content="ru_RU" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png" />
+
+    <!-- Шрифты -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Russo+One&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
       rel="stylesheet"
     />
-    <title>Новости</title>
+
+    <!-- Стили (абсолютные пути) -->
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/news.css" />
+
+    <!-- JSON-LD: разметка страницы новостей -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Новости ООО «Центрспецремонт»",
+        "description": "События, проекты и новости команды Центрспецремонт. Производственные достижения, социальные инициативы и корпоративные события.",
+        "url": "https://csr32.ru/news.html",
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListElement": []
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "ООО «Центрспецремонт»",
+          "url": "https://csr32.ru",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://csr32.ru/images/logo.png"
+          }
+        }
+      }
+    </script>
   </head>
   <body>
+    <!-- Skip link для доступности -->
+    <a href="#main-content" class="skip-link"
+      >Перейти к основному содержимому</a
+    >
+
     <header class="header__news">
       <div class="container">
         <div class="header__wrapper-inner">
           <div class="header__top header__top-services">
-            <a href="/index.html" class="logo">
-              <img src="../images/logo.png" alt="logo" />
+            <a href="/index.html" class="logo" aria-label="На главную">
+              <img src="/images/logo.png" alt="Логотип ООО Центрспецремонт" />
             </a>
-            <nav class="menu">
+            <nav class="menu" aria-label="Основная навигация">
               <ul class="menu__list">
                 <li class="menu__item">
                   <a
-                    href="../index.html#about"
+                    href="/index.html#about"
                     class="menu__link hover-btn"
                     data-text="О компании"
                     ><span>О компании</span></a
@@ -34,7 +98,7 @@
                 </li>
                 <li class="menu__item">
                   <a
-                    href="../index.html#services"
+                    href="/index.html#services"
                     class="menu__link hover-btn"
                     data-text="Наши услуги"
                     ><span>Наши услуги</span></a
@@ -42,7 +106,7 @@
                 </li>
                 <li class="menu__item">
                   <a
-                    href="../index.html#career"
+                    href="/index.html#career"
                     class="menu__link hover-btn"
                     data-text="Карьера"
                     ><span>Карьера</span></a
@@ -50,7 +114,7 @@
                 </li>
                 <li class="menu__item">
                   <a
-                    href="../index.html#social"
+                    href="/index.html#social"
                     class="menu__link hover-btn"
                     data-text="Социальные проекты"
                     ><span>Социальные проекты</span></a
@@ -58,15 +122,16 @@
                 </li>
                 <li class="menu__item">
                   <a
-                    href="../index.html#news"
+                    href="/index.html#news"
                     class="menu__link hover-btn"
                     data-text="Новости"
+                    aria-current="page"
                     ><span>Новости</span></a
                   >
                 </li>
                 <li class="menu__item">
                   <a
-                    href="../index.html#footer"
+                    href="/index.html#footer"
                     class="menu__link hover-btn"
                     data-text="Контакты"
                     ><span>Контакты</span></a
@@ -86,7 +151,7 @@
             <span></span>
           </button>
 
-          <nav class="mobile-menu">
+          <nav class="mobile-menu" aria-label="Мобильная навигация">
             <ul class="mobile-menu__list">
               <li>
                 <a href="/index.html#about" class="mobile-menu__link"
@@ -109,7 +174,12 @@
                 >
               </li>
               <li>
-                <a href="/index.html#news" class="mobile-menu__link">Новости</a>
+                <a
+                  href="/index.html#news"
+                  class="mobile-menu__link"
+                  aria-current="page"
+                  >Новости</a
+                >
               </li>
               <li>
                 <a href="/index.html#footer" class="mobile-menu__link"
@@ -127,18 +197,26 @@
         </div>
       </div>
     </header>
-    <main>
-      <section class="news">
+    <main id="main-content">
+      <section class="news" aria-labelledby="news-heading">
         <div class="container">
-          <div class="news-page__list"></div>
+          <h2 class="visually-hidden" id="news-heading">
+            Список новостей компании
+          </h2>
+          <div
+            class="news-page__list"
+            aria-live="polite"
+            aria-busy="false"
+            role="feed"
+          ></div>
         </div>
       </section>
     </main>
     <footer class="footer" id="footer">
       <div class="container">
         <div class="footer__wrapper">
-          <a href="/index.html" class="footer__logo">
-            <img src="/images/logo.png" alt="logo" />
+          <a href="/index.html" class="footer__logo" aria-label="На главную">
+            <img src="/images/logo.png" alt="Логотип ООО Центрспецремонт" />
           </a>
 
           <ul class="footer__nav">
@@ -203,12 +281,13 @@
             </li>
             <li class="footer__social-item">
               <a
-                href="https://vk.ru/csr32"
+                href="https://vk.com/csr32"
                 class="footer__social-link"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Мы ВКонтакте (откроется в новой вкладке)"
               >
-                <img src="/images/footer/vk.svg" alt="vk" />
+                <img src="/images/footer/vk.svg" alt="" aria-hidden="true" />
                 <span>CSR-32</span>
               </a>
             </li>
@@ -217,19 +296,19 @@
           <ul class="footer__contacts">
             <li class="footer__contact-item">
               <a href="#" class="footer__contact-link">
-                <img src="/images/footer/map.svg" alt="" />
+                <img src="/images/footer/map.svg" alt="" aria-hidden="true" />
                 <span>г. Фокино, ул. Базарная, 10</span>
               </a>
             </li>
             <li class="footer__contact-item">
-              <a href="tel: +74832367380" class="footer__contact-link">
-                <img src="/images/footer/phone.svg" alt="" />
+              <a href="tel:+74832367380" class="footer__contact-link">
+                <img src="/images/footer/phone.svg" alt="" aria-hidden="true" />
                 <span>+7 (4832) 36-73-80</span>
               </a>
             </li>
             <li class="footer__contact-item">
-              <a href="tel: +74833347101" class="footer__contact-link">
-                <img src="/images/footer/phone.svg" alt="" />
+              <a href="tel:+74833347101" class="footer__contact-link">
+                <img src="/images/footer/phone.svg" alt="" aria-hidden="true" />
                 <span>+7 (48333) 4-71-01</span>
               </a>
             </li>
@@ -245,8 +324,8 @@
       </div>
     </footer>
     <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js"></script>
-    <script src="../js/common.js" defer></script>
-    <script src="../js/news.js" defer></script>
-    <script src="../js/news-render.js" defer></script>
+    <script src="/js/common.js" defer></script>
+    <script src="/js/news.js" defer></script>
+    <script src="/js/news-render.js" defer></script>
   </body>
 </html>
