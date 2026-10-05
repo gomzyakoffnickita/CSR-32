@@ -623,24 +623,88 @@
 }
 
 /* ===== АДАПТИВ ===== */
-@media (max-width: 1024px) {
-  .polk-groups__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+
+/* Большие планшеты и маленькие десктопы */
+@media (max-width: 1200px) {
+  .header__title-news {
+    font-size: 64px;
+    line-height: 76px;
   }
 
-  .polk-groups__title {
-    font-size: 40px;
+  .header__title-news::after {
+    width: 100%;
+    max-width: 1280px;
   }
 
-  .polk-group-card__title {
-    font-size: 20px;
+  .polk-intro__wrapper {
+    gap: 40px;
+  }
+
+  .polk-group-card__content {
+    padding: 24px;
   }
 }
 
-@media (max-width: 768px) {
+/* Планшеты */
+@media (max-width: 1024px) {
+  /* Header */
+  .header__title-news {
+    font-size: 56px;
+    line-height: 68px;
+    margin-bottom: 40px;
+  }
+
+  .header__title-news::after {
+    bottom: -160px;
+  }
+
+  /* Интро */
+  .polk-intro {
+    padding: 60px 0;
+  }
+
+  .polk-intro__wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .polk-intro__lead {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  /* Цифры */
+  .polk-stats {
+    padding: 40px 0;
+  }
+
+  .polk-stats__grid {
+    gap: 30px;
+  }
+
+  .polk-stats__num {
+    font-size: 48px;
+  }
+
+  /* Фильм */
+  .victory-film__play {
+    width: 56px;
+    height: 56px;
+    font-size: 18px;
+  }
+
+  .victory-film__body {
+    padding: 24px;
+  }
+
+  .victory-film__title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  /* Группы */
   .polk-groups {
-    padding: 60px 0 100px;
+    padding: 80px 0 120px;
   }
 
   .polk-groups__head {
@@ -648,7 +712,7 @@
   }
 
   .polk-groups__title {
-    font-size: 32px;
+    font-size: 40px;
   }
 
   .polk-groups__subtitle {
@@ -657,112 +721,458 @@
 
   .polk-groups__grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
-
-  .polk-group-card {
-    aspect-ratio: 2 / 3;
-  }
-
-  .polk-group-card__content {
-    padding: 20px;
-  }
-
-  .polk-group-card__title {
-    font-size: 18px;
-  }
-
-  .polk-group-card__num {
-    font-size: 12px;
-    margin-bottom: 8px;
-  }
-
-  .polk-group-card__count {
-    font-size: 12px;
-    margin-bottom: 12px;
-  }
-
-  .polk-group-card__arrow {
-    width: 36px;
-    height: 36px;
-    font-size: 16px;
-    top: 12px;
-    right: 12px;
-  }
-
-  .polk-heroes {
-    padding: 60px 0 80px;
-  }
-
-  .polk-heroes__title {
-    font-size: 32px;
-  }
-
-  .polk-heroes__grid {
-    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-    gap: 16px 12px;
-  }
-
-  .polk-hero__name {
-    font-size: 12px;
-  }
-
-  .polk-modal {
-    padding: 10px;
-  }
-
-  .polk-modal__content {
-    padding: 30px 20px;
-  }
-
-  .polk-modal__body {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .polk-modal__photo {
-    max-width: 280px;
-    margin: 0 auto;
-  }
-
-  .polk-modal__name {
-    font-size: 24px;
-    text-align: center;
-  }
-
-  .polk-modal__years {
-    text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .polk-groups__grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .polk-group-card {
-    aspect-ratio: 16 / 9;
-  }
-
-  .polk-groups__title {
-    font-size: 28px;
-  }
-
-  .polk-group-card__content {
-    padding: 20px;
+    gap: 20px;
   }
 
   .polk-group-card__title {
     font-size: 20px;
   }
 
+  /* Герои */
+  .polk-heroes {
+    padding: 60px 0 100px;
+  }
+
+  .polk-heroes__heading {
+    margin-bottom: 30px;
+  }
+
+  .polk-heroes__title {
+    font-size: 36px;
+  }
+}
+
+/* Мобильные и маленькие планшеты */
+@media (max-width: 768px) {
+  /* Header */
+  .header__title-news {
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 30px;
+  }
+
+  .header__title-news::after {
+    bottom: -120px;
+  }
+
+  /* Интро */
+  .polk-intro {
+    padding: 40px 0;
+  }
+
+  .polk-intro__wrapper {
+    gap: 30px;
+  }
+
+  .polk-intro__lead {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 16px;
+  }
+
+  .polk-intro__text p {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  /* Цифры */
+  .polk-stats {
+    padding: 30px 0;
+  }
+
+  .polk-stats__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .polk-stats__item {
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(27, 25, 23, 0.08);
+  }
+
+  .polk-stats__item:last-child {
+    border-bottom: none;
+  }
+
+  .polk-stats__num {
+    font-size: 40px;
+    margin-bottom: 4px;
+  }
+
+  .polk-stats__label {
+    font-size: 14px;
+  }
+
+  /* Фильм */
+  .victory-film:hover {
+    transform: none; /* Отключаем hover-эффект на тач-устройствах */
+  }
+
+  .victory-film__play {
+    width: 52px;
+    height: 52px;
+    font-size: 16px;
+  }
+
+  .victory-film__body {
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .victory-film__title {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .victory-film__desc {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  /* Группы */
+  .polk-groups {
+    padding: 60px 0 80px;
+  }
+
+  .polk-groups__head {
+    margin-bottom: 30px;
+  }
+
+  .polk-groups__title {
+    font-size: 32px;
+  }
+
+  .polk-groups__subtitle {
+    font-size: 15px;
+  }
+
+  .polk-groups__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .polk-group-card {
+    aspect-ratio: 2 / 3;
+  }
+
+  .polk-group-card:hover {
+    transform: none;
+  }
+
+  .polk-group-card__content {
+    padding: 16px;
+  }
+
   .polk-group-card__num {
+    font-size: 11px;
+    margin-bottom: 6px;
+  }
+
+  .polk-group-card__title {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  .polk-group-card__count {
     font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .polk-group-card__arrow {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    top: 10px;
+    right: 10px;
+    opacity: 1; /* Всегда показываем на тач */
+    transform: translateX(0);
+  }
+
+  /* Герои */
+  .polk-heroes {
+    padding: 40px 0 60px;
+  }
+
+  .polk-heroes__heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .polk-heroes__title {
+    font-size: 28px;
+  }
+
+  .polk-heroes__counter {
+    font-size: 14px;
+  }
+
+  .polk-heroes__grid {
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 16px 10px;
+  }
+
+  .polk-hero__name {
+    font-size: 11px;
+  }
+
+  .polk-hero:hover {
+    transform: none;
+  }
+
+  /* Кнопка назад */
+  .polk-back-link {
+    padding: 10px 20px;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  /* Пустое состояние */
+  .polk-heroes__empty {
+    padding: 40px 16px;
+    font-size: 16px;
+  }
+
+  /* Модалка */
+  .polk-modal {
+    padding: 12px;
+    align-items: flex-end;
+  }
+
+  .polk-modal__content {
+    padding: 24px 20px 32px;
+    border-radius: 16px 16px 0 0;
+    max-height: 92vh;
+  }
+
+  .polk-modal__close {
+    width: 44px;
+    height: 44px;
+    top: 12px;
+    right: 12px;
+    font-size: 28px;
+  }
+
+  .polk-modal__body {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .polk-modal__photo {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+
+  .polk-modal__name {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .polk-modal__years {
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+
+  .polk-modal__bio {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
+
+/* Маленькие мобильные */
+@media (max-width: 480px) {
+  /* Header */
+  .header__title-news {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 24px;
+  }
+
+  .header__title-news::after {
+    bottom: -80px;
+    width: 100vw;
+    left: 0;
+    transform: none;
+  }
+
+  /* Интро */
+  .polk-intro {
+    padding: 30px 0;
+  }
+
+  .polk-intro__lead {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  /* Цифры */
+  .polk-stats__num {
+    font-size: 36px;
+  }
+
+  /* Группы */
+  .polk-groups {
+    padding: 40px 0 60px;
+  }
+
+  .polk-groups__title {
+    font-size: 26px;
+  }
+
+  .polk-groups__subtitle {
+    font-size: 14px;
+  }
+
+  .polk-groups__grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .polk-group-card {
+    aspect-ratio: 16 / 9; /* Горизонтальные карточки */
+  }
+
+  .polk-group-card__title {
+    font-size: 18px;
+  }
+
+  /* Герои */
+  .polk-heroes__title {
+    font-size: 24px;
   }
 
   .polk-heroes__grid {
     grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
     gap: 12px 8px;
+  }
+
+  .polk-hero__name {
+    font-size: 10px;
+  }
+
+  /* Модалка - fullscreen */
+  .polk-modal {
+    padding: 0;
+  }
+
+  .polk-modal__content {
+    padding: 20px 16px 24px;
+    border-radius: 0;
+    max-height: 100vh;
+    height: 100%;
+  }
+
+  .polk-modal__photo {
+    max-width: 200px;
+  }
+
+  .polk-modal__name {
+    font-size: 20px;
+  }
+
+  .polk-modal__years {
+    font-size: 14px;
+  }
+
+  .polk-modal__bio {
+    font-size: 14px;
+  }
+}
+
+/* Очень маленькие экраны (iPhone SE, маленькие Android) */
+@media (max-width: 360px) {
+  .header__title-news {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .polk-intro__lead {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .polk-groups__title {
+    font-size: 22px;
+  }
+
+  .polk-group-card__title {
+    font-size: 16px;
+  }
+
+  .polk-heroes__title {
+    font-size: 20px;
+  }
+
+  .polk-heroes__grid {
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    gap: 10px 6px;
+  }
+
+  .polk-hero__name {
+    font-size: 9px;
+  }
+
+  .polk-modal__name {
+    font-size: 18px;
+  }
+
+  .polk-modal__bio {
+    font-size: 13px;
+  }
+}
+
+/* Убираем hover-эффекты на тач-устройствах */
+@media (hover: none) {
+  .victory-film:hover {
+    transform: none;
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .victory-film:hover img {
+    transform: none;
+    filter: grayscale(45%);
+  }
+
+  .victory-film:hover .victory-film__play {
+    transform: translate(-50%, -50%);
+  }
+
+  .polk-group-card:hover {
+    transform: none;
+  }
+
+  .polk-group-card:hover .polk-group-card__cover img {
+    transform: none;
+    filter: grayscale(40%);
+  }
+
+  .polk-hero:hover {
+    transform: none;
+  }
+
+  .polk-hero:hover img {
+    filter: grayscale(30%);
+  }
+
+  /* Стрелки на группах всегда видны */
+  .polk-group-card__arrow {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Поддержка тач-интерфейса - увеличиваем области нажатия */
+@media (pointer: coarse) {
+  .polk-modal__close {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .polk-back-link {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
   }
 }

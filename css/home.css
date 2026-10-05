@@ -375,6 +375,7 @@
 .hire__img {
   position: absolute;
   inset: 0;
+  object-position: top;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1295,6 +1296,14 @@
     line-height: 40px;
   }
 
+  .news__heading {
+    display: block;
+  }
+
+  .news__heading h2 {
+    margin-bottom: 15px;
+  }
+
   .career__cards {
     grid-template-columns: 1fr;
     padding-bottom: 60px;
@@ -1373,9 +1382,5 @@
 
   .career__hire-title h2 {
     animation: none;
-  }
-  .news__heading {
-    flex-wrap: wrap;
-    gap: 20px;
   }
 }

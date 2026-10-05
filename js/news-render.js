@@ -2,10 +2,9 @@
 function getBasePath() {
   const path = window.location.pathname; //Текущий путь URL
   const parts = path.split("/").filter((p) => p !== ""); //Разбиваем строку на / и убираем пустые элементы
-  console.log(parts);
 
   if (
-    parts.length === 0 || 
+    parts.length === 0 ||
     parts[0] === "pages" ||
     parts[0].endsWith(".html")
   ) {
